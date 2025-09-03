@@ -6,8 +6,10 @@ import Page from "./components/Page";
 export default async function Home(): Promise<React.ReactNode> {
   const { i18n }: { i18n: i18n } = await getT("", [null, ""]);
   const response: Response = await getHello(i18n);
-  const requestBody: string = await response.text();
-  console.log(requestBody);
+  if (response.ok) {
+    const requestBody: string = await response.text();
+    console.log(requestBody);
+  }
 
   return (
     <Page />
