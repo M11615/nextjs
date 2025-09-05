@@ -20,7 +20,7 @@ services:
       dockerfile: ./server/Dockerfile
     container_name: nextjs-server
     ports:
-      - "4000:4000"
+      - "3000:3000"
     networks:
       - nextjs-network
     depends_on:
@@ -33,7 +33,7 @@ services:
       dockerfile: ./client/Dockerfile
     container_name: nextjs-client
     ports:
-      - "4001:4001"
+      - "3001:3001"
     networks:
       - nextjs-network
     extra_hosts:
