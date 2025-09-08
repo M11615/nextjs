@@ -10,7 +10,7 @@ services:
       - MONGO_INITDB_DATABASE=nextjs
     volumes:
       - nextjs-mongo-volume:/data/db
-      - ./initialization-mongo:/docker-entrypoint-initdb.d
+      - ./initialization/mongo:/docker-entrypoint-initdb.d
     networks:
       - nextjs-network
     restart: no
