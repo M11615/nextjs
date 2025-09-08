@@ -11,8 +11,10 @@
     "dev": "turbo run dev --concurrency=3",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
     "docker:start": "docker compose start",
     "docker:stop": "docker compose stop",
+    "docker:restart": "docker compose restart",
     "docker:rm": "docker compose rm"
   },
   "devDependencies": {
