@@ -1,12 +1,13 @@
 {
   "name": "nextjs",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.9.4",
   "workspaces": [
     "server",
     "client"
   ],
   "scripts": {
     "upgrade": "yarn upgrade-interactive",
+    "yarn:upgrade": "yarn set version latest",
     "build": "turbo run build --concurrency=3",
     "dev": "turbo run dev --concurrency=3",
     "docker:build": "docker compose build",
