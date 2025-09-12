@@ -1,4 +1,4 @@
-import { IsEmail  } from 'class-validator';
+import { IsEmail } from 'class-validator';
 import { Transform, TransformFnParams } from 'class-transformer';
 
 export class CreateSubscriptionRequest {

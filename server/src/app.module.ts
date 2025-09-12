@@ -35,4 +35,4 @@ import { SubscriptionController } from './subscription/subscription.controller';
   providers: [AppService, SubscriptionService],
   controllers: [AppController, SubscriptionController]
 })
-export class AppModule {}
+export class AppModule { }

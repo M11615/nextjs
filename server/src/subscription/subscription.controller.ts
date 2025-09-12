@@ -4,7 +4,7 @@ import { CreateSubscriptionRequest } from './request/create-subscription.request
 
 @Controller({ path: 'subscription', version: '1' })
 export class SubscriptionController {
-  constructor(private readonly subscriptionService: SubscriptionService) {}
+  constructor(private readonly subscriptionService: SubscriptionService) { }
 
   @Post('create-subscription')
   async createSubscription(@Body() requestBody: CreateSubscriptionRequest): Promise<void> {
