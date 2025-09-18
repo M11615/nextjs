@@ -27,12 +27,16 @@ export default function Main(): React.ReactNode {
   };
 
   const handleCopy = (): void => {
-    navigator.clipboard.writeText(command).then((): void => {
-      setCopied(true);
-      setTimeout((): void => {
-        setCopied(false);
-      }, 1500);
-    });
+    try {
+      navigator.clipboard.writeText(command)
+        .then((): void => {
+          setCopied(true);
+          setTimeout((): void => {
+            setCopied(false);
+          }, 1500);
+        })
+        .catch((): void => { });
+    } catch { }
   };
 
   if (!hydrated) return null;
@@ -178,7 +182,7 @@ export default function Main(): React.ReactNode {
           </div>
           <div className="flex justify-center gap-2">
             <div
-              className="relative cursor-copy text-[var(--theme-text-muted)]"
+              className="relative pl-[15px] pr-[15px] cursor-copy text-[var(--theme-text-muted)]"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onClick={handleCopy}
@@ -186,7 +190,7 @@ export default function Main(): React.ReactNode {
               <p className="font-[family-name:var(--font-geist-mono)] text-sm tracking-tighter">
                 <span>▲{" "}</span>
                 <span>~{" "}{command}</span>
-                <span className={`absolute top-1/5 pl-[15px] transition duration-200 ease-in-out ${hovered ? "opacity-100" : "opacity-0"}`}>
+                <span className={`absolute top-[2px] pl-[15px] transition duration-200 ease-in-out ${hovered ? "opacity-100" : "opacity-0"}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
