@@ -11,6 +11,7 @@
     "build": "turbo run build --concurrency=3",
     "dev": "turbo run dev --concurrency=3",
     "docker:pull": "docker compose pull",
+    "docker:build-pull": "docker compose build --pull",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
