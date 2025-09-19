@@ -2,6 +2,7 @@
   "layout": {
     "title": "Vercel 出品的 Next.js —— React 框架"
   },
+  "skipToContent": "跳到主要内容",
   "header": {
     "showcase": "案例展示",
     "docs": "文档",

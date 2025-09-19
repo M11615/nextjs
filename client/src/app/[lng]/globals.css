@@ -17,6 +17,7 @@
   --theme-text-subtle: #dfdfdf;
   --theme-primary: #0373F5;
   --theme-primary-light: #0373F5;
+  --theme-primary-light-hover: #73BAFB;
   --theme-success: #4aa75c;
   --theme-accent-blue: #0070f1;
   --theme-accent-blue-bg: #ebf5ff;
@@ -44,6 +45,7 @@
     --theme-text-subtle: #404040;
     --theme-primary: #0373F5;
     --theme-primary-light: #52a8ff;
+    --theme-primary-light-hover: #67B4F9;
     --theme-success: #409850;
     --theme-accent-blue: #0070f1;
     --theme-accent-blue-bg: #10233d;

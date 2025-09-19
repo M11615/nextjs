@@ -2,6 +2,7 @@
   "layout": {
     "title": "Vercel による Next.js － React フレームワーク"
   },
+  "skipToContent": "コンテンツにスキップ",
   "header": {
     "showcase": "ショーケース",
     "docs": "ドキュメント",

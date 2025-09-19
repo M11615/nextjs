@@ -2,6 +2,7 @@
   "layout": {
     "title": "Next.js de Vercel - El framework de React"
   },
+  "skipToContent": "Saltar al contenido",
   "header": {
     "showcase": "Vitrina",
     "docs": "Documentos",

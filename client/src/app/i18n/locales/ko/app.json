@@ -2,6 +2,7 @@
   "layout": {
     "title": "Vercel의 Next.js - React 프레임워크"
   },
+  "skipToContent": "콘텐츠로 건너뛰기",
   "header": {
     "showcase": "쇼케이스",
     "docs": "문서",

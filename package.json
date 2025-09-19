@@ -6,8 +6,8 @@
     "client"
   ],
   "scripts": {
-    "upgrade": "yarn upgrade-interactive",
     "set-version": "yarn set version latest",
+    "upgrade": "yarn upgrade-interactive",
     "build": "turbo run build --concurrency=3",
     "dev": "turbo run dev --concurrency=3",
     "docker:pull": "docker compose pull",

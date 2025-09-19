@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { languages } from "@/app/i18n/settings";
 import { useT } from "@/app/i18n/client";
 import { OptionalI18n, FALLBACK_MOBILE_M_SCREEN_WIDTH } from "@/app/lib/constants";
@@ -41,13 +40,13 @@ export default function Main() {
             if (!item) return null;
 
             return (
-              <Link
+              <a
                 key={lang}
                 href={`/${lang}`}
                 className="text-[var(--theme-primary-light)] underline"
               >
                 {item.region} - {item.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
