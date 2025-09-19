@@ -59,7 +59,7 @@ export default function Header(): React.ReactNode {
                 style={{ filter: "var(--theme-image-filter-light)" }}
                 src="/assets/vercel.svg"
                 alt="Vercel logo"
-                width={25.4}
+                width={25}
                 height={22}
                 priority
               />
@@ -74,7 +74,7 @@ export default function Header(): React.ReactNode {
                 style={{ filter: "var(--theme-image-filter-dark)" }}
                 src="/assets/next.svg"
                 alt="Next.js logo"
-                width={89.76}
+                width={90}
                 height={18}
                 priority
               />

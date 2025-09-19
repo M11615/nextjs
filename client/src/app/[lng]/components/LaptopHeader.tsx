@@ -73,7 +73,7 @@ export default function LaptopHeader({
             src="/assets/vercel.svg"
             alt="Vercel logo"
             width={15}
-            height={12.99}
+            height={13}
             priority
           />
           <span className="ml-[10px]">
