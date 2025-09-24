@@ -30,18 +30,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme-image-filter-dark: invert(1);
     --theme-image-filter-light: none;
+    --theme-image-filter-dark: invert(1);
     --theme-border-base: #333333;
     --theme-bg-base: #000000;
     --theme-bg-dark: #0A0A0A;
-    --theme-fg-base: #FFFFFF;
-    --theme-fg-light: #E7E7E7;
-    --theme-fg-dark: #C5C5C5;
     --theme-bg-muted: #1A1A1A;
     --theme-bg-muted-hover: #1F1F1F;
     --theme-bg-muted-dark: #1F1F1F;
     --theme-bg-muted-dark-hover: #1A1A1A;
+    --theme-fg-base: #FFFFFF;
+    --theme-fg-light: #E7E7E7;
+    --theme-fg-dark: #C5C5C5;
     --theme-text-muted: #808080;
     --theme-text-subtle: #404040;
     --theme-text-caption: #898989;
@@ -87,18 +87,18 @@ html.light {
 }
 
 html.dark {
-  --theme-image-filter-dark: invert(1);
   --theme-image-filter-light: none;
+  --theme-image-filter-dark: invert(1);
   --theme-border-base: #333333;
   --theme-bg-base: #000000;
   --theme-bg-dark: #0A0A0A;
-  --theme-fg-base: #FFFFFF;
-  --theme-fg-light: #E7E7E7;
-  --theme-fg-dark: #C5C5C5;
   --theme-bg-muted: #1A1A1A;
   --theme-bg-muted-hover: #1F1F1F;
   --theme-bg-muted-dark: #1F1F1F;
   --theme-bg-muted-dark-hover: #1A1A1A;
+  --theme-fg-base: #FFFFFF;
+  --theme-fg-light: #E7E7E7;
+  --theme-fg-dark: #C5C5C5;
   --theme-text-muted: #808080;
   --theme-text-subtle: #404040;
   --theme-text-caption: #898989;

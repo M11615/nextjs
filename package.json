@@ -1,6 +1,6 @@
 {
   "name": "nextjs",
-  "packageManager": "yarn@4.9.4",
+  "packageManager": "yarn@4.10.3",
   "workspaces": [
     "server",
     "client"
@@ -21,6 +21,6 @@
     "docker:rm": "docker compose rm"
   },
   "devDependencies": {
-    "turbo": "^2.5.6"
+    "turbo": "^2.5.7"
   }
 }

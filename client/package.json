@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/env": "15.5.3",
+    "@next/env": "15.5.4",
     "accept-language": "^3.0.20",
     "cross-env": "^10.0.0",
     "i18next": "^25.5.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-resources-to-backend": "^1.2.1",
-    "next": "15.5.3",
+    "next": "15.5.4",
     "next-i18next": "^15.4.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -27,8 +27,8 @@
     "@types/node": "^22.18.6",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "15.5.3",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "15.5.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   }
