@@ -5,11 +5,11 @@ import { headerName } from "./settings";
 import i18next from "./i18next";
 import { RequiredI18n } from "@/app/lib/constants";
 
-type Options<Ns extends Namespace | null = DefaultNamespace,
+type Options<
+  Ns extends Namespace | null = DefaultNamespace,
   TKPrefix extends KeyPrefix<ActualNs> = undefined,
-  ActualNs extends Namespace = Ns extends null ? DefaultNamespace : Ns> =
-  [lng: string | readonly string[], ns?: string | undefined, keyPrefix?: TKPrefix] |
-  [lng: null, ns: string, keyPrefix?: TKPrefix];
+  ActualNs extends Namespace = Ns extends null ? DefaultNamespace : Ns
+> = [lng: string | readonly string[], ns?: string | undefined, keyPrefix?: TKPrefix] | [lng: null, ns: string, keyPrefix?: TKPrefix];
 
 export async function getT(ns: string | string[], options: Options): Promise<RequiredI18n> {
   const headerList: Headers = await headers();

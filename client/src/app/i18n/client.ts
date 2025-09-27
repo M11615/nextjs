@@ -15,7 +15,8 @@ type $Tuple<T> = readonly [T?, ...T[]];
 
 type Options<
   Ns extends FlatNamespace | $Tuple<FlatNamespace> | undefined = undefined,
-  KPrefix extends KeyPrefix<FallbackNs<Ns>> = undefined> = UseTranslationOptions<KPrefix>;
+  KPrefix extends KeyPrefix<FallbackNs<Ns>> = undefined
+> = UseTranslationOptions<KPrefix>;
 
 export function useT(ns: string | string[], options: Options): RequiredI18n {
   const lng: string = useParams()?.lng as string;

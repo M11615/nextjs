@@ -4,16 +4,16 @@ import { fallbackLng, languages, cookieName, headerName } from "@/app/i18n/setti
 
 acceptLanguage.languages(languages);
 
-export const config = {
+export const config: Record<string, string[]> = {
   // Avoid matching for static files, API routes, etc.
   matcher: ["/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|site.webmanifest).*)"]
 }
 
-export function middleware(req: NextRequest) {
+export function middleware(req: NextRequest): NextResponse {
   // Ignore paths with "icon" or "chrome"
   if (req.nextUrl.pathname.indexOf("icon") > -1 || req.nextUrl.pathname.indexOf("chrome") > -1) return NextResponse.next();
-  
-  let lng;
+
+  let lng: string | null | undefined;
   // Try to get language from cookie
   if (req.cookies.has(cookieName)) lng = acceptLanguage.get(req.cookies.get(cookieName)?.value);
   // If no cookie, check the Accept-Language header
@@ -22,8 +22,8 @@ export function middleware(req: NextRequest) {
   if (!lng) lng = fallbackLng;
 
   // Check if the language is already in the path
-  const lngInPath = languages.find(loc => req.nextUrl.pathname.startsWith(`/${loc}`));
-  const headers = new Headers(req.headers);
+  const lngInPath: string | undefined = languages.find(loc => req.nextUrl.pathname.startsWith(`/${loc}`));
+  const headers: Headers = new Headers(req.headers);
   headers.set(headerName, lngInPath || lng);
 
   // If the language is not in the path, redirect to include it
@@ -36,9 +36,9 @@ export function middleware(req: NextRequest) {
 
   // If a referer exists, try to detect the language from there and set the cookie accordingly
   if (req.headers.has("referer")) {
-    const refererUrl = new URL(req.headers.get("referer") || "");
-    const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`));
-    const response = NextResponse.next({ headers });
+    const refererUrl: URL = new URL(req.headers.get("referer") || "");
+    const lngInReferer: string | undefined = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`));
+    const response: NextResponse = NextResponse.next({ headers });
     if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
     return response;
   }
