@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// import { useT } from "@/app/i18n/client";
-import { /* RequiredI18n, */ StateSetter } from "@/app/lib/constants";
+import { StateSetter } from "@/app/lib/constants";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 
 export default function Section(): React.ReactNode {
-  // const { t, i18n }: RequiredI18n = useT("app", {});
   const [hydrated, setHydrated]: StateSetter<boolean> = useState<boolean>(false);
   const { isMobileScreen }: ResponsiveContextValue = useResponsiveContext();
 
