@@ -247,10 +247,10 @@ export default function Footer(): React.ReactNode {
                       </p>
                     </div>
                   ) : (
-                    <form noValidate onSubmit={handleSubscriptionEmailSubmit}>
+                    <form noValidate onSubmit={handleSubscriptionEmailSubmit} className="relative">
                       <input
                         key={renderKey}
-                        className="w-full border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-fg-base)] placeholder-[var(--theme-text-muted)] px-[10px] py-[5px] rounded-lg focus:outline-none focus:ring-2 ring-offset-2 focus:ring-[var(--theme-primary-light)] ring-offset-[var(--theme-bg-base)] disabled:opacity-50"
+                        className="w-full border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-fg-base)] placeholder-[var(--theme-text-muted)] px-[10px] pr-[90px] py-[5px] rounded-lg focus:outline-none focus:ring-2 ring-offset-2 focus:ring-[var(--theme-primary-light)] ring-offset-[var(--theme-bg-base)] disabled:opacity-50"
                         type="email"
                         name="subscriptionEmail"
                         value={subscriptionEmail}
