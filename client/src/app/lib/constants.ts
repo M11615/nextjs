@@ -91,7 +91,7 @@ export const LANGUAGE_MAP: Record<string, { label: string; region: string }> = {
   "tr-TR": { label: "Türkçe", region: "Türkiye" },
   "en-GB": { label: "English", region: "United Kingdom" },
   "en-US": { label: "English", region: "United States" },
-  "es-UY": { label: "Español", region: "Uruguay" }, // TODO
+  "es-UY": { label: "Español", region: "Uruguay" },
   "es-VE": { label: "Español", region: "Venezuela" },
   "vi-VN": { label: "Tiếng việt", region: "Việt Nam" },
   "el-GR": { label: "Ελληνικά", region: "Ελλάδα" },
