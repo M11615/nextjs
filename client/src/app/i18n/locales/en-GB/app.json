@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - The React Framework"
+  },
+  "skipToContent": "Skip to content",
+  "header": {
+    "showcase": "Showcase",
+    "docs": "Docs",
+    "blog": "Blog",
+    "templates": "Templates",
+    "enterprise": "Enterprise",
+    "deploy": "Deploy",
+    "learn": "Learn",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "GitHub",
+    "search": {
+      "button": "Search documentation...",
+      "input": "What are you searching for?",
+      "introduction": "Introduction",
+      "gettingStarted": "Getting Started",
+      "appRouter": "App Router",
+      "architecture": "Architecture",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Reference",
+      "accessibility": "Accessibility",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "The React Framework for the Web",
+    "descriptionStart": "Used by some of the world’s largest companies, Next.js enables you to create",
+    "descriptionHighlight": "high-quality web applications",
+    "descriptionEnd": "with the power of React components.",
+    "started": "Get Started",
+    "learn": "Learn Next.js"
+  },
+  "footer": {
+    "resources": "Resources",
+    "docs": "Docs",
+    "supportPolicy": "Support Policy",
+    "learn": "Learn",
+    "showcase": "Showcase",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analytics",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Previews",
+    "more": "More",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contact Sales",
+    "community": "Community",
+    "github": "GitHub",
+    "releases": "Releases",
+    "telemetry": "Telemetry",
+    "governance": "Governance",
+    "locale": "Language & Region",
+    "aboutVercel": "About Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open-source Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePreferences": "Cookie Preferences",
+    "subscribeSuccess": "Thanks for subscribing!",
+    "subscribeTitle": "Subscribe to our newsletter",
+    "subscribeDescription": "Stay updated on new releases and features, guides, and case studies.",
+    "subscribeButton": "Subscribe"
+  },
+  "cookieBanner": {
+    "message": "This site uses tracking technologies. You may opt in or opt out of the use of these technologies.",
+    "deny": "Deny",
+    "acceptAll": "Accept all",
+    "settings": "Consent Settings"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essential",
+      "description": "Essential cookies and services are used to enable core website features, such as ensuring the security of the website."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketing cookies and services are used to deliver personalised advertisements, promotions, and offers. These technologies enable targeted advertising and marketing campaigns by collecting information about users’ interests, preferences, and online activities."
+    },
+    "analytics": {
+      "name": "Analytics",
+      "description": "Analytics cookies and services are used for collecting statistical information about how visitors interact with a website. These technologies provide insights into website usage, visitor behaviour, and site performance to understand and improve the site and enhance user experience."
+    },
+    "functional": {
+      "name": "Functional",
+      "description": "Functional cookies and services are used to offer enhanced and personalised functionalities. These technologies provide additional features and improved user experiences, such as remembering your language preferences, font sizes, region selections, and customised layouts. Opting out of these cookies may render certain services or functionality of the website unavailable."
+    },
+    "title": "Your Privacy",
+    "description": "This site uses tracking technologies. You may opt in or opt out of the use of these technologies.",
+    "deny": "Deny",
+    "acceptAll": "Accept all",
+    "save": "Save",
+    "privacyPolicy": "Read how we handle your data in our",
+    "privacyPolicyLink": "Privacy Policy"
+  }
+}

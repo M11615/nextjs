@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React Çerçevesi"
+  },
+  "skipToContent": "İçeriğe atla",
+  "header": {
+    "showcase": "Vitrin",
+    "docs": "Dokümanlar",
+    "blog": "Blog",
+    "templates": "Şablonlar",
+    "enterprise": "Kurumsal",
+    "deploy": "Dağıt",
+    "learn": "Öğren",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Dokümantasyonda ara...",
+      "input": "Ne arıyorsunuz?",
+      "introduction": "Giriş",
+      "gettingStarted": "Başlarken",
+      "appRouter": "App Router",
+      "architecture": "Mimari",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referansı",
+      "accessibility": "Erişilebilirlik",
+      "activeTabs": {
+        "app": "Uygulama",
+        "pages": "Sayfalar"
+      }
+    }
+  },
+  "main": {
+    "title": "Web için React Çerçevesi",
+    "descriptionStart": "Dünyanın en büyük şirketlerinden bazıları tarafından kullanılan Next.js ile",
+    "descriptionHighlight": "yüksek kaliteli web uygulamaları",
+    "descriptionEnd": "React bileşenlerinin gücü ile oluşturabilirsiniz.",
+    "started": "Başlayın",
+    "learn": "Next.js Öğrenin"
+  },
+  "footer": {
+    "resources": "Kaynaklar",
+    "docs": "Dokümanlar",
+    "supportPolicy": "Destek Politikası",
+    "learn": "Öğren",
+    "showcase": "Vitrin",
+    "blog": "Blog",
+    "team": "Takım",
+    "analytics": "Analitik",
+    "nextjsConf": "Next.js Konferansı",
+    "previews": "Önizlemeler",
+    "more": "Daha Fazla",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Satış ile İletişim",
+    "community": "Topluluk",
+    "github": "Github",
+    "releases": "Sürümler",
+    "telemetry": "Telemetri",
+    "governance": "Yönetim",
+    "locale": "Dil & Bölge",
+    "aboutVercel": "Vercel Hakkında",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Açık Kaynak Yazılım",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Hukuki",
+    "privacyPolicy": "Gizlilik Politikası",
+    "cookiePreferences": "Çerez Tercihleri",
+    "subscribeSuccess": "Abonelik için teşekkürler!",
+    "subscribeTitle": "Bültenimize abone olun",
+    "subscribeDescription": "Yeni sürümler, özellikler, rehberler ve vaka çalışmaları hakkında güncel kalın.",
+    "subscribeButton": "Abone Ol"
+  },
+  "cookieBanner": {
+    "message": "Bu site izleme teknolojileri kullanmaktadır. Bu teknolojilerin kullanımını kabul edebilir veya reddedebilirsiniz.",
+    "deny": "Reddet",
+    "acceptAll": "Tümünü kabul et",
+    "settings": "Rıza Ayarları"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Temel",
+      "description": "Temel çerezler ve hizmetler, web sitesinin çekirdek özelliklerini etkinleştirmek için kullanılır, örn. web sitesinin güvenliğini sağlamak."
+    },
+    "marketing": {
+      "name": "Pazarlama",
+      "description": "Pazarlama çerezleri ve hizmetleri, kişiselleştirilmiş reklamlar, promosyonlar ve teklifler sunmak için kullanılır. Bu teknolojiler, kullanıcıların ilgi alanları ve çevrimiçi aktiviteleri hakkında bilgi toplayarak hedefli reklamcılık ve pazarlama kampanyalarını mümkün kılar."
+    },
+    "analytics": {
+      "name": "Analitik",
+      "description": "Analitik çerezler ve hizmetler, ziyaretçilerin web sitesi ile nasıl etkileşimde bulunduğu hakkında istatistiksel bilgi toplamak için kullanılır. Bu teknolojiler site kullanımını, ziyaretçi davranışını ve performansı anlamak ve kullanıcı deneyimini iyileştirmek için bilgi sağlar."
+    },
+    "functional": {
+      "name": "Fonksiyonel",
+      "description": "Fonksiyonel çerezler ve hizmetler, geliştirilmiş ve kişiselleştirilmiş işlevler sunmak için kullanılır; örn. dil tercihlerini, yazı tipi boyutlarını, bölge seçimlerini ve özelleştirilmiş düzenleri hatırlamak. Bu çerezleri reddetmek bazı hizmetlerin veya işlevlerin kullanılamamasına neden olabilir."
+    },
+    "title": "Gizliliğiniz",
+    "description": "Bu site izleme teknolojileri kullanmaktadır. Bu teknolojilerin kullanımını kabul edebilir veya reddedebilirsiniz.",
+    "deny": "Reddet",
+    "acceptAll": "Tümünü kabul et",
+    "save": "Kaydet",
+    "privacyPolicy": "Verilerinizi nasıl işlediğimizi öğrenin",
+    "privacyPolicyLink": "Gizlilik Politikası"
+  }
+}

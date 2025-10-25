@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js eftir Vercel - React rammaverk"
+  },
+  "skipToContent": "Fara í efni",
+  "header": {
+    "showcase": "Sýning",
+    "docs": "Skjöl",
+    "blog": "Blogg",
+    "templates": "Sniðmát",
+    "enterprise": "Fyrirtæki",
+    "deploy": "Birta",
+    "learn": "Læra",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Leita í skjölum...",
+      "input": "Hvað ertu að leita að?",
+      "introduction": "Inngangur",
+      "gettingStarted": "Byrjaðu",
+      "appRouter": "App Router",
+      "architecture": "Arkitektúr",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API tilvísun",
+      "accessibility": "Aðgengi",
+      "activeTabs": {
+        "app": "Forrit",
+        "pages": "Síður"
+      }
+    }
+  },
+  "main": {
+    "title": "React rammaverk fyrir vefinn",
+    "descriptionStart": "Notað af sumum af stærstu fyrirtækjum heims, gerir Next.js þér kleift að búa til",
+    "descriptionHighlight": "vandaðar vefumsóknir",
+    "descriptionEnd": "með krafti React íhluta.",
+    "started": "Byrjaðu",
+    "learn": "Lærðu Next.js"
+  },
+  "footer": {
+    "resources": "Úrræði",
+    "docs": "Skjöl",
+    "supportPolicy": "Stuðningsstefna",
+    "learn": "Læra",
+    "showcase": "Sýning",
+    "blog": "Blogg",
+    "team": "Teymi",
+    "analytics": "Greiningar",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Forsýning",
+    "more": "Meira",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Hafðu samband við sölu",
+    "community": "Samfélag",
+    "github": "Github",
+    "releases": "Útgáfur",
+    "telemetry": "Sjónvarpsgögn",
+    "governance": "Stjórnun",
+    "locale": "Tungumál & Svæði",
+    "aboutVercel": "Um Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Opinn hugbúnaður",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Lögfræðilegt",
+    "privacyPolicy": "Persónuverndarstefna",
+    "cookiePreferences": "Vafrakökurstillingar",
+    "subscribeSuccess": "Takk fyrir áskrift!",
+    "subscribeTitle": "Gerast áskrifandi að fréttabréfi okkar",
+    "subscribeDescription": "Fáðu nýjustu útgáfur, eiginleika, leiðbeiningar og dæmi um notkun.",
+    "subscribeButton": "Gerast áskrifandi"
+  },
+  "cookieBanner": {
+    "message": "Þessi síða notar rekningartækni. Þú getur valið að samþykkja eða hafna notkun hennar.",
+    "deny": "Hafna",
+    "acceptAll": "Samþykkja allt",
+    "settings": "Samþykkisstillingar"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Nauðsynlegt",
+      "description": "Nauðsynlegar vafrakökur og þjónusta eru notaðar til að virkja kjarna eiginleika vefsíðunnar og tryggja öryggi hennar."
+    },
+    "marketing": {
+      "name": "Markaðssetning",
+      "description": "Markaðsvafrakökur og þjónusta eru notuð til að veita persónulega auglýsingar, kynningar og tilboð. Þessi tækni gerir markvissa auglýsingu og markaðsherferðir mögulega með því að safna upplýsingum um áhugamál, óskir og nethegðun notenda."
+    },
+    "analytics": {
+      "name": "Greiningar",
+      "description": "Greiningarvafrakökur og þjónusta eru notaðar til að safna tölfræðilegum upplýsingum um hvernig gestir eiga samskipti við vefsíðuna. Þessi tækni veitir innsýn í notkun vefsins, hegðun gesta og frammistöðu síðunnar til að bæta upplifun notenda."
+    },
+    "functional": {
+      "name": "Virkni",
+      "description": "Virkni vafrakökur og þjónusta eru notaðar til að veita aukna og persónulega virkni, eins og að muna tungumál, leturstærðir, svæðisval og sérsniðnar útlitsstillingar. Að hafna þessum vafrakökum getur gert ákveðna þjónustu eða virkni óvirka."
+    },
+    "title": "Persónuvernd þín",
+    "description": "Þessi síða notar rekningartækni. Þú getur valið að samþykkja eða hafna notkun hennar.",
+    "deny": "Hafna",
+    "acceptAll": "Samþykkja allt",
+    "save": "Vista",
+    "privacyPolicy": "Lesa hvernig við höndlum gögnin þín í",
+    "privacyPolicyLink": "Persónuverndarstefna"
+  }
+}

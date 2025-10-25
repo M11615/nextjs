@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React Framework"
+  },
+  "skipToContent": "Preskoči na sadržaj",
+  "header": {
+    "showcase": "Prikaz",
+    "docs": "Dokumentacija",
+    "blog": "Blog",
+    "templates": "Predlošci",
+    "enterprise": "Poduzeće",
+    "deploy": "Postavi",
+    "learn": "Uči",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Pretraži dokumentaciju...",
+      "input": "Što tražiš?",
+      "introduction": "Uvod",
+      "gettingStarted": "Početak rada",
+      "appRouter": "App Router",
+      "architecture": "Arhitektura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referenca",
+      "accessibility": "Pristupačnost",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Stranice"
+      }
+    }
+  },
+  "main": {
+    "title": "React Framework za web",
+    "descriptionStart": "Koriste ga neke od najvećih svjetskih tvrtki, Next.js omogućuje vam kreiranje",
+    "descriptionHighlight": "visokokvalitetnih web aplikacija",
+    "descriptionEnd": "s snagom React komponenti.",
+    "started": "Počni",
+    "learn": "Uči Next.js"
+  },
+  "footer": {
+    "resources": "Resursi",
+    "docs": "Dokumentacija",
+    "supportPolicy": "Politika podrške",
+    "learn": "Uči",
+    "showcase": "Prikaz",
+    "blog": "Blog",
+    "team": "Tim",
+    "analytics": "Analitika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Pregledi",
+    "more": "Više",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontaktiraj prodaju",
+    "community": "Zajednica",
+    "github": "Github",
+    "releases": "Izdanja",
+    "telemetry": "Telemetrija",
+    "governance": "Upravljanje",
+    "locale": "Jezik & Regija",
+    "aboutVercel": "O Vercelu",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Pravni",
+    "privacyPolicy": "Politika privatnosti",
+    "cookiePreferences": "Postavke kolačića",
+    "subscribeSuccess": "Hvala na pretplati!",
+    "subscribeTitle": "Pretplati se na naš newsletter",
+    "subscribeDescription": "Ostanite u toku s novim izdanjima, funkcionalnostima, vodičima i studijama slučaja.",
+    "subscribeButton": "Pretplati se"
+  },
+  "cookieBanner": {
+    "message": "Ova stranica koristi tehnologije praćenja. Možete se odlučiti za prihvaćanje ili odbijanje korištenja.",
+    "deny": "Odbij",
+    "acceptAll": "Prihvati sve",
+    "settings": "Postavke pristanka"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Osnovno",
+      "description": "Osnovni kolačići i usluge koriste se za omogućavanje osnovnih funkcija web stranice, poput osiguravanja sigurnosti."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketing kolačići i usluge koriste se za pružanje personaliziranih oglasa, promocija i ponuda. Ove tehnologije omogućuju ciljano oglašavanje i marketing prikupljanjem informacija o interesima i aktivnostima korisnika."
+    },
+    "analytics": {
+      "name": "Analitika",
+      "description": "Analitički kolačići i usluge koriste se za prikupljanje statističkih podataka o interakciji posjetitelja sa stranicom. Omogućuju uvid u korištenje stranice i ponašanje posjetitelja kako bi se poboljšalo korisničko iskustvo."
+    },
+    "functional": {
+      "name": "Funkcionalno",
+      "description": "Funkcionalni kolačići i usluge nude dodatne i personalizirane funkcionalnosti, poput pamćenja jezičnih preferencija i odabira regije. Isključivanje može ograničiti određene funkcije."
+    },
+    "title": "Vaša privatnost",
+    "description": "Ova stranica koristi tehnologije praćenja. Možete se odlučiti za prihvaćanje ili odbijanje korištenja.",
+    "deny": "Odbij",
+    "acceptAll": "Prihvati sve",
+    "save": "Spremi",
+    "privacyPolicy": "Pročitajte kako obrađujemo vaše podatke u našoj",
+    "privacyPolicyLink": "Politici privatnosti"
+  }
+}

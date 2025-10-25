@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js door Vercel - Het React Framework"
+  },
+  "skipToContent": "Ga naar inhoud",
+  "header": {
+    "showcase": "Showcase",
+    "docs": "Documentatie",
+    "blog": "Blog",
+    "templates": "Sjablonen",
+    "enterprise": "Onderneming",
+    "deploy": "Uitrollen",
+    "learn": "Leren",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Documentatie doorzoeken...",
+      "input": "Waar zoekt u naar?",
+      "introduction": "Introductie",
+      "gettingStarted": "Aan de slag",
+      "appRouter": "App-router",
+      "architecture": "Architectuur",
+      "pagesRouter": "Pagina-router",
+      "apiReference": "API-referentie",
+      "accessibility": "Toegankelijkheid",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pagina's"
+      }
+    }
+  },
+  "main": {
+    "title": "Het React-framework voor het web",
+    "descriptionStart": "Gebruikt door enkele van de grootste bedrijven ter wereld, stelt Next.js u in staat",
+    "descriptionHighlight": "hoogwaardige webapplicaties",
+    "descriptionEnd": "te maken met de kracht van React-componenten.",
+    "started": "Aan de slag",
+    "learn": "Leer Next.js"
+  },
+  "footer": {
+    "resources": "Middelen",
+    "docs": "Documentatie",
+    "supportPolicy": "Ondersteuningsbeleid",
+    "learn": "Leren",
+    "showcase": "Showcase",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analyse",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Voorbeelden",
+    "more": "Meer",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Neem contact op met Sales",
+    "community": "Community",
+    "github": "Github",
+    "releases": "Releases",
+    "telemetry": "Telemetry",
+    "governance": "Governance",
+    "locale": "Taal & Regio",
+    "aboutVercel": "Over Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridisch",
+    "privacyPolicy": "Privacybeleid",
+    "cookiePreferences": "Cookievoorkeuren",
+    "subscribeSuccess": "Bedankt voor uw inschrijving!",
+    "subscribeTitle": "Abonneer u op onze nieuwsbrief",
+    "subscribeDescription": "Blijf op de hoogte van nieuwe releases en functies, handleidingen en casestudies.",
+    "subscribeButton": "Abonneren"
+  },
+  "cookieBanner": {
+    "message": "Deze site maakt gebruik van trackingtechnologieën. U kunt ervoor kiezen om deze technologieën te accepteren of te weigeren.",
+    "deny": "Weigeren",
+    "acceptAll": "Alles accepteren",
+    "settings": "Instellingen voor toestemming"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentieel",
+      "description": "Essentiële cookies en services worden gebruikt om kernfuncties van de website mogelijk te maken, zoals het waarborgen van de veiligheid van de website."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketingcookies en -diensten worden gebruikt om gepersonaliseerde advertenties, promoties en aanbiedingen te leveren. Deze technologieën maken gerichte reclame en marketingcampagnes mogelijk door informatie te verzamelen over de interesses, voorkeuren en online activiteiten van gebruikers."
+    },
+    "analytics": {
+      "name": "Analyse",
+      "description": "Analysecookies en -diensten worden gebruikt om statistische informatie te verzamelen over hoe bezoekers omgaan met een website. Deze technologieën bieden inzicht in het websitegebruik, het gedrag van bezoekers en de prestaties van de site om de site te begrijpen en te verbeteren en de gebruikerservaring te verbeteren."
+    },
+    "functional": {
+      "name": "Functioneel",
+      "description": "Functionele cookies en diensten worden gebruikt om verbeterde en gepersonaliseerde functionaliteiten te bieden. Deze technologieën bieden extra functies en verbeterde gebruikerservaringen, zoals het onthouden van uw taalvoorkeuren, lettergroottes, regiokeuzes en aangepaste lay-outs. Het uitschakelen van deze cookies kan ertoe leiden dat bepaalde diensten of functionaliteiten van de website niet beschikbaar zijn."
+    },
+    "title": "Uw privacy",
+    "description": "Deze site maakt gebruik van trackingtechnologieën. U kunt ervoor kiezen om deze technologieën te accepteren of te weigeren.",
+    "deny": "Weigeren",
+    "acceptAll": "Alles accepteren",
+    "save": "Opslaan",
+    "privacyPolicy": "Lees hoe wij uw gegevens verwerken in ons",
+    "privacyPolicyLink": "Privacybeleid"
+  }
+}

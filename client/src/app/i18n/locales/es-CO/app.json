@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js por Vercel - El Framework de React"
+  },
+  "skipToContent": "Saltar al contenido",
+  "header": {
+    "showcase": "Vitrina",
+    "docs": "Documentación",
+    "blog": "Blog",
+    "templates": "Plantillas",
+    "enterprise": "Empresa",
+    "deploy": "Desplegar",
+    "learn": "Aprender",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Buscar en la documentación...",
+      "input": "¿Qué estás buscando?",
+      "introduction": "Introducción",
+      "gettingStarted": "Comenzando",
+      "appRouter": "App Router",
+      "architecture": "Arquitectura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Referencia API",
+      "accessibility": "Accesibilidad",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Páginas"
+      }
+    }
+  },
+  "main": {
+    "title": "El Framework React para la Web",
+    "descriptionStart": "Usado por algunas de las compañías más grandes del mundo, Next.js te permite crear",
+    "descriptionHighlight": "aplicaciones web de alta calidad",
+    "descriptionEnd": "con el poder de los componentes React.",
+    "started": "Comenzar",
+    "learn": "Aprender Next.js"
+  },
+  "footer": {
+    "resources": "Recursos",
+    "docs": "Documentación",
+    "supportPolicy": "Política de Soporte",
+    "learn": "Aprender",
+    "showcase": "Vitrina",
+    "blog": "Blog",
+    "team": "Equipo",
+    "analytics": "Analítica",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Vistas previas",
+    "more": "Más",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contactar Ventas",
+    "community": "Comunidad",
+    "github": "Github",
+    "releases": "Versiones",
+    "telemetry": "Telemetría",
+    "governance": "Gobernanza",
+    "locale": "Idioma & Región",
+    "aboutVercel": "Acerca de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Software de Código Abierto",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Legal",
+    "privacyPolicy": "Política de Privacidad",
+    "cookiePreferences": "Preferencias de Cookies",
+    "subscribeSuccess": "¡Gracias por suscribirte!",
+    "subscribeTitle": "Suscríbete a nuestro boletín",
+    "subscribeDescription": "Mantente al día con nuevas versiones, funciones, guías y casos de estudio.",
+    "subscribeButton": "Suscribirse"
+  },
+  "cookieBanner": {
+    "message": "Este sitio utiliza tecnologías de seguimiento. Puedes optar por aceptar o rechazar su uso.",
+    "deny": "Rechazar",
+    "acceptAll": "Aceptar todo",
+    "settings": "Configuración de consentimiento"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Esencial",
+      "description": "Las cookies y servicios esenciales se utilizan para habilitar las funciones básicas del sitio, como la seguridad."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Las cookies y servicios de marketing se utilizan para entregar anuncios personalizados, promociones y ofertas basadas en los intereses y actividades de los usuarios."
+    },
+    "analytics": {
+      "name": "Analítica",
+      "description": "Las cookies y servicios de analítica se utilizan para recopilar información estadística sobre cómo los visitantes interactúan con el sitio web para mejorar la experiencia del usuario."
+    },
+    "functional": {
+      "name": "Funcional",
+      "description": "Las cookies y servicios funcionales ofrecen funcionalidades adicionales y personalizadas, como recordar preferencias de idioma o región. Rechazar puede limitar algunas funcionalidades."
+    },
+    "title": "Tu privacidad",
+    "description": "Este sitio utiliza tecnologías de seguimiento. Puedes optar por aceptar o rechazar su uso.",
+    "deny": "Rechazar",
+    "acceptAll": "Aceptar todo",
+    "save": "Guardar",
+    "privacyPolicy": "Lea cómo manejamos sus datos en nuestra",
+    "privacyPolicyLink": "Política de Privacidad"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js par Vercel - Le framework React"
+  },
+  "skipToContent": "Passer au contenu",
+  "header": {
+    "showcase": "Vitrine",
+    "docs": "Documentation",
+    "blog": "Blog",
+    "templates": "Modèles",
+    "enterprise": "Entreprise",
+    "deploy": "Déployer",
+    "learn": "Apprendre",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Rechercher dans la documentation...",
+      "input": "Que recherchez-vous ?",
+      "introduction": "Introduction",
+      "gettingStarted": "Premiers pas",
+      "appRouter": "Routeur d'application",
+      "architecture": "Architecture",
+      "pagesRouter": "Routeur de pages",
+      "apiReference": "Référence API",
+      "accessibility": "Accessibilité",
+      "activeTabs": {
+        "app": "Application",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "Le framework React pour le Web",
+    "descriptionStart": "Utilisé par certaines des plus grandes entreprises au monde, Next.js vous permet de créer",
+    "descriptionHighlight": "des applications web de haute qualité",
+    "descriptionEnd": "avec la puissance des composants React.",
+    "started": "Commencer",
+    "learn": "Apprendre Next.js"
+  },
+  "footer": {
+    "resources": "Ressources",
+    "docs": "Documentation",
+    "supportPolicy": "Politique de support",
+    "learn": "Apprendre",
+    "showcase": "Vitrine",
+    "blog": "Blog",
+    "team": "Équipe",
+    "analytics": "Analytique",
+    "nextjsConf": "Conférence Next.js",
+    "previews": "Aperçus",
+    "more": "Plus",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contacter les ventes",
+    "community": "Communauté",
+    "github": "Github",
+    "releases": "Versions",
+    "telemetry": "Télémétrie",
+    "governance": "Gouvernance",
+    "locale": "Langue & Région",
+    "aboutVercel": "À propos de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Logiciel open source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "cookiePreferences": "Préférences des cookies",
+    "subscribeSuccess": "Merci pour votre inscription !",
+    "subscribeTitle": "Abonnez-vous à notre newsletter",
+    "subscribeDescription": "Restez informé des nouvelles versions, fonctionnalités, guides et études de cas.",
+    "subscribeButton": "S'abonner"
+  },
+  "cookieBanner": {
+    "message": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser leur utilisation.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "settings": "Paramètres de consentement"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentiel",
+      "description": "Les cookies et services essentiels sont utilisés pour activer les fonctionnalités principales du site, telles que la sécurité."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Les cookies et services marketing sont utilisés pour diffuser des publicités, promotions et offres personnalisées en fonction de vos centres d'intérêt et activités en ligne."
+    },
+    "analytics": {
+      "name": "Analytique",
+      "description": "Les cookies et services analytiques recueillent des informations statistiques sur l'interaction des visiteurs avec le site afin d'améliorer l'expérience utilisateur."
+    },
+    "functional": {
+      "name": "Fonctionnel",
+      "description": "Les cookies et services fonctionnels offrent des fonctionnalités supplémentaires et personnalisées, comme le rappel de votre langue ou région. Les refuser peut limiter certaines fonctionnalités du site."
+    },
+    "title": "Votre vie privée",
+    "description": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser leur utilisation.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "save": "Enregistrer",
+    "privacyPolicy": "Découvrez comment nous traitons vos données dans notre",
+    "privacyPolicyLink": "Politique de confidentialité"
+  }
+}

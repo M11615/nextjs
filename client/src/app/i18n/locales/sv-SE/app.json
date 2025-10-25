@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js från Vercel - React-ramverket"
+  },
+  "skipToContent": "Hoppa till innehåll",
+  "header": {
+    "showcase": "Exempel",
+    "docs": "Dokumentation",
+    "blog": "Blogg",
+    "templates": "Mallarna",
+    "enterprise": "Företag",
+    "deploy": "Distribuera",
+    "learn": "Lär dig",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Sök i dokumentationen...",
+      "input": "Vad letar du efter?",
+      "introduction": "Introduktion",
+      "gettingStarted": "Kom igång",
+      "appRouter": "App Router",
+      "architecture": "Arkitektur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API-referens",
+      "accessibility": "Tillgänglighet",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Sidor"
+      }
+    }
+  },
+  "main": {
+    "title": "React-ramverket för webben",
+    "descriptionStart": "Används av några av världens största företag, Next.js låter dig skapa",
+    "descriptionHighlight": "högkvalitativa webbapplikationer",
+    "descriptionEnd": "med kraften från React-komponenter.",
+    "started": "Kom igång",
+    "learn": "Lär dig Next.js"
+  },
+  "footer": {
+    "resources": "Resurser",
+    "docs": "Dokumentation",
+    "supportPolicy": "Supportpolicy",
+    "learn": "Lär dig",
+    "showcase": "Exempel",
+    "blog": "Blogg",
+    "team": "Team",
+    "analytics": "Analys",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Förhandsvisningar",
+    "more": "Mer",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakta försäljning",
+    "community": "Community",
+    "github": "Github",
+    "releases": "Utgåvor",
+    "telemetry": "Telemetri",
+    "governance": "Styrning",
+    "locale": "Språk & Region",
+    "aboutVercel": "Om Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Öppen källkod",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridik",
+    "privacyPolicy": "Integritetspolicy",
+    "cookiePreferences": "Cookieinställningar",
+    "subscribeSuccess": "Tack för din prenumeration!",
+    "subscribeTitle": "Prenumerera på vårt nyhetsbrev",
+    "subscribeDescription": "Håll dig uppdaterad om nya versioner och funktioner, guider och fallstudier.",
+    "subscribeButton": "Prenumerera"
+  },
+  "cookieBanner": {
+    "message": "Den här webbplatsen använder spårningstekniker. Du kan välja att acceptera eller neka användningen av dessa tekniker.",
+    "deny": "Neka",
+    "acceptAll": "Acceptera alla",
+    "settings": "Samtyckesinställningar"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Väsentliga",
+      "description": "Väsentliga cookies och tjänster används för att möjliggöra webbplatsens kärnfunktioner, såsom att säkerställa webbplatsens säkerhet."
+    },
+    "marketing": {
+      "name": "Marknadsföring",
+      "description": "Marknadsföringscookies och tjänster används för att leverera personliga annonser, kampanjer och erbjudanden. Dessa tekniker möjliggör riktad reklam och marknadsföringskampanjer genom att samla information om användarnas intressen, preferenser och onlineaktiviteter."
+    },
+    "analytics": {
+      "name": "Analys",
+      "description": "Analyscookies och tjänster används för att samla statistisk information om hur besökare interagerar med en webbplats. Dessa tekniker ger insikter om webbplatsanvändning, besökares beteende och webbplatsens prestanda för att förstå och förbättra upplevelsen."
+    },
+    "functional": {
+      "name": "Funktionella",
+      "description": "Funktionella cookies och tjänster används för att erbjuda förbättrade och personliga funktioner, såsom att komma ihåg språkval, teckenstorlek, regionsval och anpassade layouter. Att avböja dessa cookies kan göra vissa funktioner på webbplatsen otillgängliga."
+    },
+    "title": "Din integritet",
+    "description": "Den här webbplatsen använder spårningstekniker. Du kan välja att acceptera eller neka användningen av dessa tekniker.",
+    "deny": "Neka",
+    "acceptAll": "Acceptera alla",
+    "save": "Spara",
+    "privacyPolicy": "Läs om hur vi hanterar dina uppgifter i vår",
+    "privacyPolicyLink": "Integritetspolicy"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js Vercelilt - Reacti raamistik"
+  },
+  "skipToContent": "Mine sisule",
+  "header": {
+    "showcase": "Esitlus",
+    "docs": "Dokumentatsioon",
+    "blog": "Blogi",
+    "templates": "Mallid",
+    "enterprise": "Ettevõte",
+    "deploy": "Deploy",
+    "learn": "Õpi",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Otsi dokumentatsioonist...",
+      "input": "Mida otsid?",
+      "introduction": "Sissejuhatus",
+      "gettingStarted": "Alustamine",
+      "appRouter": "App Router",
+      "architecture": "Arhitektuur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API viide",
+      "accessibility": "Juurdepääsetavus",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Lehed"
+      }
+    }
+  },
+  "main": {
+    "title": "Reacti raamistik veebilehtedele",
+    "descriptionStart": "Mõnede maailma suurimate ettevõtete poolt kasutatav Next.js võimaldab luua",
+    "descriptionHighlight": "kõrgekvaliteedilisi veebirakendusi",
+    "descriptionEnd": "Reacti komponentide jõul.",
+    "started": "Alusta",
+    "learn": "Õpi Next.js"
+  },
+  "footer": {
+    "resources": "Ressursid",
+    "docs": "Dokumentatsioon",
+    "supportPolicy": "Tugipoliitika",
+    "learn": "Õpi",
+    "showcase": "Esitlus",
+    "blog": "Blogi",
+    "team": "Meeskond",
+    "analytics": "Analüütika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Eelvaated",
+    "more": "Veel",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Võta ühendust müügiga",
+    "community": "Kogukond",
+    "github": "Github",
+    "releases": "Väljaanded",
+    "telemetry": "Telemeetria",
+    "governance": "Haldus",
+    "locale": "Keel & Regioon",
+    "aboutVercel": "Vercelist",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Avatud lähtekoodiga tarkvara",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Õigus",
+    "privacyPolicy": "Privaatsuspoliitika",
+    "cookiePreferences": "Küpsise eelistused",
+    "subscribeSuccess": "Täname tellimise eest!",
+    "subscribeTitle": "Telli meie uudiskiri",
+    "subscribeDescription": "Hoidke end kursis uute väljaannete, funktsioonide, juhendite ja juhtumiuuringutega.",
+    "subscribeButton": "Telli"
+  },
+  "cookieBanner": {
+    "message": "See sait kasutab jälgimistehnoloogiaid. Saate valida nende kasutamise aktsepteerimise või keeldumise.",
+    "deny": "Keeldu",
+    "acceptAll": "Aktsepteeri kõik",
+    "settings": "Nõusoleku seaded"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Oluline",
+      "description": "Olulisi küpsiseid ja teenuseid kasutatakse veebisaidi põhifunktsioonide lubamiseks, näiteks turvalisuse tagamiseks."
+    },
+    "marketing": {
+      "name": "Turundus",
+      "description": "Turundusküpsiseid ja teenuseid kasutatakse isikupärastatud reklaamide, kampaaniate ja pakkumiste pakkumiseks, kogudes teavet kasutajate eelistuste ja tegevuste kohta."
+    },
+    "analytics": {
+      "name": "Analüütika",
+      "description": "Analüütikaküpsiseid ja teenuseid kasutatakse statistilise teabe kogumiseks, kuidas külastajad saidiga suhtlevad, et parandada kasutajakogemust."
+    },
+    "functional": {
+      "name": "Funktsionaalne",
+      "description": "Funktsionaalsed küpsised ja teenused pakuvad täiendavaid ja isikupärastatud funktsioone, näiteks keele- ja regiooni eelistuste meelespidamist. Osalemisest keeldumine võib piirata mõningaid funktsioone."
+    },
+    "title": "Teie privaatsus",
+    "description": "See sait kasutab jälgimistehnoloogiaid. Saate valida nende kasutamise aktsepteerimise või keeldumise.",
+    "deny": "Keeldu",
+    "acceptAll": "Aktsepteeri kõik",
+    "save": "Salvesta",
+    "privacyPolicy": "Loe, kuidas me teie andmeid käsitleme meie",
+    "privacyPolicyLink": "Privaatsuspoliitika"
+  }
+}

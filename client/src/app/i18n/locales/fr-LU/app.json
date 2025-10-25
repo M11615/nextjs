@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js par Vercel - Le framework React"
+  },
+  "skipToContent": "Passer au contenu",
+  "header": {
+    "showcase": "Vitrine",
+    "docs": "Docs",
+    "blog": "Blog",
+    "templates": "Modèles",
+    "enterprise": "Entreprise",
+    "deploy": "Déployer",
+    "learn": "Apprendre",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Rechercher dans la documentation...",
+      "input": "Que recherchez-vous ?",
+      "introduction": "Introduction",
+      "gettingStarted": "Commencer",
+      "appRouter": "App Router",
+      "architecture": "Architecture",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Référence API",
+      "accessibility": "Accessibilité",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "Le framework React pour le Web",
+    "descriptionStart": "Utilisé par certaines des plus grandes entreprises du monde, Next.js vous permet de créer",
+    "descriptionHighlight": "des applications web de haute qualité",
+    "descriptionEnd": "avec la puissance des composants React.",
+    "started": "Commencer",
+    "learn": "Apprendre Next.js"
+  },
+  "footer": {
+    "resources": "Ressources",
+    "docs": "Docs",
+    "supportPolicy": "Politique de support",
+    "learn": "Apprendre",
+    "showcase": "Vitrine",
+    "blog": "Blog",
+    "team": "Équipe",
+    "analytics": "Analytique",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Aperçus",
+    "more": "Plus",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contacter les ventes",
+    "community": "Communauté",
+    "github": "Github",
+    "releases": "Versions",
+    "telemetry": "Télémétrie",
+    "governance": "Gouvernance",
+    "locale": "Langue & Région",
+    "aboutVercel": "À propos de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Logiciel open source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "cookiePreferences": "Préférences des cookies",
+    "subscribeSuccess": "Merci pour votre abonnement !",
+    "subscribeTitle": "Abonnez-vous à notre newsletter",
+    "subscribeDescription": "Restez informé des nouvelles versions, fonctionnalités, guides et études de cas.",
+    "subscribeButton": "S'abonner"
+  },
+  "cookieBanner": {
+    "message": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser l'utilisation de ces technologies.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "settings": "Paramètres de consentement"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentiel",
+      "description": "Les cookies et services essentiels sont utilisés pour activer les fonctionnalités de base du site Web, telles que la sécurité du site."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Les cookies et services marketing sont utilisés pour fournir des publicités, promotions et offres personnalisées. Ces technologies permettent de réaliser des campagnes publicitaires ciblées en collectant des informations sur les intérêts, préférences et activités en ligne des utilisateurs."
+    },
+    "analytics": {
+      "name": "Analytique",
+      "description": "Les cookies et services analytiques sont utilisés pour collecter des informations statistiques sur l'interaction des visiteurs avec le site Web. Ces technologies fournissent des informations sur l'utilisation du site, le comportement des visiteurs et les performances du site pour améliorer l'expérience utilisateur."
+    },
+    "functional": {
+      "name": "Fonctionnel",
+      "description": "Les cookies et services fonctionnels offrent des fonctionnalités améliorées et personnalisées. Ces technologies fournissent des fonctionnalités supplémentaires et une expérience utilisateur améliorée, telles que la mémorisation des préférences de langue, des tailles de police, des sélections de région et des mises en page personnalisées. Refuser ces cookies peut rendre certains services ou fonctionnalités du site indisponibles."
+    },
+    "title": "Votre vie privée",
+    "description": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser l'utilisation de ces technologies.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "save": "Enregistrer",
+    "privacyPolicy": "Découvrez comment nous traitons vos données dans notre",
+    "privacyPolicyLink": "Politique de confidentialité"
+  }
+}

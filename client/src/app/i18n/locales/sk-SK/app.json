@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React Framework"
+  },
+  "skipToContent": "Prejsť na obsah",
+  "header": {
+    "showcase": "Ukážky",
+    "docs": "Dokumentácia",
+    "blog": "Blog",
+    "templates": "Šablóny",
+    "enterprise": "Enterprise",
+    "deploy": "Nasadiť",
+    "learn": "Učiť sa",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Hľadať dokumentáciu...",
+      "input": "Čo hľadáte?",
+      "introduction": "Úvod",
+      "gettingStarted": "Začíname",
+      "appRouter": "App Router",
+      "architecture": "Architektúra",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referencia",
+      "accessibility": "Prístupnosť",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Stránky"
+      }
+    }
+  },
+  "main": {
+    "title": "React framework pre web",
+    "descriptionStart": "Používajú ho niektoré z najväčších svetových spoločností, Next.js vám umožňuje vytvárať",
+    "descriptionHighlight": "kvalitné webové aplikácie",
+    "descriptionEnd": "s využitím React komponentov.",
+    "started": "Začať",
+    "learn": "Naučte sa Next.js"
+  },
+  "footer": {
+    "resources": "Zdroje",
+    "docs": "Dokumentácia",
+    "supportPolicy": "Podporná politika",
+    "learn": "Učenie",
+    "showcase": "Ukážky",
+    "blog": "Blog",
+    "team": "Tím",
+    "analytics": "Analytika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Ukážky",
+    "more": "Viac",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontaktovať predaj",
+    "community": "Komunita",
+    "github": "Github",
+    "releases": "Vydania",
+    "telemetry": "Telemetria",
+    "governance": "Správa",
+    "locale": "Jazyk & Región",
+    "aboutVercel": "O Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source softvér",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Právne",
+    "privacyPolicy": "Zásady ochrany osobných údajov",
+    "cookiePreferences": "Nastavenia cookies",
+    "subscribeSuccess": "Ďakujeme za prihlásenie!",
+    "subscribeTitle": "Prihláste sa na odber nášho newslettera",
+    "subscribeDescription": "Buďte informovaní o nových vydaniach, funkciách, príručkách a prípadových štúdiách.",
+    "subscribeButton": "Prihlásiť sa"
+  },
+  "cookieBanner": {
+    "message": "Táto stránka používa sledovacie technológie. Môžete sa rozhodnúť, či ich použijete alebo nie.",
+    "deny": "Zamietnuť",
+    "acceptAll": "Prijať všetko",
+    "settings": "Nastavenia súhlasu"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Nezbytné",
+      "description": "Nezbytné cookies a služby umožňujú základné funkcie webovej stránky, ako je zabezpečenie stránky."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketingové cookies a služby umožňujú poskytovať personalizovanú reklamu, propagačné akcie a ponuky. Tieto technológie umožňujú cielené reklamy sledovaním záujmov, preferencií a online aktivít používateľov."
+    },
+    "analytics": {
+      "name": "Analytika",
+      "description": "Analytické cookies a služby zbierajú štatistické informácie o tom, ako návštevníci interagujú s webovou stránkou. Tieto technológie poskytujú prehľad o používaní webu, správaní návštevníkov a výkonnosti stránky pre lepšiu používateľskú skúsenosť."
+    },
+    "functional": {
+      "name": "Funkčné",
+      "description": "Funkčné cookies a služby poskytujú vylepšené a personalizované funkcie. Tieto technológie umožňujú dodatočné funkcie, ako sú uložené jazykové preferencie, veľkosti písma, výber regiónu a prispôsobené rozloženia. Vypnutie týchto cookies môže spôsobiť nedostupnosť niektorých funkcií webovej stránky."
+    },
+    "title": "Vaše súkromie",
+    "description": "Táto stránka používa sledovacie technológie. Môžete sa rozhodnúť, či ich použijete alebo nie.",
+    "deny": "Zamietnuť",
+    "acceptAll": "Prijať všetko",
+    "save": "Uložiť",
+    "privacyPolicy": "Prečítajte si, ako nakladáme s vašimi údajmi v našich",
+    "privacyPolicyLink": "Zásadách ochrany osobných údajov"
+  }
+}

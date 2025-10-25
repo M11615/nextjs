@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js di Vercel - Il Framework React"
+  },
+  "skipToContent": "Vai al contenuto",
+  "header": {
+    "showcase": "Vetrina",
+    "docs": "Documentazione",
+    "blog": "Blog",
+    "templates": "Template",
+    "enterprise": "Enterprise",
+    "deploy": "Distribuisci",
+    "learn": "Impara",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Cerca nella documentazione...",
+      "input": "Cosa stai cercando?",
+      "introduction": "Introduzione",
+      "gettingStarted": "Inizia",
+      "appRouter": "App Router",
+      "architecture": "Architettura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Riferimento API",
+      "accessibility": "Accessibilità",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pagine"
+      }
+    }
+  },
+  "main": {
+    "title": "Il Framework React per il Web",
+    "descriptionStart": "Usato da alcune delle più grandi aziende del mondo, Next.js ti permette di creare",
+    "descriptionHighlight": "applicazioni web di alta qualità",
+    "descriptionEnd": "con la potenza dei componenti React.",
+    "started": "Inizia",
+    "learn": "Impara Next.js"
+  },
+  "footer": {
+    "resources": "Risorse",
+    "docs": "Documentazione",
+    "supportPolicy": "Politica di supporto",
+    "learn": "Impara",
+    "showcase": "Vetrina",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analisi",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Anteprime",
+    "more": "Altro",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contatta il reparto vendite",
+    "community": "Community",
+    "github": "Github",
+    "releases": "Rilasci",
+    "telemetry": "Telemetria",
+    "governance": "Governance",
+    "locale": "Lingua e Regione",
+    "aboutVercel": "Informazioni su Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Software Open Source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Legale",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePreferences": "Preferenze cookie",
+    "subscribeSuccess": "Grazie per esserti iscritto!",
+    "subscribeTitle": "Iscriviti alla nostra newsletter",
+    "subscribeDescription": "Rimani aggiornato su nuove release, funzionalità, guide e casi di studio.",
+    "subscribeButton": "Iscriviti"
+  },
+  "cookieBanner": {
+    "message": "Questo sito utilizza tecnologie di tracciamento. Puoi scegliere se acconsentire o rifiutare l’uso di queste tecnologie.",
+    "deny": "Rifiuta",
+    "acceptAll": "Accetta tutto",
+    "settings": "Impostazioni consenso"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essenziali",
+      "description": "I cookie e i servizi essenziali sono utilizzati per abilitare le funzionalità principali del sito web e garantire la sicurezza."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "I cookie e i servizi di marketing sono utilizzati per fornire pubblicità personalizzate, promozioni e offerte. Queste tecnologie consentono campagne pubblicitarie mirate raccogliendo informazioni sugli interessi, le preferenze e le attività online degli utenti."
+    },
+    "analytics": {
+      "name": "Analitica",
+      "description": "I cookie e i servizi di analitica sono utilizzati per raccogliere informazioni statistiche su come i visitatori interagiscono con il sito web. Queste tecnologie forniscono informazioni sull’uso del sito, sul comportamento dei visitatori e sulle prestazioni del sito per migliorare l’esperienza utente."
+    },
+    "functional": {
+      "name": "Funzionali",
+      "description": "I cookie e i servizi funzionali sono utilizzati per offrire funzionalità avanzate e personalizzate. Queste tecnologie forniscono funzionalità aggiuntive e una migliore esperienza utente, come ricordare le preferenze di lingua, le dimensioni dei caratteri, le selezioni di regione e i layout personalizzati. Rifiutare questi cookie potrebbe rendere alcune funzionalità del sito non disponibili."
+    },
+    "title": "La tua Privacy",
+    "description": "Questo sito utilizza tecnologie di tracciamento. Puoi scegliere se acconsentire o rifiutare l’uso di queste tecnologie.",
+    "deny": "Rifiuta",
+    "acceptAll": "Accetta tutto",
+    "save": "Salva",
+    "privacyPolicy": "Leggi come gestiamo i tuoi dati nella nostra",
+    "privacyPolicyLink": "Privacy Policy"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js door Vercel - Het React-framework"
+  },
+  "skipToContent": "Ga naar inhoud",
+  "header": {
+    "showcase": "Showcase",
+    "docs": "Documentatie",
+    "blog": "Blog",
+    "templates": "Sjablonen",
+    "enterprise": "Enterprise",
+    "deploy": "Deploy",
+    "learn": "Leer",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Zoek in de documentatie...",
+      "input": "Waarnaar zoekt u?",
+      "introduction": "Introductie",
+      "gettingStarted": "Aan de slag",
+      "appRouter": "App-router",
+      "architecture": "Architectuur",
+      "pagesRouter": "Pages-router",
+      "apiReference": "API-referentie",
+      "accessibility": "Toegankelijkheid",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "Het React-framework voor het web",
+    "descriptionStart": "Gebruikt door enkele van 's werelds grootste bedrijven, Next.js stelt u in staat om",
+    "descriptionHighlight": "hoogwaardige webapplicaties",
+    "descriptionEnd": "te maken met de kracht van React-componenten.",
+    "started": "Begin",
+    "learn": "Leer Next.js"
+  },
+  "footer": {
+    "resources": "Hulpbronnen",
+    "docs": "Documentatie",
+    "supportPolicy": "Ondersteuningsbeleid",
+    "learn": "Leer",
+    "showcase": "Showcase",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analytics",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Voorbeelden",
+    "more": "Meer",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Verkoop contacteren",
+    "community": "Gemeenschap",
+    "github": "Github",
+    "releases": "Releases",
+    "telemetry": "Telemetrie",
+    "governance": "Bestuur",
+    "locale": "Taal & Regio",
+    "aboutVercel": "Over Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open source software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridisch",
+    "privacyPolicy": "Privacybeleid",
+    "cookiePreferences": "Cookievoorkeuren",
+    "subscribeSuccess": "Bedankt voor uw inschrijving!",
+    "subscribeTitle": "Abonneer u op onze nieuwsbrief",
+    "subscribeDescription": "Blijf op de hoogte van nieuwe releases, functies, handleidingen en casestudy's.",
+    "subscribeButton": "Abonneren"
+  },
+  "cookieBanner": {
+    "message": "Deze site gebruikt trackingtechnologieën. U kunt ervoor kiezen deze wel of niet te accepteren.",
+    "deny": "Weigeren",
+    "acceptAll": "Alles accepteren",
+    "settings": "Instellingen toestemming"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentieel",
+      "description": "Essentiële cookies en services worden gebruikt om kernfuncties van de website mogelijk te maken, zoals de beveiliging."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketingcookies en -services worden gebruikt om gepersonaliseerde advertenties, promoties en aanbiedingen te tonen op basis van uw interesses en online activiteiten."
+    },
+    "analytics": {
+      "name": "Analytics",
+      "description": "Analytics-cookies en services verzamelen statistische informatie over hoe bezoekers de site gebruiken om de ervaring te verbeteren."
+    },
+    "functional": {
+      "name": "Functioneel",
+      "description": "Functionele cookies en services bieden extra en gepersonaliseerde functionaliteiten, zoals het onthouden van uw taal- of regio-instellingen. Als u ze weigert, kunnen sommige functies niet beschikbaar zijn."
+    },
+    "title": "Uw privacy",
+    "description": "Deze site gebruikt trackingtechnologieën. U kunt ervoor kiezen deze wel of niet te accepteren.",
+    "deny": "Weigeren",
+    "acceptAll": "Alles accepteren",
+    "save": "Opslaan",
+    "privacyPolicy": "Lees hoe wij uw gegevens verwerken in ons",
+    "privacyPolicyLink": "Privacybeleid"
+  }
+}

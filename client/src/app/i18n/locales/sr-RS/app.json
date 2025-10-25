@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React Framework"
+  },
+  "skipToContent": "Preskoči na sadržaj",
+  "header": {
+    "showcase": "Prikazi",
+    "docs": "Dokumentacija",
+    "blog": "Blog",
+    "templates": "Šabloni",
+    "enterprise": "Enterprise",
+    "deploy": "Deploy",
+    "learn": "Učenje",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Pretraži dokumentaciju...",
+      "input": "Šta tražite?",
+      "introduction": "Uvod",
+      "gettingStarted": "Početak",
+      "appRouter": "App Router",
+      "architecture": "Arhitektura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referenca",
+      "accessibility": "Pristupačnost",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Stranice"
+      }
+    }
+  },
+  "main": {
+    "title": "React okvir za web",
+    "descriptionStart": "Koriste ga neke od najvećih kompanija na svetu, Next.js vam omogućava da kreirate",
+    "descriptionHighlight": "web aplikacije visokog kvaliteta",
+    "descriptionEnd": "sa snagom React komponenti.",
+    "started": "Počni",
+    "learn": "Uči Next.js"
+  },
+  "footer": {
+    "resources": "Resursi",
+    "docs": "Dokumentacija",
+    "supportPolicy": "Politika podrške",
+    "learn": "Učenje",
+    "showcase": "Prikazi",
+    "blog": "Blog",
+    "team": "Tim",
+    "analytics": "Analitika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Pregledi",
+    "more": "Više",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakt prodaja",
+    "community": "Zajednica",
+    "github": "Github",
+    "releases": "Izdanja",
+    "telemetry": "Telemetrija",
+    "governance": "Upravljanje",
+    "locale": "Jezik & Region",
+    "aboutVercel": "O Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Otvoreni softver",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Pravno",
+    "privacyPolicy": "Politika privatnosti",
+    "cookiePreferences": "Postavke kolačića",
+    "subscribeSuccess": "Hvala na pretplati!",
+    "subscribeTitle": "Pretplatite se na naš newsletter",
+    "subscribeDescription": "Budite u toku sa novim izdanjima, funkcijama, vodičima i studijama slučaja.",
+    "subscribeButton": "Pretplati se"
+  },
+  "cookieBanner": {
+    "message": "Ovaj sajt koristi tehnologije praćenja. Možete se odlučiti da prihvatite ili odbijete njihovu upotrebu.",
+    "deny": "Odbij",
+    "acceptAll": "Prihvati sve",
+    "settings": "Postavke saglasnosti"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Neophodno",
+      "description": "Neophodni kolačići i servisi omogućavaju osnovne funkcionalnosti sajta, uključujući sigurnost sajta."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketing kolačići i servisi omogućavaju personalizovane reklame, promocije i ponude. Ove tehnologije omogućavaju ciljanje reklama prikupljanjem informacija o interesovanjima, preferencijama i online aktivnostima korisnika."
+    },
+    "analytics": {
+      "name": "Analitika",
+      "description": "Analitički kolačići i servisi služe za prikupljanje statističkih informacija o tome kako posetioci koriste sajt. Ove tehnologije pružaju uvid u korišćenje sajta, ponašanje posetilaca i performanse sajta za poboljšanje korisničkog iskustva."
+    },
+    "functional": {
+      "name": "Funkcionalno",
+      "description": "Funkcionalni kolačići i servisi omogućavaju dodatne i personalizovane funkcionalnosti. Omogućavaju pamćenje jezičkih preferencija, veličina fonta, izbora regiona i prilagođenih rasporeda. Isključivanje ovih kolačića može učiniti neke funkcije sajta nedostupnim."
+    },
+    "title": "Vaša privatnost",
+    "description": "Ovaj sajt koristi tehnologije praćenja. Možete se odlučiti da prihvatite ili odbijete njihovu upotrebu.",
+    "deny": "Odbij",
+    "acceptAll": "Prihvati sve",
+    "save": "Sačuvaj",
+    "privacyPolicy": "Pročitajte kako rukujemo vašim podacima u našim",
+    "privacyPolicyLink": "Politikama privatnosti"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js von Vercel - Das React Framework"
+  },
+  "skipToContent": "Zum Inhalt springen",
+  "header": {
+    "showcase": "Showcase",
+    "docs": "Dokumentation",
+    "blog": "Blog",
+    "templates": "Vorlagen",
+    "enterprise": "Unternehmen",
+    "deploy": "Bereitstellen",
+    "learn": "Lernen",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Dokumentation durchsuchen...",
+      "input": "Wonach suchen Sie?",
+      "introduction": "Einführung",
+      "gettingStarted": "Erste Schritte",
+      "appRouter": "App Router",
+      "architecture": "Architektur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referenz",
+      "accessibility": "Barrierefreiheit",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Seiten"
+      }
+    }
+  },
+  "main": {
+    "title": "Das React Framework für das Web",
+    "descriptionStart": "Verwendet von einigen der weltweit größten Unternehmen, ermöglicht Next.js Ihnen die Erstellung von",
+    "descriptionHighlight": "hochwertigen Webanwendungen",
+    "descriptionEnd": "mit der Leistung von React-Komponenten.",
+    "started": "Loslegen",
+    "learn": "Next.js lernen"
+  },
+  "footer": {
+    "resources": "Ressourcen",
+    "docs": "Dokumentation",
+    "supportPolicy": "Support-Richtlinie",
+    "learn": "Lernen",
+    "showcase": "Showcase",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analytics",
+    "nextjsConf": "Next.js Konferenz",
+    "previews": "Vorschauen",
+    "more": "Mehr",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Vertrieb kontaktieren",
+    "community": "Community",
+    "github": "Github",
+    "releases": "Versionen",
+    "telemetry": "Telemetrie",
+    "governance": "Governance",
+    "locale": "Sprache & Region",
+    "aboutVercel": "Über Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open-Source-Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Rechtliches",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "cookiePreferences": "Cookie-Einstellungen",
+    "subscribeSuccess": "Danke für Ihr Abonnement!",
+    "subscribeTitle": "Abonnieren Sie unseren Newsletter",
+    "subscribeDescription": "Bleiben Sie über neue Versionen, Funktionen, Anleitungen und Fallstudien informiert.",
+    "subscribeButton": "Abonnieren"
+  },
+  "cookieBanner": {
+    "message": "Diese Website verwendet Tracking-Technologien. Sie können deren Nutzung zustimmen oder ablehnen.",
+    "deny": "Ablehnen",
+    "acceptAll": "Alle akzeptieren",
+    "settings": "Einwilligungseinstellungen"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentiell",
+      "description": "Essentielle Cookies und Dienste werden verwendet, um grundlegende Funktionen der Website zu ermöglichen, wie z.B. die Sicherheit der Website."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketing-Cookies und Dienste werden verwendet, um personalisierte Werbung, Aktionen und Angebote bereitzustellen. Diese Technologien ermöglichen gezieltes Marketing, indem sie Informationen über Interessen, Vorlieben und Online-Aktivitäten der Nutzer sammeln."
+    },
+    "analytics": {
+      "name": "Analyse",
+      "description": "Analyse-Cookies und Dienste werden verwendet, um statistische Informationen über die Interaktion von Besuchern mit der Website zu sammeln. Diese Technologien liefern Einblicke in Nutzung, Besucher-Verhalten und Leistung der Website, um die Website zu verstehen und zu verbessern."
+    },
+    "functional": {
+      "name": "Funktional",
+      "description": "Funktionale Cookies und Dienste werden verwendet, um erweiterte und personalisierte Funktionen bereitzustellen. Diese Technologien bieten zusätzliche Features und verbesserte Nutzererfahrungen, wie z.B. das Speichern von Spracheinstellungen, Schriftgrößen, Regionseinstellungen und angepassten Layouts. Ein Ablehnen dieser Cookies kann dazu führen, dass bestimmte Dienste oder Funktionen der Website nicht verfügbar sind."
+    },
+    "title": "Ihre Privatsphäre",
+    "description": "Diese Website verwendet Tracking-Technologien. Sie können deren Nutzung zustimmen oder ablehnen.",
+    "deny": "Ablehnen",
+    "acceptAll": "Alle akzeptieren",
+    "save": "Speichern",
+    "privacyPolicy": "Lesen Sie, wie wir Ihre Daten behandeln in unserer",
+    "privacyPolicyLink": "Datenschutzrichtlinie"
+  }
+}

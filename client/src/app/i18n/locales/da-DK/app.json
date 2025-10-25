@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js af Vercel - React Framework"
+  },
+  "skipToContent": "Spring til indhold",
+  "header": {
+    "showcase": "Præsentation",
+    "docs": "Dokumentation",
+    "blog": "Blog",
+    "templates": "Skabeloner",
+    "enterprise": "Erhverv",
+    "deploy": "Deploy",
+    "learn": "Lær",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Søg i dokumentationen...",
+      "input": "Hvad søger du efter?",
+      "introduction": "Introduktion",
+      "gettingStarted": "Kom godt i gang",
+      "appRouter": "App Router",
+      "architecture": "Arkitektur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Reference",
+      "accessibility": "Tilgængelighed",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Sider"
+      }
+    }
+  },
+  "main": {
+    "title": "React Framework til Web",
+    "descriptionStart": "Brugt af nogle af verdens største virksomheder, Next.js giver dig mulighed for at skabe",
+    "descriptionHighlight": "højkvalitets webapplikationer",
+    "descriptionEnd": "med kraften fra React-komponenter.",
+    "started": "Kom i gang",
+    "learn": "Lær Next.js"
+  },
+  "footer": {
+    "resources": "Ressourcer",
+    "docs": "Dokumentation",
+    "supportPolicy": "Supportpolitik",
+    "learn": "Lær",
+    "showcase": "Præsentation",
+    "blog": "Blog",
+    "team": "Team",
+    "analytics": "Analyse",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Forhåndsvisninger",
+    "more": "Mere",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakt Salg",
+    "community": "Fællesskab",
+    "github": "Github",
+    "releases": "Udgivelser",
+    "telemetry": "Telemetri",
+    "governance": "Styring",
+    "locale": "Sprog & Region",
+    "aboutVercel": "Om Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridisk",
+    "privacyPolicy": "Privatlivspolitik",
+    "cookiePreferences": "Cookieindstillinger",
+    "subscribeSuccess": "Tak for din tilmelding!",
+    "subscribeTitle": "Tilmeld dig vores nyhedsbrev",
+    "subscribeDescription": "Hold dig opdateret med nye udgivelser, funktioner, vejledninger og casestudier.",
+    "subscribeButton": "Tilmeld"
+  },
+  "cookieBanner": {
+    "message": "Dette site bruger sporings-teknologier. Du kan vælge at acceptere eller afvise deres brug.",
+    "deny": "Afvis",
+    "acceptAll": "Accepter alle",
+    "settings": "Samtykkeindstillinger"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentielt",
+      "description": "Essentielle cookies og tjenester bruges til at aktivere kernefunktioner på websitet, såsom sikkerhed."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketing cookies og tjenester bruges til at levere personlige annoncer, kampagner og tilbud baseret på brugerinteresser og aktiviteter."
+    },
+    "analytics": {
+      "name": "Analyse",
+      "description": "Analyse-cookies og tjenester bruges til at indsamle statistisk information om, hvordan besøgende interagerer med websitet, for at forbedre brugeroplevelsen."
+    },
+    "functional": {
+      "name": "Funktionel",
+      "description": "Funktionelle cookies og tjenester giver ekstra og personlige funktioner, såsom at huske sprog- og regionindstillinger. Afvisning kan begrænse nogle funktioner."
+    },
+    "title": "Dit Privatliv",
+    "description": "Dette site bruger sporings-teknologier. Du kan vælge at acceptere eller afvise deres brug.",
+    "deny": "Afvis",
+    "acceptAll": "Accepter alle",
+    "save": "Gem",
+    "privacyPolicy": "Læs hvordan vi håndterer dine data i vores",
+    "privacyPolicyLink": "Privatlivspolitik"
+  }
+}

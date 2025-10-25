@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js par Vercel - Le Framework React"
+  },
+  "skipToContent": "Aller au contenu",
+  "header": {
+    "showcase": "Vitrine",
+    "docs": "Docs",
+    "blog": "Blog",
+    "templates": "Modèles",
+    "enterprise": "Entreprise",
+    "deploy": "Déployer",
+    "learn": "Apprendre",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Rechercher dans la documentation...",
+      "input": "Que recherchez-vous ?",
+      "introduction": "Introduction",
+      "gettingStarted": "Commencer",
+      "appRouter": "App Router",
+      "architecture": "Architecture",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Référence API",
+      "accessibility": "Accessibilité",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "Le framework React pour le Web",
+    "descriptionStart": "Utilisé par certaines des plus grandes entreprises mondiales, Next.js vous permet de créer",
+    "descriptionHighlight": "des applications web de haute qualité",
+    "descriptionEnd": "avec la puissance des composants React.",
+    "started": "Commencer",
+    "learn": "Apprendre Next.js"
+  },
+  "footer": {
+    "resources": "Ressources",
+    "docs": "Docs",
+    "supportPolicy": "Politique de support",
+    "learn": "Apprendre",
+    "showcase": "Vitrine",
+    "blog": "Blog",
+    "team": "Équipe",
+    "analytics": "Analytique",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Aperçus",
+    "more": "Plus",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contacter les ventes",
+    "community": "Communauté",
+    "github": "Github",
+    "releases": "Versions",
+    "telemetry": "Télémétrie",
+    "governance": "Gouvernance",
+    "locale": "Langue & Région",
+    "aboutVercel": "À propos de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Logiciel Open Source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "cookiePreferences": "Préférences des cookies",
+    "subscribeSuccess": "Merci pour votre inscription !",
+    "subscribeTitle": "Abonnez-vous à notre newsletter",
+    "subscribeDescription": "Restez informé des nouvelles versions et fonctionnalités, guides et études de cas.",
+    "subscribeButton": "S'abonner"
+  },
+  "cookieBanner": {
+    "message": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser l'utilisation de ces technologies.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "settings": "Paramètres de consentement"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentiel",
+      "description": "Les cookies et services essentiels sont utilisés pour activer les fonctionnalités principales du site Web, telles que la sécurité du site."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Les cookies et services marketing sont utilisés pour fournir des publicités, promotions et offres personnalisées. Ces technologies permettent le ciblage publicitaire en collectant des informations sur les intérêts et activités des utilisateurs."
+    },
+    "analytics": {
+      "name": "Analytique",
+      "description": "Les cookies et services analytiques sont utilisés pour collecter des informations statistiques sur l'interaction des visiteurs avec le site Web, permettant d'améliorer l'expérience utilisateur."
+    },
+    "functional": {
+      "name": "Fonctionnel",
+      "description": "Les cookies et services fonctionnels permettent d'offrir des fonctionnalités améliorées et personnalisées, comme mémoriser vos préférences de langue, taille de police, région et mises en page personnalisées."
+    },
+    "title": "Votre vie privée",
+    "description": "Ce site utilise des technologies de suivi. Vous pouvez accepter ou refuser leur utilisation.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "save": "Enregistrer",
+    "privacyPolicy": "Lire comment nous traitons vos données dans notre",
+    "privacyPolicyLink": "Politique de confidentialité"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js av Vercel - React-rammeverket"
+  },
+  "skipToContent": "Hopp til innhold",
+  "header": {
+    "showcase": "Vis frem",
+    "docs": "Dokumentasjon",
+    "blog": "Blogg",
+    "templates": "Mal",
+    "enterprise": "Bedrift",
+    "deploy": "Distribuer",
+    "learn": "Lær",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Søk i dokumentasjonen...",
+      "input": "Hva leter du etter?",
+      "introduction": "Introduksjon",
+      "gettingStarted": "Kom i gang",
+      "appRouter": "App Router",
+      "architecture": "Arkitektur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referanse",
+      "accessibility": "Tilgjengelighet",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Sider"
+      }
+    }
+  },
+  "main": {
+    "title": "React-rammeverket for Web",
+    "descriptionStart": "Brukt av noen av verdens største selskaper, lar Next.js deg lage",
+    "descriptionHighlight": "høy-kvalitets nettapplikasjoner",
+    "descriptionEnd": "med kraften til React-komponenter.",
+    "started": "Kom i gang",
+    "learn": "Lær Next.js"
+  },
+  "footer": {
+    "resources": "Ressurser",
+    "docs": "Dokumentasjon",
+    "supportPolicy": "Støttepolitikk",
+    "learn": "Lær",
+    "showcase": "Vis frem",
+    "blog": "Blogg",
+    "team": "Team",
+    "analytics": "Analyse",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Forhåndsvisninger",
+    "more": "Mer",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakt Salg",
+    "community": "Fellesskap",
+    "github": "Github",
+    "releases": "Utgivelser",
+    "telemetry": "Telemetri",
+    "governance": "Styring",
+    "locale": "Språk & Region",
+    "aboutVercel": "Om Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Åpen kildekode programvare",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridisk",
+    "privacyPolicy": "Personvern",
+    "cookiePreferences": "Cookie-innstillinger",
+    "subscribeSuccess": "Takk for at du abonnerte!",
+    "subscribeTitle": "Abonner på vårt nyhetsbrev",
+    "subscribeDescription": "Hold deg oppdatert om nye utgivelser og funksjoner, guider og casestudier.",
+    "subscribeButton": "Abonner"
+  },
+  "cookieBanner": {
+    "message": "Dette nettstedet bruker sporingsteknologier. Du kan velge å godta eller avvise bruken av disse teknologiene.",
+    "deny": "Avvis",
+    "acceptAll": "Godta alle",
+    "settings": "Samtykkeinnstillinger"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essensiell",
+      "description": "Essensielle cookies og tjenester brukes for å aktivere kjernefunksjoner på nettstedet, som å sikre nettstedets sikkerhet."
+    },
+    "marketing": {
+      "name": "Markedsføring",
+      "description": "Markedsføringscookies og tjenester brukes for å levere personlig tilpassede annonser, kampanjer og tilbud. Disse teknologiene muliggjør målrettet annonsering ved å samle informasjon om brukernes interesser, preferanser og aktiviteter på nettet."
+    },
+    "analytics": {
+      "name": "Analyse",
+      "description": "Analysecookies og tjenester brukes til å samle statistisk informasjon om hvordan besøkende interagerer med nettstedet. Disse teknologiene gir innsikt i bruk, besøksadferd og ytelse for å forstå og forbedre brukeropplevelsen."
+    },
+    "functional": {
+      "name": "Funksjonell",
+      "description": "Funksjonelle cookies og tjenester brukes for å tilby forbedrede og personaliserte funksjoner. Dette inkluderer å huske språkpreferanser, skriftstørrelser, regionsvalg og tilpassede layouter. Å avslå disse cookies kan gjøre visse tjenester eller funksjoner utilgjengelige."
+    },
+    "title": "Personvern",
+    "description": "Dette nettstedet bruker sporingsteknologier. Du kan velge å godta eller avvise bruken av disse teknologiene.",
+    "deny": "Avvis",
+    "acceptAll": "Godta alle",
+    "save": "Lagre",
+    "privacyPolicy": "Les hvordan vi håndterer dine data i vår",
+    "privacyPolicyLink": "Personvern"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js od Vercel - React Framework"
+  },
+  "skipToContent": "Přejít na obsah",
+  "header": {
+    "showcase": "Ukázky",
+    "docs": "Dokumentace",
+    "blog": "Blog",
+    "templates": "Šablony",
+    "enterprise": "Podnik",
+    "deploy": "Nasadit",
+    "learn": "Naučit se",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Hledat v dokumentaci...",
+      "input": "Co hledáte?",
+      "introduction": "Úvod",
+      "gettingStarted": "Začínáme",
+      "appRouter": "App Router",
+      "architecture": "Architektura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Reference",
+      "accessibility": "Přístupnost",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Stránky"
+      }
+    }
+  },
+  "main": {
+    "title": "React Framework pro web",
+    "descriptionStart": "Používán některými z největších světových společností, Next.js umožňuje vytvářet",
+    "descriptionHighlight": "webové aplikace vysoké kvality",
+    "descriptionEnd": "s využitím React komponent.",
+    "started": "Začít",
+    "learn": "Naučit se Next.js"
+  },
+  "footer": {
+    "resources": "Zdroje",
+    "docs": "Dokumentace",
+    "supportPolicy": "Podpora",
+    "learn": "Naučit se",
+    "showcase": "Ukázky",
+    "blog": "Blog",
+    "team": "Tým",
+    "analytics": "Analytika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Náhledy",
+    "more": "Více",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakt na prodej",
+    "community": "Komunita",
+    "github": "Github",
+    "releases": "Verze",
+    "telemetry": "Telemetrie",
+    "governance": "Správa",
+    "locale": "Jazyk & Region",
+    "aboutVercel": "O Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source Software",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Právní informace",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "cookiePreferences": "Nastavení cookies",
+    "subscribeSuccess": "Děkujeme za přihlášení!",
+    "subscribeTitle": "Přihlaste se k odběru newsletteru",
+    "subscribeDescription": "Získejte aktuální informace o nových verzích, funkcích, návodech a případových studiích.",
+    "subscribeButton": "Přihlásit se"
+  },
+  "cookieBanner": {
+    "message": "Tato stránka používá sledovací technologie. Můžete se rozhodnout je přijmout nebo odmítnout.",
+    "deny": "Odmítnout",
+    "acceptAll": "Přijmout vše",
+    "settings": "Nastavení souhlasu"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Nezbytné",
+      "description": "Nezbytné cookies a služby jsou používány k zajištění základních funkcí webu, jako je bezpečnost."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketingové cookies a služby se používají k poskytování personalizovaných reklam, propagačních akcí a nabídek na základě zájmů a aktivit uživatelů."
+    },
+    "analytics": {
+      "name": "Analytika",
+      "description": "Analytické cookies a služby shromažďují statistické informace o interakci návštěvníků s webem pro zlepšení uživatelského zážitku."
+    },
+    "functional": {
+      "name": "Funkční",
+      "description": "Funkční cookies a služby poskytují další a personalizované funkce, jako je zapamatování jazykových nebo regionálních preferencí. Odmítnutí může omezit určité funkce."
+    },
+    "title": "Vaše soukromí",
+    "description": "Tato stránka používá sledovací technologie. Můžete se rozhodnout je přijmout nebo odmítnout.",
+    "deny": "Odmítnout",
+    "acceptAll": "Přijmout vše",
+    "save": "Uložit",
+    "privacyPolicy": "Přečtěte si, jak nakládáme s vašimi daty v naší",
+    "privacyPolicyLink": "Zásady ochrany osobních údajů"
+  }
+}

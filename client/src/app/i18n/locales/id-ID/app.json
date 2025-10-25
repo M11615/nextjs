@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js oleh Vercel - Framework React"
+  },
+  "skipToContent": "Lewati ke konten",
+  "header": {
+    "showcase": "Tampilan",
+    "docs": "Dokumentasi",
+    "blog": "Blog",
+    "templates": "Template",
+    "enterprise": "Enterprise",
+    "deploy": "Deploy",
+    "learn": "Pelajari",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Cari dokumentasi...",
+      "input": "Apa yang ingin Anda cari?",
+      "introduction": "Pendahuluan",
+      "gettingStarted": "Memulai",
+      "appRouter": "App Router",
+      "architecture": "Arsitektur",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Referensi API",
+      "accessibility": "Aksesibilitas",
+      "activeTabs": {
+        "app": "Aplikasi",
+        "pages": "Halaman"
+      }
+    }
+  },
+  "main": {
+    "title": "Framework React untuk Web",
+    "descriptionStart": "Digunakan oleh beberapa perusahaan terbesar di dunia, Next.js memungkinkan Anda membuat",
+    "descriptionHighlight": "aplikasi web berkualitas tinggi",
+    "descriptionEnd": "dengan kekuatan komponen React.",
+    "started": "Mulai",
+    "learn": "Pelajari Next.js"
+  },
+  "footer": {
+    "resources": "Sumber Daya",
+    "docs": "Dokumentasi",
+    "supportPolicy": "Kebijakan Dukungan",
+    "learn": "Pelajari",
+    "showcase": "Tampilan",
+    "blog": "Blog",
+    "team": "Tim",
+    "analytics": "Analitik",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Pratinjau",
+    "more": "Lainnya",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Hubungi Penjualan",
+    "community": "Komunitas",
+    "github": "Github",
+    "releases": "Rilis",
+    "telemetry": "Telemetri",
+    "governance": "Tata Kelola",
+    "locale": "Bahasa & Wilayah",
+    "aboutVercel": "Tentang Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Perangkat Lunak Open Source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Hukum",
+    "privacyPolicy": "Kebijakan Privasi",
+    "cookiePreferences": "Preferensi Cookie",
+    "subscribeSuccess": "Terima kasih telah berlangganan!",
+    "subscribeTitle": "Berlangganan newsletter kami",
+    "subscribeDescription": "Tetap diperbarui tentang rilis baru, fitur, panduan, dan studi kasus.",
+    "subscribeButton": "Berlangganan"
+  },
+  "cookieBanner": {
+    "message": "Situs ini menggunakan teknologi pelacakan. Anda dapat memilih untuk menerima atau menolak penggunaannya.",
+    "deny": "Tolak",
+    "acceptAll": "Terima semua",
+    "settings": "Pengaturan Persetujuan"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Esensial",
+      "description": "Cookie dan layanan esensial digunakan untuk mengaktifkan fitur inti situs web, seperti memastikan keamanan situs."
+    },
+    "marketing": {
+      "name": "Pemasaran",
+      "description": "Cookie dan layanan pemasaran digunakan untuk memberikan iklan, promosi, dan penawaran yang dipersonalisasi. Teknologi ini memungkinkan iklan dan kampanye pemasaran yang ditargetkan dengan mengumpulkan informasi tentang minat, preferensi, dan aktivitas pengguna."
+    },
+    "analytics": {
+      "name": "Analitik",
+      "description": "Cookie dan layanan analitik digunakan untuk mengumpulkan informasi statistik tentang bagaimana pengunjung berinteraksi dengan situs web. Teknologi ini memberikan wawasan tentang penggunaan situs, perilaku pengunjung, dan kinerja situs untuk memahami dan meningkatkan pengalaman pengguna."
+    },
+    "functional": {
+      "name": "Fungsional",
+      "description": "Cookie dan layanan fungsional digunakan untuk menawarkan fungsionalitas yang ditingkatkan dan dipersonalisasi, seperti mengingat preferensi bahasa, ukuran font, pemilihan wilayah, dan tata letak yang disesuaikan. Menolak cookie ini dapat membuat beberapa layanan atau fungsi situs tidak tersedia."
+    },
+    "title": "Privasi Anda",
+    "description": "Situs ini menggunakan teknologi pelacakan. Anda dapat memilih untuk menerima atau menolak penggunaannya.",
+    "deny": "Tolak",
+    "acceptAll": "Terima semua",
+    "save": "Simpan",
+    "privacyPolicy": "Baca bagaimana kami menangani data Anda di",
+    "privacyPolicyLink": "Kebijakan Privasi"
+  }
+}

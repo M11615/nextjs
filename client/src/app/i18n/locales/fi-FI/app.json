@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js Verceliltä - React-kehys"
+  },
+  "skipToContent": "Siirry sisältöön",
+  "header": {
+    "showcase": "Esittely",
+    "docs": "Dokumentaatio",
+    "blog": "Blogi",
+    "templates": "Mallit",
+    "enterprise": "Yritys",
+    "deploy": "Julkaise",
+    "learn": "Opettele",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Hae dokumentaatiosta...",
+      "input": "Mitä etsit?",
+      "introduction": "Johdanto",
+      "gettingStarted": "Aloita",
+      "appRouter": "App Router",
+      "architecture": "Arkkitehtuuri",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API-viite",
+      "accessibility": "Saavutettavuus",
+      "activeTabs": {
+        "app": "Sovellus",
+        "pages": "Sivut"
+      }
+    }
+  },
+  "main": {
+    "title": "React-kehys verkkoa varten",
+    "descriptionStart": "Joidenkin maailman suurimpien yritysten käyttämä Next.js mahdollistaa",
+    "descriptionHighlight": "korkealaatuisten verkkosovellusten luomisen",
+    "descriptionEnd": "React-komponenttien voimalla.",
+    "started": "Aloita",
+    "learn": "Opi Next.js"
+  },
+  "footer": {
+    "resources": "Resurssit",
+    "docs": "Dokumentaatio",
+    "supportPolicy": "Tukikäytäntö",
+    "learn": "Opettele",
+    "showcase": "Esittely",
+    "blog": "Blogi",
+    "team": "Tiimi",
+    "analytics": "Analytiikka",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Esikatselut",
+    "more": "Lisää",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Ota yhteyttä myyntiin",
+    "community": "Yhteisö",
+    "github": "Github",
+    "releases": "Julkaisut",
+    "telemetry": "Telemetria",
+    "governance": "Hallinto",
+    "locale": "Kieli & Alue",
+    "aboutVercel": "Tietoa Vercelistä",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Avoimen lähdekoodin ohjelmisto",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Laki",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "cookiePreferences": "Evästeasetukset",
+    "subscribeSuccess": "Kiitos tilauksestasi!",
+    "subscribeTitle": "Tilaa uutiskirjeemme",
+    "subscribeDescription": "Pysy ajan tasalla uusista julkaisuista, ominaisuuksista, oppaista ja tapaustutkimuksista.",
+    "subscribeButton": "Tilaa"
+  },
+  "cookieBanner": {
+    "message": "Tämä sivusto käyttää seurantateknologioita. Voit hyväksyä tai kieltää niiden käytön.",
+    "deny": "Kieltaa",
+    "acceptAll": "Hyväksy kaikki",
+    "settings": "Suostumusasetukset"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Olennaiset",
+      "description": "Olennaisia evästeitä ja palveluita käytetään verkkosivuston keskeisten ominaisuuksien mahdollistamiseen, kuten sivuston turvallisuuden varmistamiseen."
+    },
+    "marketing": {
+      "name": "Markkinointi",
+      "description": "Markkinointievästeitä ja palveluita käytetään personoitujen mainosten, tarjousten ja kampanjoiden toimittamiseen. Nämä teknologiat mahdollistavat kohdennetun mainonnan keräämällä tietoa käyttäjien kiinnostuksen kohteista ja toiminnasta verkossa."
+    },
+    "analytics": {
+      "name": "Analytiikka",
+      "description": "Analytiikkaevästeitä ja -palveluita käytetään tilastotietojen keräämiseen siitä, miten vierailijat käyttävät verkkosivustoa. Nämä teknologiat tarjoavat tietoa sivuston käytöstä, vierailijoiden käyttäytymisestä ja suorituskyvystä parantaen käyttäjäkokemusta."
+    },
+    "functional": {
+      "name": "Toiminnalliset",
+      "description": "Toiminnallisia evästeitä ja palveluita käytetään tarjoamaan parannettuja ja henkilökohtaisia toimintoja, kuten kieliasetusten, fonttikokojen, aluevalintojen ja mukautettujen asettelujen muistamista. Näiden evästeiden kieltäminen voi rajoittaa joidenkin verkkosivuston palveluiden saatavuutta."
+    },
+    "title": "Yksityisyytesi",
+    "description": "Tämä sivusto käyttää seurantateknologioita. Voit hyväksyä tai kieltää niiden käytön.",
+    "deny": "Kieltaa",
+    "acceptAll": "Hyväksy kaikki",
+    "save": "Tallenna",
+    "privacyPolicy": "Lue, kuinka käsittelemme tietojasi",
+    "privacyPolicyLink": "Tietosuojakäytäntö"
+  }
+}

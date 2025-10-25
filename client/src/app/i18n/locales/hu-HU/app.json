@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js a Verceltől - A React keretrendszer"
+  },
+  "skipToContent": "Ugrás a tartalomhoz",
+  "header": {
+    "showcase": "Bemutató",
+    "docs": "Dokumentáció",
+    "blog": "Blog",
+    "templates": "Sablonok",
+    "enterprise": "Vállalat",
+    "deploy": "Telepítés",
+    "learn": "Tanulás",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Dokumentáció keresése...",
+      "input": "Mit keres?",
+      "introduction": "Bevezetés",
+      "gettingStarted": "Első lépések",
+      "appRouter": "App Router",
+      "architecture": "Architektúra",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API referencia",
+      "accessibility": "Akadálymentesség",
+      "activeTabs": {
+        "app": "Alkalmazás",
+        "pages": "Oldalak"
+      }
+    }
+  },
+  "main": {
+    "title": "A React keretrendszer a webhez",
+    "descriptionStart": "A világ legnagyobb cégei által is használt Next.js lehetővé teszi, hogy",
+    "descriptionHighlight": "magas minőségű webalkalmazásokat",
+    "descriptionEnd": "hozz létre React komponensek erejével.",
+    "started": "Kezdés",
+    "learn": "Next.js tanulása"
+  },
+  "footer": {
+    "resources": "Erőforrások",
+    "docs": "Dokumentáció",
+    "supportPolicy": "Támogatási irányelvek",
+    "learn": "Tanulás",
+    "showcase": "Bemutató",
+    "blog": "Blog",
+    "team": "Csapat",
+    "analytics": "Analitika",
+    "nextjsConf": "Next.js Konferencia",
+    "previews": "Előzetesek",
+    "more": "Több",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Értékesítés kapcsolat",
+    "community": "Közösség",
+    "github": "Github",
+    "releases": "Kiadások",
+    "telemetry": "Telemetria",
+    "governance": "Kormányzás",
+    "locale": "Nyelv & Régió",
+    "aboutVercel": "A Vercelről",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Nyílt forráskódú szoftver",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Jogi",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "cookiePreferences": "Cookie-beállítások",
+    "subscribeSuccess": "Köszönjük a feliratkozást!",
+    "subscribeTitle": "Iratkozzon fel hírlevelünkre",
+    "subscribeDescription": "Maradjon naprakész az új kiadásokkal, funkciókkal, útmutatókkal és esettanulmányokkal kapcsolatban.",
+    "subscribeButton": "Feliratkozás"
+  },
+  "cookieBanner": {
+    "message": "Ez a weboldal nyomkövető technológiákat használ. Elfogadhatja vagy elutasíthatja ezek használatát.",
+    "deny": "Elutasítás",
+    "acceptAll": "Összes elfogadása",
+    "settings": "Hozzájárulási beállítások"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Alapvető",
+      "description": "Az alapvető sütik és szolgáltatások lehetővé teszik az alapvető webhelyfunkciók használatát, például a webhely biztonságának biztosítását."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "A marketing sütik és szolgáltatások személyre szabott hirdetések, promóciók és ajánlatok biztosítására szolgálnak. Ezek a technológiák lehetővé teszik a célzott hirdetési kampányokat a felhasználók érdeklődési körének, preferenciáinak és online tevékenységeinek gyűjtésével."
+    },
+    "analytics": {
+      "name": "Analitika",
+      "description": "Az analitikai sütik és szolgáltatások statisztikai információk gyűjtésére szolgálnak arról, hogyan lépnek kapcsolatba a látogatók a weboldallal. Ezek a technológiák betekintést nyújtanak a webhelyhasználatba, a látogatói viselkedésbe és a webhely teljesítményébe az élmény javítása érdekében."
+    },
+    "functional": {
+      "name": "Funkcionális",
+      "description": "A funkcionális sütik és szolgáltatások fejlett és személyre szabott funkciókat biztosítanak. Ezek a technológiák további funkciókat és jobb felhasználói élményt nyújtanak, például nyelvi beállítások, betűméretek, régió kiválasztása és testreszabott elrendezések megjegyzésével. Ezen sütik elutasítása bizonyos szolgáltatások vagy funkciók használatát korlátozhatja."
+    },
+    "title": "Az Ön adatvédelme",
+    "description": "Ez a weboldal nyomkövető technológiákat használ. Elfogadhatja vagy elutasíthatja ezek használatát.",
+    "deny": "Elutasítás",
+    "acceptAll": "Összes elfogadása",
+    "save": "Mentés",
+    "privacyPolicy": "Olvassa el, hogyan kezeljük adatait a",
+    "privacyPolicyLink": "Adatvédelmi irányelvek"
+  }
+}

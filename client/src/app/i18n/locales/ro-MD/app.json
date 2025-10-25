@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - Framework-ul React"
+  },
+  "skipToContent": "Salt la conținut",
+  "header": {
+    "showcase": "Vitrină",
+    "docs": "Documentație",
+    "blog": "Blog",
+    "templates": "Șabloane",
+    "enterprise": "Enterprise",
+    "deploy": "Deploy",
+    "learn": "Învățați",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Căutați în documentație...",
+      "input": "Ce căutați?",
+      "introduction": "Introducere",
+      "gettingStarted": "Începeți",
+      "appRouter": "App Router",
+      "architecture": "Arhitectură",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Referință API",
+      "accessibility": "Accesibilitate",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pagini"
+      }
+    }
+  },
+  "main": {
+    "title": "Framework-ul React pentru Web",
+    "descriptionStart": "Folosind de unele dintre cele mai mari companii din lume, Next.js vă permite să creați",
+    "descriptionHighlight": "aplicații web de înaltă calitate",
+    "descriptionEnd": "cu puterea componentelor React.",
+    "started": "Începeți",
+    "learn": "Învățați Next.js"
+  },
+  "footer": {
+    "resources": "Resurse",
+    "docs": "Documentație",
+    "supportPolicy": "Politica de Suport",
+    "learn": "Învățați",
+    "showcase": "Vitrină",
+    "blog": "Blog",
+    "team": "Echipă",
+    "analytics": "Analitică",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Previzualizări",
+    "more": "Mai mult",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contactați Vânzări",
+    "community": "Comunitate",
+    "github": "Github",
+    "releases": "Lansări",
+    "telemetry": "Telemetrie",
+    "governance": "Guvernanță",
+    "locale": "Limbă & Regiune",
+    "aboutVercel": "Despre Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Software Open Source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Legal",
+    "privacyPolicy": "Politica de Confidențialitate",
+    "cookiePreferences": "Preferințe Cookies",
+    "subscribeSuccess": "Mulțumim pentru abonare!",
+    "subscribeTitle": "Abonați-vă la newsletter",
+    "subscribeDescription": "Rămâneți la curent cu noi lansări, funcționalități, ghiduri și studii de caz.",
+    "subscribeButton": "Abonați-vă"
+  },
+  "cookieBanner": {
+    "message": "Acest site utilizează tehnologii de urmărire. Puteți accepta sau refuza utilizarea acestor tehnologii.",
+    "deny": "Refuzați",
+    "acceptAll": "Acceptați tot",
+    "settings": "Setări Consimțământ"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Esential",
+      "description": "Cookie-urile și serviciile esențiale sunt folosite pentru a activa funcțiile de bază ale site-ului, cum ar fi asigurarea securității."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Cookie-urile și serviciile de marketing sunt folosite pentru a livra reclame, promoții și oferte personalizate. Aceste tehnologii permit campanii de marketing targetate prin colectarea de informații despre interesele și activitățile online ale utilizatorilor."
+    },
+    "analytics": {
+      "name": "Analitică",
+      "description": "Cookie-urile și serviciile analitice sunt folosite pentru a colecta informații statistice despre cum interacționează vizitatorii cu site-ul. Aceste tehnologii oferă informații despre utilizarea site-ului, comportamentul vizitatorilor și performanța site-ului pentru a înțelege și îmbunătăți experiența utilizatorului."
+    },
+    "functional": {
+      "name": "Funcțional",
+      "description": "Cookie-urile și serviciile funcționale oferă funcționalități îmbunătățite și personalizate. Aceste tehnologii oferă caracteristici suplimentare și îmbunătățesc experiența utilizatorului, cum ar fi memorarea preferințelor de limbă, dimensiunea fontului, selecția regiunii și layout-uri personalizate. Optarea pentru dezactivarea acestor cookie-uri poate face anumite funcționalități indisponibile."
+    },
+    "title": "Confidențialitatea Ta",
+    "description": "Acest site utilizează tehnologii de urmărire. Puteți accepta sau refuza utilizarea acestor tehnologii.",
+    "deny": "Refuzați",
+    "acceptAll": "Acceptați tot",
+    "save": "Salvați",
+    "privacyPolicy": "Citiți cum gestionăm datele dvs. în",
+    "privacyPolicyLink": "Politica de Confidențialitate"
+  }
+}

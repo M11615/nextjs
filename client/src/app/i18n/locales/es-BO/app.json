@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js por Vercel - El Framework de React"
+  },
+  "skipToContent": "Ir al contenido",
+  "header": {
+    "showcase": "Muestra",
+    "docs": "Documentación",
+    "blog": "Blog",
+    "templates": "Plantillas",
+    "enterprise": "Empresa",
+    "deploy": "Desplegar",
+    "learn": "Aprender",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Buscar en la documentación...",
+      "input": "¿Qué está buscando?",
+      "introduction": "Introducción",
+      "gettingStarted": "Primeros pasos",
+      "appRouter": "Enrutador de apps",
+      "architecture": "Arquitectura",
+      "pagesRouter": "Enrutador de páginas",
+      "apiReference": "Referencia API",
+      "accessibility": "Accesibilidad",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Páginas"
+      }
+    }
+  },
+  "main": {
+    "title": "El Framework de React para la web",
+    "descriptionStart": "Utilizado por algunas de las empresas más grandes del mundo, Next.js le permite crear",
+    "descriptionHighlight": "aplicaciones web de alta calidad",
+    "descriptionEnd": "con el poder de los componentes de React.",
+    "started": "Comenzar",
+    "learn": "Aprender Next.js"
+  },
+  "footer": {
+    "resources": "Recursos",
+    "docs": "Documentación",
+    "supportPolicy": "Política de soporte",
+    "learn": "Aprender",
+    "showcase": "Muestra",
+    "blog": "Blog",
+    "team": "Equipo",
+    "analytics": "Analítica",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Previsualizaciones",
+    "more": "Más",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contactar ventas",
+    "community": "Comunidad",
+    "github": "Github",
+    "releases": "Lanzamientos",
+    "telemetry": "Telemetría",
+    "governance": "Gobernanza",
+    "locale": "Idioma y Región",
+    "aboutVercel": "Acerca de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Software de código abierto",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Legal",
+    "privacyPolicy": "Política de privacidad",
+    "cookiePreferences": "Preferencias de cookies",
+    "subscribeSuccess": "¡Gracias por suscribirse!",
+    "subscribeTitle": "Suscríbase a nuestro boletín",
+    "subscribeDescription": "Manténgase actualizado sobre nuevas versiones, funciones, guías y casos de estudio.",
+    "subscribeButton": "Suscribirse"
+  },
+  "cookieBanner": {
+    "message": "Este sitio utiliza tecnologías de seguimiento. Puede aceptar o rechazar su uso.",
+    "deny": "Rechazar",
+    "acceptAll": "Aceptar todo",
+    "settings": "Configuración de consentimiento"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Esencial",
+      "description": "Las cookies y servicios esenciales se utilizan para habilitar las funciones principales del sitio, como la seguridad."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Las cookies y servicios de marketing se utilizan para entregar anuncios, promociones y ofertas personalizadas según sus intereses y actividades en línea."
+    },
+    "analytics": {
+      "name": "Analítica",
+      "description": "Las cookies y servicios de analítica recopilan información estadística sobre cómo los visitantes interactúan con el sitio para mejorar la experiencia."
+    },
+    "functional": {
+      "name": "Funcional",
+      "description": "Las cookies y servicios funcionales ofrecen funcionalidades adicionales y personalizadas, como recordar su idioma o región. Si las rechaza, algunas funciones pueden no estar disponibles."
+    },
+    "title": "Su privacidad",
+    "description": "Este sitio utiliza tecnologías de seguimiento. Puede aceptar o rechazar su uso.",
+    "deny": "Rechazar",
+    "acceptAll": "Aceptar todo",
+    "save": "Guardar",
+    "privacyPolicy": "Lea cómo manejamos sus datos en nuestra",
+    "privacyPolicyLink": "Política de privacidad"
+  }
+}

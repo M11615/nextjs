@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React ietvars"
+  },
+  "skipToContent": "Pāriet uz saturu",
+  "header": {
+    "showcase": "Demonstrācija",
+    "docs": "Dokumentācija",
+    "blog": "Blogs",
+    "templates": "Veidnes",
+    "enterprise": "Enterprise",
+    "deploy": "Izvietot",
+    "learn": "Mācīties",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Meklēt dokumentācijā...",
+      "input": "Ko jūs meklējat?",
+      "introduction": "Ievads",
+      "gettingStarted": "Sākt darbu",
+      "appRouter": "App Router",
+      "architecture": "Arhitektūra",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API atsauce",
+      "accessibility": "Piekļūstamība",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Lapas"
+      }
+    }
+  },
+  "main": {
+    "title": "React ietvars tīmeklim",
+    "descriptionStart": "To izmanto daži no pasaules lielākajiem uzņēmumiem, Next.js ļauj izveidot",
+    "descriptionHighlight": "augstas kvalitātes tīmekļa lietotnes",
+    "descriptionEnd": "ar React komponentu spēku.",
+    "started": "Sākt darbu",
+    "learn": "Mācīties Next.js"
+  },
+  "footer": {
+    "resources": "Resursi",
+    "docs": "Dokumentācija",
+    "supportPolicy": "Atbalsta politika",
+    "learn": "Mācīties",
+    "showcase": "Demonstrācija",
+    "blog": "Blogs",
+    "team": "Komanda",
+    "analytics": "Analītika",
+    "nextjsConf": "Next.js Konference",
+    "previews": "Priekšskatījumi",
+    "more": "Vairāk",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Sazināties ar pārdošanas nodaļu",
+    "community": "Kopiena",
+    "github": "Github",
+    "releases": "Versijas",
+    "telemetry": "Telemetrija",
+    "governance": "Pārvaldība",
+    "locale": "Valoda un reģions",
+    "aboutVercel": "Par Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Atvērtā koda programmatūra",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Juridiski",
+    "privacyPolicy": "Privātuma politika",
+    "cookiePreferences": "Sīkdatņu preferences",
+    "subscribeSuccess": "Paldies par abonēšanu!",
+    "subscribeTitle": "Abonējiet mūsu jaunumus",
+    "subscribeDescription": "Uzturiet sevi informētu par jaunām versijām, funkcijām, ceļvežiem un gadījumu izpēti.",
+    "subscribeButton": "Abonēt"
+  },
+  "cookieBanner": {
+    "message": "Šī vietne izmanto izsekošanas tehnoloģijas. Jūs varat izvēlēties piekrist vai noraidīt šo tehnoloģiju izmantošanu.",
+    "deny": "Noraidīt",
+    "acceptAll": "Pieņemt visu",
+    "settings": "Konsenta iestatījumi"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Būtiski",
+      "description": "Būtiskās sīkdatnes un pakalpojumi tiek izmantoti, lai nodrošinātu galvenās vietnes funkcijas, piemēram, vietnes drošību."
+    },
+    "marketing": {
+      "name": "Mārketings",
+      "description": "Mārketinga sīkdatnes un pakalpojumi tiek izmantoti personalizētas reklāmas, akciju un piedāvājumu sniegšanai. Šīs tehnoloģijas ļauj veikt mērķtiecīgas reklāmas kampaņas, vācot informāciju par lietotāju interesēm, preferencēm un tiešsaistes aktivitātēm."
+    },
+    "analytics": {
+      "name": "Analītika",
+      "description": "Analītikas sīkdatnes un pakalpojumi tiek izmantoti statistikas informācijas vākšanai par to, kā apmeklētāji mijiedarbojas ar vietni. Šīs tehnoloģijas nodrošina ieskatu vietnes izmantošanā, apmeklētāju uzvedībā un vietnes darbībā, lai uzlabotu lietotāja pieredzi."
+    },
+    "functional": {
+      "name": "Funkcionālas",
+      "description": "Funkcionālās sīkdatnes un pakalpojumi tiek izmantoti, lai piedāvātu uzlabotas un personalizētas funkcijas. Šīs tehnoloģijas nodrošina papildu funkcijas un uzlabotu lietotāja pieredzi, piemēram, atceroties jūsu valodas preferences, fonta izmērus, reģiona izvēli un pielāgotus izkārtojumus. Atsakoties no šīm sīkdatnēm, daži pakalpojumi vai vietnes funkcionalitāte var nebūt pieejami."
+    },
+    "title": "Jūsu privātums",
+    "description": "Šī vietne izmanto izsekošanas tehnoloģijas. Jūs varat izvēlēties piekrist vai noraidīt šo tehnoloģiju izmantošanu.",
+    "deny": "Noraidīt",
+    "acceptAll": "Pieņemt visu",
+    "save": "Saglabāt",
+    "privacyPolicy": "Uzziniet, kā mēs apstrādājam jūsu datus mūsu",
+    "privacyPolicyLink": "Privātuma politika"
+  }
+}

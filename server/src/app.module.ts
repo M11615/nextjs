@@ -16,7 +16,7 @@ import { SubscriptionController } from './subscription/subscription.controller';
       isGlobal: true
     }),
     I18nModule.forRoot({
-      fallbackLanguage: 'en',
+      fallbackLanguage: 'en-US',
       loaderOptions: {
         path: path.join(__dirname, '/i18n'),
         includeSubfolders: true
@@ -29,10 +29,10 @@ import { SubscriptionController } from './subscription/subscription.controller';
         AcceptLanguageResolver
       ]
     }),
-    MongooseModule.forRoot(process.env.MONGO_URL ?? 'mongodb://localhost:27017/nextjs'),
-    MongooseModule.forFeature([{ name: Subscription.name, schema: SubscriptionSchema }])
+    // MongooseModule.forRoot(process.env.MONGO_URL ?? 'mongodb://localhost:27017/nextjs'),
+    // MongooseModule.forFeature([{ name: Subscription.name, schema: SubscriptionSchema }])
   ],
-  providers: [AppService, SubscriptionService],
-  controllers: [AppController, SubscriptionController]
+  // providers: [AppService, SubscriptionService],
+  // controllers: [AppController, SubscriptionController]
 })
 export class AppModule { }

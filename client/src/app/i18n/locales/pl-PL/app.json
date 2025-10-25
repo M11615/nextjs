@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - Framework React"
+  },
+  "skipToContent": "Przejdź do treści",
+  "header": {
+    "showcase": "Prezentacja",
+    "docs": "Dokumentacja",
+    "blog": "Blog",
+    "templates": "Szablony",
+    "enterprise": "Przedsiębiorstwo",
+    "deploy": "Wdróż",
+    "learn": "Nauka",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Szukaj dokumentacji...",
+      "input": "Czego szukasz?",
+      "introduction": "Wprowadzenie",
+      "gettingStarted": "Pierwsze kroki",
+      "appRouter": "App Router",
+      "architecture": "Architektura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "Referencje API",
+      "accessibility": "Dostępność",
+      "activeTabs": {
+        "app": "Aplikacja",
+        "pages": "Strony"
+      }
+    }
+  },
+  "main": {
+    "title": "Framework React dla sieci",
+    "descriptionStart": "Używany przez niektóre z największych firm na świecie, Next.js pozwala tworzyć",
+    "descriptionHighlight": "wysokiej jakości aplikacje internetowe",
+    "descriptionEnd": "z mocą komponentów React.",
+    "started": "Rozpocznij",
+    "learn": "Naucz się Next.js"
+  },
+  "footer": {
+    "resources": "Zasoby",
+    "docs": "Dokumentacja",
+    "supportPolicy": "Polityka wsparcia",
+    "learn": "Nauka",
+    "showcase": "Prezentacja",
+    "blog": "Blog",
+    "team": "Zespół",
+    "analytics": "Analiza",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Podglądy",
+    "more": "Więcej",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontakt z działem sprzedaży",
+    "community": "Społeczność",
+    "github": "Github",
+    "releases": "Wydania",
+    "telemetry": "Telemetria",
+    "governance": "Zarządzanie",
+    "locale": "Język i region",
+    "aboutVercel": "O Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Oprogramowanie open-source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Prawo",
+    "privacyPolicy": "Polityka prywatności",
+    "cookiePreferences": "Preferencje plików cookie",
+    "subscribeSuccess": "Dziękujemy za subskrypcję!",
+    "subscribeTitle": "Zapisz się do naszego newslettera",
+    "subscribeDescription": "Bądź na bieżąco z nowymi wydaniami i funkcjami, poradnikami i studiami przypadków.",
+    "subscribeButton": "Subskrybuj"
+  },
+  "cookieBanner": {
+    "message": "Ta strona używa technologii śledzenia. Możesz zaakceptować lub odrzucić ich użycie.",
+    "deny": "Odrzuć",
+    "acceptAll": "Akceptuj wszystkie",
+    "settings": "Ustawienia zgody"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Niezbędne",
+      "description": "Niezbędne ciasteczka i usługi są używane do włączenia podstawowych funkcji strony internetowej, takich jak zapewnienie bezpieczeństwa witryny."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Ciasteczka i usługi marketingowe służą do dostarczania spersonalizowanych reklam, promocji i ofert. Te technologie umożliwiają prowadzenie kampanii reklamowych poprzez zbieranie informacji o zainteresowaniach, preferencjach i aktywnościach użytkowników w sieci."
+    },
+    "analytics": {
+      "name": "Analiza",
+      "description": "Ciasteczka i usługi analityczne służą do zbierania informacji statystycznych o tym, jak odwiedzający wchodzą w interakcję ze stroną. Technologie te dostarczają wgląd w korzystanie z witryny, zachowanie odwiedzających i wydajność witryny w celu zrozumienia i poprawy doświadczenia użytkownika."
+    },
+    "functional": {
+      "name": "Funkcjonalne",
+      "description": "Ciasteczka i usługi funkcjonalne służą do oferowania ulepszonych i spersonalizowanych funkcji. Technologie te zapewniają dodatkowe funkcje i poprawiają doświadczenie użytkownika, np. zapamiętując preferencje językowe, rozmiary czcionki, wybór regionu i spersonalizowane układy. Rezygnacja z tych ciasteczek może uniemożliwić działanie niektórych funkcji strony."
+    },
+    "title": "Twoja prywatność",
+    "description": "Ta strona używa technologii śledzenia. Możesz zaakceptować lub odrzucić ich użycie.",
+    "deny": "Odrzuć",
+    "acceptAll": "Akceptuj wszystkie",
+    "save": "Zapisz",
+    "privacyPolicy": "Dowiedz się, jak przetwarzamy Twoje dane w naszej",
+    "privacyPolicyLink": "Polityce prywatności"
+  }
+}

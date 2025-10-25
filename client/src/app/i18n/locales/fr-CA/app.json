@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js par Vercel - Le Framework React"
+  },
+  "skipToContent": "Aller au contenu",
+  "header": {
+    "showcase": "Vitrine",
+    "docs": "Documentation",
+    "blog": "Blog",
+    "templates": "Modèles",
+    "enterprise": "Entreprise",
+    "deploy": "Déployer",
+    "learn": "Apprendre",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Rechercher dans la documentation...",
+      "input": "Que recherchez-vous ?",
+      "introduction": "Introduction",
+      "gettingStarted": "Commencer",
+      "appRouter": "Routeur App",
+      "architecture": "Architecture",
+      "pagesRouter": "Routeur Pages",
+      "apiReference": "Référence API",
+      "accessibility": "Accessibilité",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Pages"
+      }
+    }
+  },
+  "main": {
+    "title": "Le Framework React pour le Web",
+    "descriptionStart": "Utilisé par certaines des plus grandes entreprises mondiales, Next.js vous permet de créer",
+    "descriptionHighlight": "des applications web de haute qualité",
+    "descriptionEnd": "avec la puissance des composants React.",
+    "started": "Commencer",
+    "learn": "Apprendre Next.js"
+  },
+  "footer": {
+    "resources": "Ressources",
+    "docs": "Documentation",
+    "supportPolicy": "Politique de Support",
+    "learn": "Apprendre",
+    "showcase": "Vitrine",
+    "blog": "Blog",
+    "team": "Équipe",
+    "analytics": "Analytique",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Aperçus",
+    "more": "Plus",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Contactez les Ventes",
+    "community": "Communauté",
+    "github": "Github",
+    "releases": "Versions",
+    "telemetry": "Télémétrie",
+    "governance": "Gouvernance",
+    "locale": "Langue & Région",
+    "aboutVercel": "À propos de Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Logiciel Open Source",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de Confidentialité",
+    "cookiePreferences": "Préférences des Cookies",
+    "subscribeSuccess": "Merci pour votre inscription !",
+    "subscribeTitle": "Abonnez-vous à notre newsletter",
+    "subscribeDescription": "Restez informé des nouvelles versions, fonctionnalités, guides et études de cas.",
+    "subscribeButton": "S'abonner"
+  },
+  "cookieBanner": {
+    "message": "Ce site utilise des technologies de suivi. Vous pouvez choisir d’accepter ou de refuser leur utilisation.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "settings": "Paramètres de consentement"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essentiel",
+      "description": "Les cookies et services essentiels sont utilisés pour activer les fonctionnalités de base du site, comme la sécurité."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Les cookies et services marketing sont utilisés pour fournir des publicités personnalisées, promotions et offres basées sur les intérêts et activités des utilisateurs."
+    },
+    "analytics": {
+      "name": "Analytique",
+      "description": "Les cookies et services analytiques collectent des informations statistiques sur l’interaction des visiteurs avec le site pour améliorer l’expérience utilisateur."
+    },
+    "functional": {
+      "name": "Fonctionnel",
+      "description": "Les cookies et services fonctionnels offrent des fonctionnalités supplémentaires et personnalisées, comme mémoriser vos préférences de langue ou région. Refuser peut limiter certaines fonctionnalités."
+    },
+    "title": "Votre Vie Privée",
+    "description": "Ce site utilise des technologies de suivi. Vous pouvez choisir d’accepter ou de refuser leur utilisation.",
+    "deny": "Refuser",
+    "acceptAll": "Tout accepter",
+    "save": "Enregistrer",
+    "privacyPolicy": "Lisez comment nous traitons vos données dans notre",
+    "privacyPolicyLink": "Politique de Confidentialité"
+  }
+}

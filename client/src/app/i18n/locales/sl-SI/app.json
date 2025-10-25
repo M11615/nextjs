@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - Okvir React"
+  },
+  "skipToContent": "Pojdi na vsebino",
+  "header": {
+    "showcase": "Predstavitev",
+    "docs": "Dokumentacija",
+    "blog": "Blog",
+    "templates": "Predloge",
+    "enterprise": "Enterprise",
+    "deploy": "Objavi",
+    "learn": "Učenje",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Išči dokumentacijo...",
+      "input": "Kaj iščete?",
+      "introduction": "Uvod",
+      "gettingStarted": "Začetek",
+      "appRouter": "App Router",
+      "architecture": "Arhitektura",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API Referenca",
+      "accessibility": "Dostopnost",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Strani"
+      }
+    }
+  },
+  "main": {
+    "title": "React okvir za splet",
+    "descriptionStart": "Uporabljajo ga nekatere največje svetovne podjetja, Next.js vam omogoča ustvarjanje",
+    "descriptionHighlight": "visokokakovostnih spletnih aplikacij",
+    "descriptionEnd": "s pomočjo React komponent.",
+    "started": "Začnite",
+    "learn": "Naučite se Next.js"
+  },
+  "footer": {
+    "resources": "Viri",
+    "docs": "Dokumentacija",
+    "supportPolicy": "Politika podpore",
+    "learn": "Učenje",
+    "showcase": "Predstavitev",
+    "blog": "Blog",
+    "team": "Ekipa",
+    "analytics": "Analitika",
+    "nextjsConf": "Next.js Conf",
+    "previews": "Predogledi",
+    "more": "Več",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Kontaktirajte prodajo",
+    "community": "Skupnost",
+    "github": "Github",
+    "releases": "Izdaje",
+    "telemetry": "Telemetrija",
+    "governance": "Upravljanje",
+    "locale": "Jezik & Regija",
+    "aboutVercel": "O Vercelu",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Open Source programska oprema",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Pravno",
+    "privacyPolicy": "Politika zasebnosti",
+    "cookiePreferences": "Nastavitve piškotkov",
+    "subscribeSuccess": "Hvala za prijavo!",
+    "subscribeTitle": "Prijavite se na naše novice",
+    "subscribeDescription": "Ostanite obveščeni o novih izdajah, funkcijah, vodičih in študijah primerov.",
+    "subscribeButton": "Prijavi se"
+  },
+  "cookieBanner": {
+    "message": "Ta spletna stran uporablja sledilne tehnologije. Lahko se odločite za njihovo uporabo ali ne.",
+    "deny": "Zavrni",
+    "acceptAll": "Sprejmi vse",
+    "settings": "Nastavitve soglasja"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Essencialno",
+      "description": "Essencialni piškotki in storitve omogočajo osnovne funkcije spletne strani, kot je zagotavljanje varnosti spletnega mesta."
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": "Marketinški piškotki in storitve omogočajo prikazovanje personaliziranih oglasov, promocij in ponudb. Te tehnologije omogočajo ciljno oglaševanje s sledenjem interesom, preferencam in spletnim aktivnostim uporabnikov."
+    },
+    "analytics": {
+      "name": "Analitika",
+      "description": "Analitični piškotki in storitve zbirajo statistične podatke o interakciji obiskovalcev s spletno stranjo. Te tehnologije nudijo vpogled v uporabo spletnega mesta, vedenje obiskovalcev in delovanje strani za izboljšanje uporabniške izkušnje."
+    },
+    "functional": {
+      "name": "Funkcionalno",
+      "description": "Funkcionalni piškotki in storitve nudijo izboljšane in personalizirane funkcionalnosti. Te tehnologije omogočajo dodatne funkcije, kot so zapomnjene jezikovne nastavitve, velikosti pisav, izbira regije in prilagojene postavitve. Izklop teh piškotkov lahko povzroči nedostopnost nekaterih funkcij spletne strani."
+    },
+    "title": "Vaša zasebnost",
+    "description": "Ta spletna stran uporablja sledilne tehnologije. Lahko se odločite za njihovo uporabo ali ne.",
+    "deny": "Zavrni",
+    "acceptAll": "Sprejmi vse",
+    "save": "Shrani",
+    "privacyPolicy": "Preberite, kako ravnamo z vašimi podatki v naši",
+    "privacyPolicyLink": "Politiki zasebnosti"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "layout": {
+    "title": "Next.js by Vercel - React karkasas"
+  },
+  "skipToContent": "Praleisti į turinį",
+  "header": {
+    "showcase": "Paroda",
+    "docs": "Dokumentacija",
+    "blog": "Tinklaraštis",
+    "templates": "Šablonai",
+    "enterprise": "Įmonė",
+    "deploy": "Diegti",
+    "learn": "Mokytis",
+    "nextjsCommerce": "Next.js Commerce",
+    "github": "Github",
+    "search": {
+      "button": "Ieškoti dokumentacijoje...",
+      "input": "Ko ieškote?",
+      "introduction": "Įvadas",
+      "gettingStarted": "Pradėti",
+      "appRouter": "App Router",
+      "architecture": "Architektūra",
+      "pagesRouter": "Pages Router",
+      "apiReference": "API nuoroda",
+      "accessibility": "Prieinamumas",
+      "activeTabs": {
+        "app": "App",
+        "pages": "Puslapiai"
+      }
+    }
+  },
+  "main": {
+    "title": "React karkasas žiniatinkliui",
+    "descriptionStart": "Kai kurios didžiausios pasaulio įmonės naudoja Next.js, kad galėtų kurti",
+    "descriptionHighlight": "aukštos kokybės žiniatinklio programas",
+    "descriptionEnd": "naudojant React komponentų galią.",
+    "started": "Pradėti",
+    "learn": "Mokytis Next.js"
+  },
+  "footer": {
+    "resources": "Ištekliai",
+    "docs": "Dokumentacija",
+    "supportPolicy": "Palaikymo politika",
+    "learn": "Mokytis",
+    "showcase": "Paroda",
+    "blog": "Tinklaraštis",
+    "team": "Komanda",
+    "analytics": "Analitika",
+    "nextjsConf": "Next.js Konferencija",
+    "previews": "Peržiūros",
+    "more": "Daugiau",
+    "nextjsCommerce": "Next.js Commerce",
+    "contactSales": "Susisiekti su pardavimais",
+    "community": "Bendruomenė",
+    "github": "Github",
+    "releases": "Leidimai",
+    "telemetry": "Telemetrija",
+    "governance": "Valdymas",
+    "locale": "Kalba ir regionas",
+    "aboutVercel": "Apie Vercel",
+    "nextjsVercel": "Next.js + Vercel",
+    "openSourceSoftware": "Atviro kodo programinė įranga",
+    "bluesky": "Bluesky",
+    "x": "X",
+    "legal": "Teisinė informacija",
+    "privacyPolicy": "Privatumo politika",
+    "cookiePreferences": "Slapukų nustatymai",
+    "subscribeSuccess": "Ačiū, kad užsiprenumeravote!",
+    "subscribeTitle": "Užsiprenumeruokite mūsų naujienas",
+    "subscribeDescription": "Gaukite naujausias versijas, funkcijas, gaires ir atvejų analizę.",
+    "subscribeButton": "Užsiprenumeruoti"
+  },
+  "cookieBanner": {
+    "message": "Ši svetainė naudoja sekimo technologijas. Galite sutikti arba atsisakyti šių technologijų naudojimo.",
+    "deny": "Atsisakyti",
+    "acceptAll": "Sutikti su viskuo",
+    "settings": "Sutikimo nustatymai"
+  },
+  "consentModal": {
+    "essential": {
+      "name": "Būtina",
+      "description": "Būtini slapukai ir paslaugos naudojami pagrindinėms svetainės funkcijoms užtikrinti, pvz., svetainės saugumui."
+    },
+    "marketing": {
+      "name": "Marketingas",
+      "description": "Marketingo slapukai ir paslaugos naudojamos personalizuotai reklamai, akcijoms ir pasiūlymams teikti. Šios technologijos leidžia vykdyti tikslingas reklamos kampanijas, rinkdamos informaciją apie vartotojų pomėgius, pageidavimus ir internetinę veiklą."
+    },
+    "analytics": {
+      "name": "Analitika",
+      "description": "Analitikos slapukai ir paslaugos naudojamos statistikos informacijai apie tai, kaip lankytojai sąveikauja su svetaine, rinkti. Šios technologijos suteikia įžvalgų apie svetainės naudojimą, lankytojų elgesį ir svetainės našumą, siekiant pagerinti vartotojo patirtį."
+    },
+    "functional": {
+      "name": "Funkciniai",
+      "description": "Funkciniai slapukai ir paslaugos suteikia patobulintas ir suasmenintas funkcijas. Šios technologijos suteikia papildomų funkcijų ir pagerintą vartotojo patirtį, pvz., atsimenant jūsų kalbos pasirinkimus, šrifto dydžius, regiono pasirinkimus ir tinkintus išdėstymus. Atsisakius šių slapukų, kai kurios paslaugos ar svetainės funkcijos gali būti neprieinamos."
+    },
+    "title": "Jūsų privatumas",
+    "description": "Ši svetainė naudoja sekimo technologijas. Galite sutikti arba atsisakyti šių technologijų naudojimo.",
+    "deny": "Atsisakyti",
+    "acceptAll": "Sutikti su viskuo",
+    "save": "Išsaugoti",
+    "privacyPolicy": "Sužinokite, kaip tvarkome jūsų duomenis mūsų",
+    "privacyPolicyLink": "Privatumo politika"
+  }
+}
