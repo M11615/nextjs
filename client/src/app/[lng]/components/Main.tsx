@@ -188,7 +188,7 @@ export default function Main(): React.ReactNode {
               onClick={handleCopy}
             >
               <p className="font-[family-name:var(--font-geist-mono)] text-sm tracking-tighter">
-                <span className="text-[8px] pr-[2px]">▲{" "}</span>
+                <span>▲{" "}</span>
                 <span>~{" "}{command}</span>
                 <span className={`absolute top-[2px] pl-[15px] transition duration-200 ease-in-out ${hovered ? "opacity-100" : "opacity-0"}`}>
                   <svg

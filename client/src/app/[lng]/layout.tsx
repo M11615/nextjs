@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
@@ -8,14 +8,14 @@ import { OptionalI18n, COOKIE_KEYS, FALLBACK_THEME } from "@/app/lib/constants";
 import ResponsiveProvider from "./components/ResponsiveContext";
 import "./globals.css";
 
-const geistSans: NextFontWithVariable = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"]
+const geistSans: NextFontWithVariable = localFont({
+  src: "../fonts/Geist/Geist-VariableFont_wght.ttf",
+  variable: "--font-geist-sans"
 });
 
-const geistMono: NextFontWithVariable = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"]
+const geistMono: NextFontWithVariable = localFont({
+  src: "../fonts/Geist_Mono/GeistMono-VariableFont_wght.ttf",
+  variable: "--font-geist-mono"
 });
 
 export async function generateMetadata(): Promise<Metadata> {
