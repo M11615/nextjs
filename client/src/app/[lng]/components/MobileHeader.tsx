@@ -6,7 +6,7 @@ import Link from "next/link";
 import { i18n, TFunction } from "i18next";
 import { StateSetter } from "@/app/lib/constants";
 
-interface TabletHeaderProps {
+interface MobileHeaderProps {
   t: TFunction;
   i18n: i18n;
   handleSearchOpen: () => void;
@@ -19,9 +19,9 @@ interface NavLink {
   isExternal: boolean;
 }
 
-export default function TabletHeader({
+export default function MobileHeader({
   t, i18n, handleSearchOpen
-}: TabletHeaderProps): React.ReactNode {
+}: MobileHeaderProps): React.ReactNode {
   // const pathname: string = usePathname();
   const [isMenuOpen, setIsMenuOpen]: StateSetter<boolean> = useState<boolean>(false);
   const navLinks: NavLink[] = [
@@ -38,7 +38,7 @@ export default function TabletHeader({
 
   return (
     <>
-      <div className="flex space-x-3 ml-auto">
+      <div className="flex space-x-3 ml-auto z-60">
         <button
           className="cursor-pointer flex items-center text-[14px] text-[var(--theme-fg-base)] font-medium px-1 py-[5px]"
           onClick={handleSearchOpen}
@@ -59,7 +59,7 @@ export default function TabletHeader({
               x2="22"
               y2="8"
               className="transition-transform duration-200 ease-in-out origin-center"
-              transform={isMenuOpen ? "translate(0, 5) rotate(45)" : "translate(0, 0) rotate(0)"}
+              transform={isMenuOpen ? "translate(0, 4.5) rotate(45)" : "translate(0, 0) rotate(0)"}
             />
             <line
               x1="1"
@@ -67,14 +67,14 @@ export default function TabletHeader({
               x2="22"
               y2="18"
               className="transition-transform duration-200 ease-in-out origin-center"
-              transform={isMenuOpen ? "translate(0, -5) rotate(-45)" : "translate(0, 0) rotate(0)"}
+              transform={isMenuOpen ? "translate(0, -4.5) rotate(-45)" : "translate(0, 0) rotate(0)"}
             />
           </svg>
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="fixed top-[65px] left-0 w-full h-[100vh] bg-[var(--theme-bg-base)] z-40 flex flex-col pl-[25px] pt-[15px] shadow font-[family-name:var(--font-geist-sans)]">
+        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[var(--theme-bg-base)] z-40 flex flex-col pl-[25px] pt-[80px] shadow font-[family-name:var(--font-geist-sans)]">
           {navLinks.map(({ id, href, label }): React.ReactNode => (
             <Link
               key={id}

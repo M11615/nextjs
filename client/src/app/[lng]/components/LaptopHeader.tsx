@@ -4,10 +4,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { i18n, TFunction } from "i18next";
+import { ResponsiveContextValue } from "./ResponsiveContext";
 
 interface LaptopHeaderProps {
   t: TFunction;
   i18n: i18n;
+  responsiveContext: ResponsiveContextValue;
   handleSearchOpen: () => void;
 }
 
@@ -19,7 +21,7 @@ interface NavLink {
 }
 
 export default function LaptopHeader({
-  t, i18n, handleSearchOpen
+  t, i18n, responsiveContext, handleSearchOpen
 }: LaptopHeaderProps): React.ReactNode {
   // const pathname: string = usePathname();
   const navLinks: NavLink[] = [
@@ -64,17 +66,17 @@ export default function LaptopHeader({
 
       <div className="flex space-x-3 ml-auto">
         <button
-          className="cursor-pointer border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-text-muted)] font-extralight px-[10px] pl-[8px] pr-[5px] rounded-lg hover:bg-[var(--theme-bg-muted-hover)] hover:border-[var(--theme-bg-muted-hover)] focus:outline-none transition duration-200 ease-in-out"
+          className={`relative whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-text-muted)] font-extralight pl-[8px] ${responsiveContext.isTabletScreen ? "max-w-[110px] pr-[40px]" : "pr-[90px]"} rounded-lg hover:bg-[var(--theme-bg-muted-hover)] hover:border-[var(--theme-bg-muted-hover)] focus:outline-none transition duration-200 ease-in-out`}
           onClick={handleSearchOpen}
         >
           {t("header.search.button")}
-          <span className="border border-[var(--theme-text-subtle)] bg-[var(--theme-bg-base)] text-[12px] text-[var(--theme-fg-base)] font-medium px-[5px] py-[3px] rounded-lg ml-[45px]">
-            CtrlK
+          <span className="absolute right-[2px] border border-[var(--theme-text-subtle)] bg-[var(--theme-bg-base)] text-[12px] text-[var(--theme-fg-base)] font-medium px-[5px] py-[1.5px] rounded-lg">
+            {responsiveContext.isTabletScreen ? "⌘K" : "CtrlK"}
           </span>
         </button>
         <Link
           href={`/${i18n.language}`}
-          className="cursor-pointer flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
         >
           <Image
             style={{ filter: "var(--theme-image-filter-light)" }}
@@ -90,7 +92,7 @@ export default function LaptopHeader({
         </Link>
         <Link
           href={`/${i18n.language}`}
-          className="cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer flex items-center border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
         >
           {t("header.learn")}
         </Link>

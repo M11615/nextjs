@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter } from "@/app/lib/constants";
+import { RequiredI18n, StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 
 interface SearchModalProps {
@@ -23,7 +23,7 @@ export default function SearchModal({
   isSearchOpen, isSearchClosing, handleSearchClose
 }: SearchModalProps): React.ReactNode {
   const { t, i18n }: RequiredI18n = useT("app", {});
-  const { isMobileScreen }: ResponsiveContextValue = useResponsiveContext();
+  const { width }: ResponsiveContextValue = useResponsiveContext();
   const [searchActiveTab, setSearchActiveTab]: StateSetter<string> = useState<string>("app");
   const [selectedResultIndex, setSelectedResultIndex]: StateSetter<number> = useState<number>(0);
   const SearchResults: SearchResult[] = [
@@ -40,11 +40,11 @@ export default function SearchModal({
     <>
       {isSearchOpen && (
         <div
-          className={`fixed inset-0 ${isSearchClosing ? "" : `${isMobileScreen ? "bg-[#000000]/40" : "bg-[var(--theme-bg-dark)]/80"}`} flex items-start pt-[110px] justify-center ${isMobileScreen ? "z-60" : "z-50"} font-[family-name:var(--font-geist-sans)]`}
+          className={`fixed inset-0 ${isSearchClosing ? "" : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "bg-[#000000]/40" : "bg-[var(--theme-bg-dark)]/80"}`} flex items-start pt-[110px] justify-center ${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "z-60" : "z-50"} font-[family-name:var(--font-geist-sans)]`}
           onClick={(): void => handleSearchClose()}
         >
           <div
-            className={`${isMobileScreen ? "absolute bottom-0 h-[550px] rounded-tl-[12px] rounded-tr-[12px]" : "rounded-[12px]"} bg-[var(--theme-bg-dark)] w-full max-w-[640px] border border-[var(--theme-border-base)] shadow ${isSearchClosing ? `${isMobileScreen ? "search-modal-translate-out" : "search-modal-scale-out"}` : `${isMobileScreen ? "search-modal-translate-in" : "search-modal-scale-in"}`}`}
+            className={`${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "absolute bottom-0 h-[550px] rounded-tl-[12px] rounded-tr-[12px]" : "rounded-[12px]"} bg-[var(--theme-bg-dark)] w-full max-w-[640px] border border-[var(--theme-border-base)] shadow ${isSearchClosing ? `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "search-modal-translate-out" : "search-modal-scale-out"}` : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "search-modal-translate-in" : "search-modal-scale-in"}`}`}
             onClick={(e: React.MouseEvent): void => e.stopPropagation()}
           >
             <div className="p-3 border-b border-[var(--theme-border-base)]">
@@ -66,9 +66,9 @@ export default function SearchModal({
                 <input
                   type="text"
                   placeholder={t("header.search.input")}
-                  className={`w-full ${isMobileScreen ? "text-[16px]" : "text-[18px]"} outline-none placeholder-[var(--theme-text-caption)] pl-1`}
+                  className={`w-full ${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "text-[16px]" : "text-[18px]"} outline-none placeholder-[var(--theme-text-caption)] pl-1`}
                 />
-                {!isMobileScreen && (
+                {!(width < FALLBACK_MOBILE_L_SCREEN_WIDTH) && (
                   <span
                     className="cursor-pointer transition duration-200 ease-in-out border border-[var(--theme-text-subtle)] bg-[var(--theme-bg-base)] text-[12px] text-[var(--theme-fg-base)] px-[4px] py-[1px] rounded hover:bg-[var(--theme-bg-muted)]"
                     onClick={handleSearchClose}
@@ -83,7 +83,7 @@ export default function SearchModal({
                 <Link
                   key={id}
                   href={href}
-                  className={`transition duration-200 ease-in-out flex items-center p-[9px] ${isMobileScreen ? "py-[13px]" : "py-[11px]"} text-sm rounded ${!isMobileScreen ? index === selectedResultIndex ? "bg-[var(--theme-bg-muted)]" : "hover:bg-[var(--theme-bg-muted)]" : ""}`}
+                  className={`transition duration-200 ease-in-out flex items-center p-[9px] ${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "py-[13px]" : "py-[11px]"} text-sm rounded ${!(width < FALLBACK_MOBILE_L_SCREEN_WIDTH) ? index === selectedResultIndex ? "bg-[var(--theme-bg-muted)]" : "hover:bg-[var(--theme-bg-muted)]" : ""}`}
                   onMouseEnter={(): void => setSelectedResultIndex(index)}
                 >
                   <Image

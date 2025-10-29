@@ -7,13 +7,13 @@ import { useT } from "@/app/i18n/client";
 import { RequiredI18n, StateSetter } from "@/app/lib/constants";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 import LaptopHeader from "./LaptopHeader";
-import TabletHeader from "./TabletHeader";
+import MobileHeader from "./MobileHeader";
 import SearchModal from "./SearchModal";
 
 export default function Header(): React.ReactNode {
   const { t, i18n }: RequiredI18n = useT("app", {});
   const [hydrated, setHydrated]: StateSetter<boolean> = useState<boolean>(false);
-  const { isTabletScreen, isMobileScreen }: ResponsiveContextValue = useResponsiveContext();
+  const responsiveContext: ResponsiveContextValue = useResponsiveContext();
   const [isSearchOpen, setIsSearchOpen]: StateSetter<boolean> = useState<boolean>(false);
   const [isSearchClosing, setIsSearchClosing]: StateSetter<boolean> = useState<boolean>(false);
 
@@ -53,8 +53,8 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <header className="fixed top-0 left-0 w-full h-[65px] z-60 flex items-center bg-[var(--theme-bg-base)]/80 backdrop-blur-[5px] border-b border-[var(--theme-border-base)] py-[15px] bg-[var(--theme-bg-base)]">
-        <div className={`w-full max-w-screen-2xl mx-auto flex items-center justify-between ${isTabletScreen ? "px-[25px]" : "px-[60px]"}`}>
-          <div className="flex items-center space-x-3 mr-[45px]">
+        <div className={`w-full max-w-screen-2xl mx-auto flex items-center justify-between ${responsiveContext.isTabletScreen ? "px-[25px]" : "px-[60px]"}`}>
+          <div className="flex items-center space-x-3 mr-[45px] z-60">
             <Link href={`/${i18n.language}`}>
               <Image
                 style={{ filter: "var(--theme-image-filter-light)" }}
@@ -81,8 +81,8 @@ export default function Header(): React.ReactNode {
               />
             </Link>
           </div>
-          {isTabletScreen ? (
-            <TabletHeader
+          {responsiveContext.isMobileScreen ? (
+            <MobileHeader
               t={t}
               i18n={i18n}
               handleSearchOpen={handleSearchOpen}
@@ -91,6 +91,7 @@ export default function Header(): React.ReactNode {
             <LaptopHeader
               t={t}
               i18n={i18n}
+              responsiveContext={responsiveContext}
               handleSearchOpen={handleSearchOpen}
             />
           )}
