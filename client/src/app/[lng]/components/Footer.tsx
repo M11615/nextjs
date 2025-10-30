@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useT } from "@/app/i18n/client";
 import { RequiredI18n, StateSetter, COOKIE_KEYS, THEME_KEYS, FALLBACK_THEME, FALLBACK_MOBILE_M_SCREEN_WIDTH } from "@/app/lib/constants";
 import { getCookie } from "@/app/lib/cookies";
+import { modalManager } from "@/app/lib/modalManager";
 import { createSubscription } from "@/app/services/v1/subscription";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 import ConsentModal from "./ConsentModal";
 import CookieBanner from "./CookieBanner";
 import ThemeSwitcher from "./ThemeSwitcher";
-
 interface NavLink {
   id: number;
   href: string;
@@ -95,18 +95,25 @@ export default function Footer(): React.ReactNode {
       </Link>
     </div>
   );
+  const consentModalId: string = Footer.name.concat(ConsentModal.name);
 
   useEffect((): void => {
     const mode: string = getCookie(COOKIE_KEYS.THEME) || FALLBACK_THEME;
     setTheme(mode);
     emitThemeChange(mode);
+    modalManager.register(consentModalId, {
+      open: handleConsentOpen,
+      close: handleConsentClose
+    });
   }, []);
 
   const handleConsentOpen = (): void => {
+    document.body.style.overflow = "hidden";
     setIsConsentOpen(true);
   };
 
   const handleConsentClose = (): void => {
+    document.body.style.overflow = "";
     setIsConsentOpen(false);
   };
 
@@ -146,7 +153,7 @@ export default function Footer(): React.ReactNode {
     <>
       <ConsentModal
         isConsentOpen={isConsentOpen}
-        handleConsentClose={handleConsentClose}
+        handleConsentClose={(): void => modalManager.close(consentModalId)}
       />
 
       {!isConsentOpen && (
@@ -234,7 +241,7 @@ export default function Footer(): React.ReactNode {
                   ))}
                   <button
                     className="cursor-pointer transition duration-200 ease-in-out inline-flex text-left text-[var(--theme-text-muted)] hover:text-[var(--theme-fg-base)]"
-                    onClick={handleConsentOpen}
+                    onClick={(): void => modalManager.open(consentModalId)}
                   >
                     {t("footer.cookiePreferences")}
                   </button>

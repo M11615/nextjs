@@ -36,9 +36,14 @@ export default function MobileHeader({
     { id: 9, href: `/${i18n.language}`, label: t("header.github"), isExternal: false }
   ];
 
+  const handleMenuOpenOrClose = (open: boolean): void => {
+    document.body.style.overflow = open ? "hidden" : "";
+    setIsMenuOpen(open);
+  };
+
   return (
     <>
-      <div className="flex space-x-3 ml-auto z-60">
+      <div className="flex space-x-3 ml-auto">
         <button
           className="cursor-pointer flex items-center text-[14px] text-[var(--theme-fg-base)] font-medium px-1 py-[5px]"
           onClick={handleSearchOpen}
@@ -50,7 +55,7 @@ export default function MobileHeader({
         </button>
         <button
           className="cursor-pointer flex items-center text-[14px] text-[var(--theme-fg-base)] font-medium px-1 py-[5px]"
-          onClick={(): void => setIsMenuOpen(!isMenuOpen)}
+          onClick={(): void => handleMenuOpenOrClose(!isMenuOpen)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
             <line
@@ -74,7 +79,7 @@ export default function MobileHeader({
       </div>
 
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[var(--theme-bg-base)] z-40 flex flex-col pl-[25px] pt-[80px] shadow font-[family-name:var(--font-geist-sans)]">
+        <div className="fixed top-[65px] left-0 w-full h-[100vh] bg-[var(--theme-bg-base)] z-50 flex flex-col pl-[25px] pt-[15px] shadow font-[family-name:var(--font-geist-sans)]">
           {navLinks.map(({ id, href, label }): React.ReactNode => (
             <Link
               key={id}

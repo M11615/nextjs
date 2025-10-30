@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter } from "@/app/lib/constants";
+import { RequiredI18n, StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { modalManager } from "@/app/lib/modalManager";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 import LaptopHeader from "./LaptopHeader";
 import MobileHeader from "./MobileHeader";
@@ -15,6 +16,7 @@ export default function Header(): React.ReactNode {
   const responsiveContext: ResponsiveContextValue = useResponsiveContext();
   const [isSearchOpen, setIsSearchOpen]: StateSetter<boolean> = useState<boolean>(false);
   const [isSearchClosing, setIsSearchClosing]: StateSetter<boolean> = useState<boolean>(false);
+  const searchModalId: string = Header.name.concat(SearchModal.name);
 
   useEffect((): () => void => {
     const handleKeyDown = (e: KeyboardEvent): void => {
@@ -31,23 +33,32 @@ export default function Header(): React.ReactNode {
     return (): void => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  useEffect((): void => {
+    modalManager.register(searchModalId, {
+      open: handleSearchOpen,
+      close: handleSearchClose
+    });
+  }, []);
+
   const handleSearchOpen = (): void => {
+    document.body.style.overflow = "hidden";
     setIsSearchOpen(true);
   };
 
   const handleSearchClose = (): void => {
     setIsSearchClosing(true);
     setTimeout((): void => {
+      document.body.style.overflow = "";
       setIsSearchOpen(false);
       setIsSearchClosing(false);
-    }, 200);
+    }, responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? 300 : 200);
   };
 
   return (
     <>
       <header className="fixed top-0 left-0 w-full h-[65px] z-60 flex items-center bg-[var(--theme-bg-base)]/80 backdrop-blur-[5px] border-b border-[var(--theme-border-base)] py-[15px] bg-[var(--theme-bg-base)]">
         <div className={`w-full max-w-screen-2xl mx-auto flex items-center justify-between ${responsiveContext.isTabletScreen ? "px-[25px]" : "px-[60px]"}`}>
-          <div className="flex items-center space-x-3 mr-[45px] z-60">
+          <div className="flex items-center space-x-3 mr-[45px]">
             <Link href={`/${i18n.language}`}>
               <Image
                 style={{ filter: "var(--theme-image-filter-light)" }}
@@ -78,14 +89,14 @@ export default function Header(): React.ReactNode {
             <MobileHeader
               t={t}
               i18n={i18n}
-              handleSearchOpen={handleSearchOpen}
+              handleSearchOpen={(): void => modalManager.open(searchModalId)}
             />
           ) : (
             <LaptopHeader
               t={t}
               i18n={i18n}
               responsiveContext={responsiveContext}
-              handleSearchOpen={handleSearchOpen}
+              handleSearchOpen={(): void => modalManager.open(searchModalId)}
             />
           )}
         </div>
@@ -95,7 +106,7 @@ export default function Header(): React.ReactNode {
         <SearchModal
           isSearchOpen={isSearchOpen}
           isSearchClosing={isSearchClosing}
-          handleSearchClose={handleSearchClose}
+          handleSearchClose={(): void => modalManager.close(searchModalId)}
         />
       )}
     </>
