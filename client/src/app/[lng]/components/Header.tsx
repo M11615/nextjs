@@ -22,10 +22,10 @@ export default function Header(): React.ReactNode {
     const handleKeyDown = (e: KeyboardEvent): void => {
       if (e.ctrlKey && e.key === "k") {
         e.preventDefault();
-        handleSearchOpen();
+        modalManager.open(searchModalId);
       }
       if (e.key === "Escape") {
-        handleSearchClose();
+        modalManager.close(searchModalId);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
