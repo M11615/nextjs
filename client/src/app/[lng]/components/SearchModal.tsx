@@ -40,7 +40,7 @@ export default function SearchModal({
     <>
       {isSearchOpen && (
         <div
-          className={`fixed inset-0 ${isSearchClosing ? "" : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "" : "bg-[var(--theme-bg-dark)]/80"}`} flex items-start pt-[110px] justify-center z-70 font-[family-name:var(--font-geist-sans)]`}
+          className={`fixed inset-0 ${isSearchClosing ? "" : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "" : "bg-gradient-to-b from-transparent via-[var(--theme-bg-dark)]/80 to-[var(--theme-bg-dark)]/80"}`} flex items-start pt-[110px] justify-center z-70 font-[family-name:var(--font-geist-sans)]`}
           onClick={(): void => handleSearchClose()}
         >
           <div
@@ -87,7 +87,8 @@ export default function SearchModal({
                   onMouseEnter={(): void => setSelectedResultIndex(index)}
                 >
                   <Image
-                    className="dark:invert"
+                    className="select-none"
+                    style={{ filter: "var(--theme-image-filter-dark)" }}
                     src="/assets/file.svg"
                     alt="File logo"
                     width={16}

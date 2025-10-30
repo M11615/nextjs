@@ -53,7 +53,7 @@ export default function CookieBanner(): React.ReactNode {
             <div className="flex flex-wrap justify-between items-center gap-2">
               <div className={`flex flex-wrap gap-[12px]`}>
                 <button
-                  className={`whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+                  className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
                   onClick={(): void => {
                     handleDeny();
                     modalManager.close(consentModalId);
@@ -61,7 +61,7 @@ export default function CookieBanner(): React.ReactNode {
                   {t("cookieBanner.deny")}
                 </button>
                 <button
-                  className={`whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+                  className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
                   onClick={(): void => {
                     handleAcceptAll();
                     modalManager.close(consentModalId);
@@ -70,7 +70,7 @@ export default function CookieBanner(): React.ReactNode {
                 </button>
               </div>
               <button
-                className={`whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-text-muted)] hover:border-[var(--theme-text-muted)] transition duration-200 ease-in-out`}
+                className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-text-muted)] hover:border-[var(--theme-text-muted)] transition duration-200 ease-in-out`}
                 onClick={(): void => modalManager.open(consentModalId)}
               >
                 {t("cookieBanner.settings")}

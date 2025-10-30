@@ -72,7 +72,7 @@ export default function Main(): React.ReactNode {
           <div className="flex justify-center gap-2 mt-[12px]">
             <Link
               href={`/${i18n.language}`}
-              className={`inline-flex items-center gap-2 whitespace-nowrap cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-border-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
+              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-border-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
             >
               {t("main.findOutMore")}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
@@ -81,7 +81,7 @@ export default function Main(): React.ReactNode {
             </Link>
             <Link
               href={`/${i18n.language}`}
-              className={`inline-flex items-center gap-2 whitespace-nowrap cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-fg-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-fg-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
             >
               {t("main.watchRecap")}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
@@ -91,7 +91,7 @@ export default function Main(): React.ReactNode {
           </div>
           <div
             onClick={(): void => setShowVideo(true)}
-            className={`group absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center w-full max-w-[1024px] mt-[40px] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-0" : "px-[7.5%]"}`}
+            className={`group absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center w-full max-w-[1024px] mt-[40px] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-0" : "px-[7.5%]"} select-none`}
           >
             {!showVideo ? (
               actualTheme === THEME_KEYS.LIGHT || actualTheme === THEME_KEYS.DARK ? (
@@ -284,13 +284,13 @@ export default function Main(): React.ReactNode {
           <div ref={linkRef} className={`inline-flex justify-center gap-4 ${isMobileScreen ? "" : "px-[35px]"} ${width > FALLBACK_MOBILE_M_SCREEN_WIDTH ? "pt-[45px]" : "pt-[25px]"}`}>
             <Link
               href={`/${i18n.language}`}
-              className={`whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-base text-[var(--theme-border-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
+              className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-base text-[var(--theme-border-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
             >
               {t("main.started")}
             </Link>
             <Link
               href={`/${i18n.language}`}
-              className={`whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-base text-[var(--theme-fg-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+              className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-base text-[var(--theme-fg-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
             >
               {t("main.learn")}
             </Link>

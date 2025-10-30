@@ -118,6 +118,24 @@ html.dark {
   --theme-accent-purple-border: #4F2768;
 }
 
+:focus-visible:not(.outline-none) {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--theme-bg-base),
+    0 0 0 4px var(--theme-primary-light);
+}
+
+::selection {
+  background-color: var(--theme-fg-base);
+  color: var(--theme-bg-base);
+}
+
 body {
   background-color: var(--theme-bg-base);
+}
+
+@layer base {
+  * {
+    @apply rounded-[2px];
+  }
 }

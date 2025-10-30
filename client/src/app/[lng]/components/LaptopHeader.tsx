@@ -76,7 +76,7 @@ export default function LaptopHeader({
         </button>
         <Link
           href={`/${i18n.language}`}
-          className="whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
         >
           <Image
             style={{ filter: "var(--theme-image-filter-light)" }}
@@ -92,7 +92,7 @@ export default function LaptopHeader({
         </Link>
         <Link
           href={`/${i18n.language}`}
-          className="whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer flex items-center border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer flex items-center border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
         >
           {t("header.learn")}
         </Link>
