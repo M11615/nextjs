@@ -1,43 +1,43 @@
-{
+{ 
   "layout": {
-    "title": "Next.js 由 Vercel 提供 - React 框架"
+    "title": "Next.js by Vercel - React 框架"
   },
   "skipToContent": "跳至內容",
   "header": {
     "showcase": "展示",
     "docs": "文件",
-    "blog": "部落格",
-    "templates": "模板",
-    "enterprise": "企業",
+    "blog": "博客",
+    "templates": "範本",
+    "enterprise": "企業版",
     "deploy": "部署",
     "learn": "學習",
     "nextjsCommerce": "Next.js 商務版",
     "github": "Github",
     "search": {
       "button": "搜尋文件...",
-      "input": "你在搜尋什麼？",
+      "input": "你想搜尋甚麼？",
       "introduction": "介紹",
-      "gettingStarted": "快速入門",
-      "appRouter": "應用程式路由",
+      "gettingStarted": "快速開始",
+      "appRouter": "App 路由",
       "architecture": "架構",
-      "pagesRouter": "頁面路由",
+      "pagesRouter": "Pages 路由",
       "apiReference": "API 參考",
       "accessibility": "無障礙",
       "activeTabs": {
-        "app": "應用程式",
+        "app": "App",
         "pages": "頁面"
       }
     }
   },
   "main": {
-    "new": "新內容",
-    "confAnnouncement": "查看我們在 Next.js Conf 25 上發布的內容",
+    "new": "新功能",
+    "confAnnouncement": "回顧我們在 Next.js Conf 25 發佈的內容",
     "findOutMore": "了解更多",
     "watchRecap": "觀看回顧",
-    "title": "Web 的 React 框架",
-    "descriptionStart": "Next.js 被世界上最大的公司使用，使你能夠創建",
+    "title": "為網頁而生的 React 框架",
+    "descriptionStart": "被全球眾多大型公司採用，Next.js 讓你能夠創建",
     "descriptionHighlight": "高品質的網頁應用程式",
-    "descriptionEnd": "，並充分利用 React 元件的強大功能。",
+    "descriptionEnd": "結合 React 元件的強大力量。",
     "started": "開始使用",
     "learn": "學習 Next.js"
   },
@@ -47,10 +47,10 @@
     "supportPolicy": "支援政策",
     "learn": "學習",
     "showcase": "展示",
-    "blog": "部落格",
+    "blog": "博客",
     "team": "團隊",
     "analytics": "分析",
-    "nextjsConf": "Next.js 會議",
+    "nextjsConf": "Next.js 大會",
     "previews": "預覽",
     "evals": "評估",
     "more": "更多",
@@ -61,22 +61,22 @@
     "releases": "版本",
     "telemetry": "遙測",
     "governance": "治理",
-    "locale": "語言及地區",
+    "locale": "語言與地區",
     "aboutVercel": "關於 Vercel",
     "nextjsVercel": "Next.js + Vercel",
-    "openSourceSoftware": "開源軟體",
+    "openSourceSoftware": "開源軟件",
     "bluesky": "Bluesky",
     "x": "X",
     "legal": "法律",
-    "privacyPolicy": "隱私政策",
+    "privacyPolicy": "私隱政策",
     "cookiePreferences": "Cookie 偏好設定",
-    "subscribeSuccess": "感謝訂閱！",
+    "subscribeSuccess": "感謝你的訂閱！",
     "subscribeTitle": "訂閱我們的電子報",
-    "subscribeDescription": "隨時掌握新版本、新功能、指南與案例研究。",
+    "subscribeDescription": "隨時獲取最新版本、功能、指南及案例研究的更新。",
     "subscribeButton": "訂閱"
   },
   "cookieBanner": {
-    "message": "本網站使用追蹤技術。您可以選擇接受或拒絕這些技術的使用。",
+    "message": "本網站使用追蹤技術。你可以選擇同意或拒絕使用這些技術。",
     "deny": "拒絕",
     "acceptAll": "全部接受",
     "settings": "同意設定"
@@ -84,26 +84,26 @@
   "consentModal": {
     "essential": {
       "name": "必要",
-      "description": "必要的 Cookie 與服務用於啟用網站核心功能，如確保網站安全。"
+      "description": "必要的 Cookie 和服務用於啟用網站的核心功能，例如確保網站安全。"
     },
     "marketing": {
       "name": "行銷",
-      "description": "行銷 Cookie 與服務用於提供個人化廣告、促銷與優惠。這些技術通過收集用戶的興趣、偏好及線上活動資料來進行精準行銷。"
+      "description": "行銷 Cookie 和服務用於提供個人化廣告、推廣及優惠。這些技術透過收集用戶興趣及偏好來啟用精準行銷活動。"
     },
     "analytics": {
       "name": "分析",
-      "description": "分析 Cookie 與服務用於收集訪客與網站互動的統計資料，幫助理解與改善網站及使用者體驗。"
+      "description": "分析 Cookie 和服務用於收集訪客與網站互動的統計資料，以協助改進網站性能與使用體驗。"
     },
     "functional": {
       "name": "功能",
-      "description": "功能性 Cookie 與服務用於提供增強及個人化功能，例如記住語言偏好、字體大小、地區設定與自訂佈局。拒絕這些 Cookie 可能會導致部分服務無法使用。"
+      "description": "功能性 Cookie 和服務提供增強及個人化的體驗，例如記住語言偏好、字體大小及版面設定。若關閉，部分功能可能無法使用。"
     },
-    "title": "您的隱私",
-    "description": "本網站使用追蹤技術。您可以選擇接受或拒絕這些技術的使用。",
+    "title": "你的私隱",
+    "description": "本網站使用追蹤技術。你可以選擇同意或拒絕使用這些技術。",
     "deny": "拒絕",
     "acceptAll": "全部接受",
     "save": "儲存",
-    "privacyPolicy": "閱讀我們如何處理您的資料，請見",
-    "privacyPolicyLink": "隱私政策"
+    "privacyPolicy": "了解我們如何處理你的資料：",
+    "privacyPolicyLink": "私隱政策"
   }
 }

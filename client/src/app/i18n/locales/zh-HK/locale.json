@@ -1,8 +1,8 @@
-{
+{ 
   "layout": {
-    "title": "選擇你的國家和語言 | Next.js 由 Vercel 提供 - React 框架"
+    "title": "選擇你的國家／地區及語言 | Next.js by Vercel - React 框架"
   },
   "main": {
-    "title": "本網站於其他國家/地區："
+    "title": "此網站在其他國家／地區的版本："
   }
 }
