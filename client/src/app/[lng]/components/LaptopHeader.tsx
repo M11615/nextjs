@@ -63,7 +63,6 @@ export default function LaptopHeader({
           </Link>
         ))}
       </nav>
-
       <div className="flex space-x-3 ml-auto">
         <button
           className={`relative whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-text-muted)] font-extralight pl-[8px] ${responsiveContext.isTabletScreen ? "max-w-[110px] pr-[40px]" : "pr-[90px]"} rounded-lg hover:bg-[var(--theme-bg-muted-hover)] hover:border-[var(--theme-bg-muted-hover)] focus:outline-none transition duration-200 ease-in-out`}

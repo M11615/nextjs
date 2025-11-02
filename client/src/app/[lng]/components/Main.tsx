@@ -56,37 +56,53 @@ export default function Main(): React.ReactNode {
 
   return (
     <>
-      <main className="relative flex flex-col w-full items-center pb-[130px] bg-[var(--theme-bg-base)]">
+      <main className={`relative flex flex-col w-full items-center ${isMobileScreen ? "pt-[115px]" : "pt-[130px]"} bg-[var(--theme-bg-base)]`}>
         <div
           className={`${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-0 w-[60%]" : "px-[5%]"}`}
           style={{
             paddingBottom: `${isTabletScreen ? `${width * (576 / 1024) + 130}px` : "730px"}`
           }}
         >
-          <div className="flex flex-wrap tracking-[-0.03em] items-center text-center justify-center gap-2">
+          <div className={`flex flex-wrap tracking-[-0.02em] items-center text-center justify-center gap-2 mx-auto min-w-[255px] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "w-full" : "w-0"}`}>
             <span className="text-[var(--theme-primary-light)] bg-[var(--theme-accent-blue-bg)] px-[12px] py-[2px] rounded-full font-medium text-[14px]">
               {t("main.new")}
             </span>
-            <span className="text-[var(--theme-fg-base)] text-[20px] font-semibold">
+            <span className="text-[var(--theme-fg-base)] text-[20px] leading-[1.3] font-semibold">
               {t("main.confAnnouncement")}
             </span>
           </div>
-          <div className="flex justify-center gap-2 mt-[12px]">
+          <div className="flex justify-center gap-[10px] mt-[15px]">
             <Link
               href={`/${i18n.language}`}
-              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-border-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
+              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-border-base)] font-medium pl-[12px] px-[8px] py-[5px] rounded-full hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
             >
               {t("main.findOutMore")}
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                strokeLinejoin="round"
+                className="ml-[1px]"
+              >
                 <path fillRule="evenodd" clipRule="evenodd" d="M6.74999 3.93933L7.28032 4.46966L10.1035 7.29288C10.4941 7.68341 10.4941 8.31657 10.1035 8.7071L7.28032 11.5303L6.74999 12.0607L5.68933 11L6.21966 10.4697L8.68933 7.99999L6.21966 5.53032L5.68933 4.99999L6.74999 3.93933Z" />
               </svg>
             </Link>
             <Link
               href={`/${i18n.language}`}
-              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-fg-base)] font-medium pl-3 pr-[7px] py-[5px] rounded-full hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+              className={`inline-flex items-center gap-2 whitespace-nowrap select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] whitespace-nowrap overflow-hidden text-ellipsis text-[14px] text-[var(--theme-fg-base)] font-medium pl-[12px] pr-[8px] py-[5px] rounded-full hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
             >
               {t("main.watchRecap")}
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                strokeLinejoin="round"
+                className="ml-[1px]"
+              >
                 <path fillRule="evenodd" clipRule="evenodd" d="M6.74999 3.93933L7.28032 4.46966L10.1035 7.29288C10.4941 7.68341 10.4941 8.31657 10.1035 8.7071L7.28032 11.5303L6.74999 12.0607L5.68933 11L6.21966 10.4697L8.68933 7.99999L6.21966 5.53032L5.68933 4.99999L6.74999 3.93933Z" />
               </svg>
             </Link>
@@ -277,7 +293,7 @@ export default function Main(): React.ReactNode {
               </defs>
             </svg>
           )}
-          <h1 ref={titleRef} className={`font-extrabold bg-gradient-to-b from-[var(--theme-fg-light)]/95 to-[var(--theme-fg-dark)] bg-clip-text text-transparent max-w-[1215px] mx-auto py-[5px] ${isTabletScreen ? `${isMobileScreen ? `text-[48px] tracking-[-0.04em] leading-[1.1] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-[80px]" : `${width < FALLBACK_MOBILE_S_SCREEN_WIDTH ? "px-[5px]" : "px-[20px]"}`} py-[20px]` : "text-[50px] tracking-[-0.06em]"}` : "text-[76px] tracking-[-0.05em]"}`}>
+          <h1 ref={titleRef} className={`font-semibold text-[var(--theme-fg-base)] max-w-[1165px] mx-auto py-[5px] ${isTabletScreen ? `${isMobileScreen ? `text-[48px] tracking-[-0.04em] leading-[1.1] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-[90px]" : `${width < FALLBACK_MOBILE_S_SCREEN_WIDTH ? "px-[15px]" : "px-[30px]"}`} py-[20px]` : "text-[50px] tracking-[-0.06em]"}` : "text-[76px] tracking-[-0.05em]"}`}>
             {t("main.title")}
           </h1>
           <p ref={descriptionRef} className={`text-[var(--theme-text-muted)] max-w-3xl mx-auto py-[30px] ${isTabletScreen ? `${isMobileScreen ? `text-[16px] tracking-[-0.02em] leading-[1.6] ${width < FALLBACK_MOBILE_S_SCREEN_WIDTH ? "px-[5px]" : "px-[30px]"}` : "text-[20px] tracking-[-0.02em] leading-[1.8]"}` : "text-xl tracking-[-0.01em] leading-[1.8]"}`}>

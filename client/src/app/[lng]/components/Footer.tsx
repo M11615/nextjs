@@ -146,7 +146,7 @@ export default function Footer(): React.ReactNode {
         <CookieBanner />
       )}
 
-      <footer className="flex flex-wrap w-full py-[33px] items-center justify-center bg-[var(--theme-bg-base)] border-t border-[var(--theme-border-base)]">
+      <footer className="flex flex-wrap w-full py-[33px] mt-[130px] items-center justify-center bg-[var(--theme-bg-base)] border-t border-[var(--theme-border-base)]">
         <div className={`w-full max-w-screen-xl flex flex-col gap-[55px] ${isTabletScreen ? "px-[25px]" : "px-[40px]"}`}>
           <div className={`grid ${isTabletScreen ? `${isMobileScreen ? "grid-cols-[1fr]" : "grid-cols-[1fr_6.5fr]"}` : "grid-cols-[1fr_6fr]"}`}>
             <div className={`text-[var(--theme-fg-base)] ${isMobileScreen ? "pb-8" : ""}`}>
@@ -251,7 +251,7 @@ export default function Footer(): React.ReactNode {
                   <form noValidate onSubmit={handleSubscriptionEmailSubmit} className="relative">
                     <input
                       key={renderKey}
-                      className="w-full border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-fg-base)] placeholder-[var(--theme-text-muted)] px-[10px] pr-[90px] py-[5px] rounded-lg disabled:opacity-50"
+                      className="w-full border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-fg-base)] placeholder-[var(--theme-text-muted)]/80 px-[10px] pr-[90px] py-[5px] rounded-lg disabled:opacity-50"
                       type="email"
                       name="subscriptionEmail"
                       value={subscriptionEmail}

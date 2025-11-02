@@ -57,7 +57,7 @@ export default function Header(): React.ReactNode {
   return (
     <>
       <header className="fixed top-0 left-0 w-full h-[65px] z-60 flex items-center bg-[var(--theme-bg-base)]/80 backdrop-blur-[5px] border-b border-[var(--theme-border-base)] py-[15px] bg-[var(--theme-bg-base)]">
-        <div className={`w-full max-w-screen-2xl mx-auto flex items-center justify-between ${responsiveContext.isTabletScreen ? "px-[25px]" : "px-[60px]"}`}>
+        <div className={`w-full max-w-screen-2xl mx-auto flex items-center justify-between ${responsiveContext.isTabletScreen ? "px-[25px]" : "px-[57px]"}`}>
           <div className="flex items-center space-x-3 mr-[45px] select-none">
             <Link href={`/${i18n.language}`}>
               <Image
