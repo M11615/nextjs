@@ -20,9 +20,9 @@ export default function Main() {
   };
 
   return (
-    <main className="w-full pt-[80px] bg-[var(--theme-bg-base)]">
+    <main className="w-full pt-[110px] bg-[var(--theme-bg-base)]">
       <div className="w-full max-w-screen-xl mx-auto px-[25px]">
-        <h1 className="text-[var(--theme-fg-base)] text-2xl font-semibold mb-8">
+        <h1 className="text-[var(--theme-fg-base)] text-2xl font-semibold mb-[25px]">
           {t("main.title")}
         </h1>
         <nav className={`grid gap-x-[5vw] gap-y-[20px] ${isTabletScreen ? `${isMobileScreen ? `${width < FALLBACK_MOBILE_M_SCREEN_WIDTH ? "grid-cols-[1fr]" : "grid-cols-[1fr_1fr]"}` : "grid-cols-[1fr_1fr_1fr_1fr]"}` : "grid-cols-[1fr_1fr_1fr_1fr]"} justify-start`}>

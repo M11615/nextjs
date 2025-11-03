@@ -33,8 +33,8 @@ export default function LaptopHeader({
   ];
 
   return (
-    <>
-      <nav className="flex space-x-6 text-[14px]">
+    <div className="flex items-center justify-between flex-1 gap-10">
+      <nav className="flex space-x-6 text-[14px] flex-shrink-0">
         {navLinks.map(({ id, href, label, isExternal }): React.ReactNode => (
           <Link
             key={id}
@@ -63,7 +63,7 @@ export default function LaptopHeader({
           </Link>
         ))}
       </nav>
-      <div className="flex space-x-3 ml-auto">
+      <div className="flex space-x-3 ml-auto flex-shrink-1">
         <button
           className={`relative whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer border border-[var(--theme-bg-muted)] bg-[var(--theme-bg-muted)] text-[14px] text-[var(--theme-text-muted)] font-extralight pl-[8px] ${responsiveContext.isTabletScreen ? "max-w-[110px] pr-[40px]" : "pr-[90px]"} rounded-lg hover:bg-[var(--theme-bg-muted-hover)] hover:border-[var(--theme-bg-muted-hover)] focus:outline-none transition duration-200 ease-in-out`}
           onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
@@ -78,9 +78,10 @@ export default function LaptopHeader({
         </button>
         <Link
           href={`/${i18n.language}`}
-          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
         >
           <Image
+            className="inline"
             style={{ filter: "var(--theme-image-filter-light)" }}
             src="/assets/vercel.svg"
             alt="Vercel logo"
@@ -94,11 +95,11 @@ export default function LaptopHeader({
         </Link>
         <Link
           href={`/${i18n.language}`}
-          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer flex items-center border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
+          className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out"
         >
           {t("header.learn")}
         </Link>
       </div>
-    </>
+    </div>
   );
 }

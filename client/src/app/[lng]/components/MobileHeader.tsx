@@ -43,7 +43,7 @@ export default function MobileHeader({
 
   return (
     <>
-      <div className="flex space-x-3 ml-auto">
+      <div className="flex space-x-3 ml-auto flex-shrink-0">
         <button
           className="cursor-pointer flex items-center text-[14px] text-[var(--theme-fg-base)] font-medium px-1 py-[5px]"
           onClick={handleSearchOpen}

@@ -137,10 +137,10 @@ export default function ConsentModal({
                 </div>
               ))}
             </div>
-            <div className="flex justify-between items-center border-t border-[var(--theme-border-base)] bg-[var(--theme-bg-dark)] p-6 pb-0">
-              <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3 justify-between items-center border-t border-[var(--theme-border-base)] bg-[var(--theme-bg-dark)] p-6 pb-0">
+              <div className="flex flex-wrap gap-3">
                 <button
-                  className="select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+                  className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
                   onClick={(): void => {
                     handleDeny();
                     handleConsentClose();
@@ -149,7 +149,7 @@ export default function ConsentModal({
                   {t("consentModal.deny")}
                 </button>
                 <button
-                  className="select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+                  className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
                   onClick={(): void => {
                     handleAcceptAll();
                     handleConsentClose();
@@ -159,7 +159,7 @@ export default function ConsentModal({
                 </button>
               </div>
               <button
-                className="select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-text-muted)] hover:border-[var(--theme-text-muted)] transition duration-200 ease-in-out"
+                className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-lg hover:bg-[var(--theme-text-muted)] hover:border-[var(--theme-text-muted)] transition duration-200 ease-in-out"
                 onClick={(): void => {
                   handleSave(cookieConsent);
                   handleConsentClose();
