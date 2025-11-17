@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter, COOKIE_KEYS, COOKIE_CATEGORIES, FALLBACK_COOKIE_CONSENT } from "@/app/lib/constants";
+import { I18nInstance, StateSetter, COOKIE_KEYS, COOKIE_CATEGORIES, FALLBACK_COOKIE_CONSENT } from "@/app/lib/constants";
 import { parseConsent, setCookie } from "@/app/lib/cookies";
 
 interface ConsentModalProps {
@@ -41,7 +41,7 @@ export const handleAcceptAll = (): void => {
 export default function ConsentModal({
   isConsentOpen, handleConsentClose
 }: ConsentModalProps): React.ReactNode {
-  const { t, i18n }: RequiredI18n = useT("app", {});
+  const { t }: I18nInstance = useT("app", {});
   const [cookieConsent, setCookieConsent]: StateSetter<Record<string, boolean>> = useState<Record<string, boolean>>(FALLBACK_COOKIE_CONSENT);
   const [expandedIds, setExpandedIds]: StateSetter<string[]> = useState<string[]>([]);
   const [renderKey, setRenderKey]: StateSetter<number> = useState<number>(0);
@@ -170,7 +170,7 @@ export default function ConsentModal({
             </div>
             <div className="text-[12px] pt-4 text-[var(--theme-text-muted)] bg-[var(--theme-bg-dark)] p-6 pt-0 rounded-[12px]">
               {t("consentModal.privacyPolicy")}{" "}
-              <Link href={`/${i18n.language}`} className="text-[var(--theme-fg-base)] hover:text-[var(--theme-text-muted)]">
+              <Link href="/" className="text-[var(--theme-fg-base)] hover:text-[var(--theme-text-muted)]">
                 {t("consentModal.privacyPolicyLink")}
               </Link>
             </div>

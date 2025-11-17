@@ -1,4 +1,4 @@
-import { COOKIE_KEYS, LANGUAGE_MAP, FALLBACK_LANGUAGE } from "@/app/lib/constants";
+import { LANGUAGE_MAP, FALLBACK_LANGUAGE, COOKIE_KEYS } from "@/app/lib/constants";
 
 export const fallbackLng: string = FALLBACK_LANGUAGE;
 export const languages: string[] = Object.keys(LANGUAGE_MAP);

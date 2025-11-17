@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 import { getT } from "@/app/i18n/index";
-import { OptionalI18n, COOKIE_KEYS, FALLBACK_THEME } from "@/app/lib/constants";
+import { I18nInstance, FALLBACK_THEME, COOKIE_KEYS } from "@/app/lib/constants";
 import ResponsiveProvider from "./components/ResponsiveContext";
 import "./globals.css";
 
@@ -19,7 +19,7 @@ const geistMono: NextFontWithVariable = localFont({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t }: OptionalI18n = await getT("app", [null, "app"]);
+  const { t }: I18nInstance = await getT("app", [null, "app"]);
 
   return {
     title: t("layout.title")
@@ -31,7 +31,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>): Promise<React.ReactNode> {
-  const { i18n }: OptionalI18n = await getT("", [null, ""]);
+  const { i18n }: I18nInstance = await getT("", [null, ""]);
   const cookieStore: ReadonlyRequestCookies = await cookies();
   const theme: string = cookieStore.get(COOKIE_KEYS.THEME)?.value || FALLBACK_THEME;
 

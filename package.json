@@ -22,6 +22,6 @@
     "docker:rm": "docker compose rm"
   },
   "devDependencies": {
-    "turbo": "^2.6.0"
+    "turbo": "^2.6.1"
   }
 }

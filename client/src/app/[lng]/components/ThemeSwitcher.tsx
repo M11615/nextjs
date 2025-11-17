@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { StateSetter, COOKIE_KEYS, THEME_KEYS, FALLBACK_THEME } from "@/app/lib/constants";
+import { StateSetter, THEME_KEYS, FALLBACK_THEME, COOKIE_KEYS } from "@/app/lib/constants";
 import { setCookie, getCookie } from "@/app/lib/cookies";
 
 interface Option {

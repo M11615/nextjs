@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { I18nInstance, StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 
 interface SearchModalProps {
@@ -22,18 +22,18 @@ interface SearchResult {
 export default function SearchModal({
   isSearchOpen, isSearchClosing, handleSearchClose
 }: SearchModalProps): React.ReactNode {
-  const { t, i18n }: RequiredI18n = useT("app", {});
+  const { t }: I18nInstance = useT("app", {});
   const { width }: ResponsiveContextValue = useResponsiveContext();
   const [searchActiveTab, setSearchActiveTab]: StateSetter<string> = useState<string>("app");
   const [selectedResultIndex, setSelectedResultIndex]: StateSetter<number> = useState<number>(0);
   const SearchResults: SearchResult[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("header.search.introduction") },
-    { id: 2, href: `/${i18n.language}`, label: t("header.search.gettingStarted") },
-    { id: 3, href: `/${i18n.language}`, label: t("header.search.appRouter") },
-    { id: 4, href: `/${i18n.language}`, label: t("header.search.architecture") },
-    { id: 5, href: `/${i18n.language}`, label: t("header.search.pagesRouter") },
-    { id: 6, href: `/${i18n.language}`, label: t("header.search.apiReference") },
-    { id: 7, href: `/${i18n.language}`, label: t("header.search.accessibility") }
+    { id: 1, href: "/", label: t("header.search.introduction") },
+    { id: 2, href: "/", label: t("header.search.gettingStarted") },
+    { id: 3, href: "/", label: t("header.search.appRouter") },
+    { id: 4, href: "/", label: t("header.search.architecture") },
+    { id: 5, href: "/", label: t("header.search.pagesRouter") },
+    { id: 6, href: "/", label: t("header.search.apiReference") },
+    { id: 7, href: "/", label: t("header.search.accessibility") }
   ];
 
   return (

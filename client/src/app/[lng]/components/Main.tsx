@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter, THEME_KEYS, FALLBACK_MOBILE_L_SCREEN_WIDTH, FALLBACK_MOBILE_M_SCREEN_WIDTH, FALLBACK_MOBILE_S_SCREEN_WIDTH } from "@/app/lib/constants";
+import { I18nInstance, StateSetter, THEME_KEYS, FALLBACK_MOBILE_L_SCREEN_WIDTH, FALLBACK_MOBILE_M_SCREEN_WIDTH, FALLBACK_MOBILE_S_SCREEN_WIDTH } from "@/app/lib/constants";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
 
 export default function Main(): React.ReactNode {
-  const { t, i18n }: RequiredI18n = useT("app", {});
+  const { t }: I18nInstance = useT("app", {});
   const { width, isTabletScreen, isMobileScreen, actualTheme }: ResponsiveContextValue = useResponsiveContext();
   const [visibleMedia, setVisibleMedia]: StateSetter<boolean> = useState<boolean>(false);
   const [showVideo, setShowVideo]: StateSetter<boolean> = useState<boolean>(false);
@@ -73,7 +73,7 @@ export default function Main(): React.ReactNode {
           </div>
           <div className="inline-flex justify-center gap-[10px] mt-[15px] w-full">
             <Link
-              href={`/${i18n.language}`}
+              href="/"
               className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[14px] text-[var(--theme-border-base)] font-medium pl-[12px] pr-[18px] py-[5px] rounded-full hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
             >
               {t("main.findOutMore")}
@@ -90,7 +90,7 @@ export default function Main(): React.ReactNode {
               </svg>
             </Link>
             <Link
-              href={`/${i18n.language}`}
+              href="/"
               className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-[14px] text-[var(--theme-fg-base)] font-medium pl-[12px] pr-[18px] py-[5px] rounded-full hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
             >
               {t("main.watchRecap")}
@@ -303,13 +303,13 @@ export default function Main(): React.ReactNode {
           </p>
           <div ref={linkRef} className={`inline-flex justify-center gap-4 ${isMobileScreen ? "w-full" : "px-[35px]"} ${width > FALLBACK_MOBILE_M_SCREEN_WIDTH ? "pt-[45px]" : "pt-[25px]"}`}>
             <Link
-              href={`/${i18n.language}`}
+              href="/"
               className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-base text-[var(--theme-border-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)] transition duration-200 ease-in-out`}
             >
               {t("main.started")}
             </Link>
             <Link
-              href={`/${i18n.language}`}
+              href="/"
               className={`whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] text-base text-[var(--theme-fg-base)] font-medium px-5 py-3 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
             >
               {t("main.learn")}

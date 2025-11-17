@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useT } from "@/app/i18n/client";
-import { RequiredI18n, StateSetter, FALLBACK_MOBILE_M_SCREEN_WIDTH } from "@/app/lib/constants";
+import { I18nInstance, StateSetter, FALLBACK_MOBILE_M_SCREEN_WIDTH } from "@/app/lib/constants";
 import { modalManager } from "@/app/lib/modalManager";
 import { createSubscription } from "@/app/services/v1/subscription";
 import { ResponsiveContextValue, useResponsiveContext } from "./ResponsiveContext";
@@ -18,7 +18,7 @@ interface NavLink {
 }
 
 export default function Footer(): React.ReactNode {
-  const { t, i18n }: RequiredI18n = useT("app", {});
+  const { t }: I18nInstance = useT("app", {});
   const { width, isTabletScreen, isMobileScreen }: ResponsiveContextValue = useResponsiveContext();
   const [isConsentOpen, setIsConsentOpen]: StateSetter<boolean> = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting]: StateSetter<boolean> = useState<boolean>(false);
@@ -26,41 +26,41 @@ export default function Footer(): React.ReactNode {
   const [subscriptionEmail, setSubscriptionEmail]: StateSetter<string> = useState<string>("");
   const [renderKey, setRenderKey]: StateSetter<number> = useState<number>(0);
   const resourcesLinks: NavLink[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("footer.docs") },
-    { id: 2, href: `/${i18n.language}`, label: t("footer.supportPolicy") },
-    { id: 3, href: `/${i18n.language}`, label: t("footer.learn") },
-    { id: 4, href: `/${i18n.language}`, label: t("footer.showcase") },
-    { id: 5, href: `/${i18n.language}`, label: t("footer.blog") },
-    { id: 6, href: `/${i18n.language}`, label: t("footer.team") },
-    { id: 7, href: `/${i18n.language}`, label: t("footer.analytics") },
-    { id: 8, href: `/${i18n.language}`, label: t("footer.nextjsConf") },
-    { id: 9, href: `/${i18n.language}`, label: t("footer.previews") },
-    { id: 10, href: `/${i18n.language}`, label: t("footer.evals") }
+    { id: 1, href: "/", label: t("footer.docs") },
+    { id: 2, href: "/", label: t("footer.supportPolicy") },
+    { id: 3, href: "/", label: t("footer.learn") },
+    { id: 4, href: "/", label: t("footer.showcase") },
+    { id: 5, href: "/", label: t("footer.blog") },
+    { id: 6, href: "/", label: t("footer.team") },
+    { id: 7, href: "/", label: t("footer.analytics") },
+    { id: 8, href: "/", label: t("footer.nextjsConf") },
+    { id: 9, href: "/", label: t("footer.previews") },
+    { id: 10, href: "/", label: t("footer.evals") }
   ];
   const moreLinks: NavLink[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("footer.nextjsCommerce") },
-    { id: 2, href: `/${i18n.language}`, label: t("footer.contactSales") },
-    { id: 3, href: `/${i18n.language}`, label: t("footer.community") },
-    { id: 4, href: `/${i18n.language}`, label: t("footer.github") },
-    { id: 5, href: `/${i18n.language}`, label: t("footer.releases") },
-    { id: 6, href: `/${i18n.language}`, label: t("footer.telemetry") },
-    { id: 7, href: `/${i18n.language}`, label: t("footer.governance") },
-    { id: 8, href: `/${i18n.language}/locale`, label: t("footer.locale") }
+    { id: 1, href: "/", label: t("footer.nextjsCommerce") },
+    { id: 2, href: "/", label: t("footer.contactSales") },
+    { id: 3, href: "/", label: t("footer.community") },
+    { id: 4, href: "/", label: t("footer.github") },
+    { id: 5, href: "/", label: t("footer.releases") },
+    { id: 6, href: "/", label: t("footer.telemetry") },
+    { id: 7, href: "/", label: t("footer.governance") },
+    { id: 8, href: "/locale", label: t("footer.locale") }
   ];
   const aboutLinks: NavLink[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("footer.nextjsVercel") },
-    { id: 2, href: `/${i18n.language}`, label: t("footer.openSourceSoftware") },
-    { id: 3, href: `/${i18n.language}`, label: t("footer.github") },
-    { id: 4, href: `/${i18n.language}`, label: t("footer.bluesky") },
-    { id: 5, href: `/${i18n.language}`, label: t("footer.x") }
+    { id: 1, href: "/", label: t("footer.nextjsVercel") },
+    { id: 2, href: "/", label: t("footer.openSourceSoftware") },
+    { id: 3, href: "/", label: t("footer.github") },
+    { id: 4, href: "/", label: t("footer.bluesky") },
+    { id: 5, href: "/", label: t("footer.x") }
   ];
   const legalLinks: NavLink[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("footer.privacyPolicy") }
+    { id: 1, href: "/", label: t("footer.privacyPolicy") }
   ];
   const SocialLinks: React.ReactNode = (
     <div className="flex flex-row items-center gap-x-3">
       <Link
-        href={`/${i18n.language}`}
+        href="/"
         className="text-[var(--theme-text-muted)] hover:text-[var(--theme-fg-base)] transition duration-200 ease-in-out"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
@@ -76,7 +76,7 @@ export default function Footer(): React.ReactNode {
       </Link>
       <div className="border-l border-[var(--theme-text-subtle)] w-[1px] h-[20px]" />
       <Link
-        href={`/${i18n.language}`}
+        href="/"
         className="text-[var(--theme-text-muted)] hover:text-[var(--theme-fg-base)] transition duration-200 ease-in-out"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
@@ -85,7 +85,7 @@ export default function Footer(): React.ReactNode {
       </Link>
       <div className="border-l border-[var(--theme-text-subtle)] w-[1px] h-[20px]" />
       <Link
-        href={`/${i18n.language}`}
+        href="/"
         className="text-[var(--theme-text-muted)] hover:text-[var(--theme-fg-base)] transition duration-200 ease-in-out"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" strokeLinejoin="round">
@@ -152,7 +152,7 @@ export default function Footer(): React.ReactNode {
             <div className={`text-[var(--theme-fg-base)] ${isMobileScreen ? "pb-8" : ""}`}>
               <div className={`flex items-center ${isMobileScreen ? "flex-row items-center justify-between pr-[8px]" : "flex-row items-center"} ${width < FALLBACK_MOBILE_M_SCREEN_WIDTH ? "w-[85vw]" : "w-full"}`}>
                 <Link
-                  href={`/${i18n.language}`}
+                  href="/"
                   className="inline-flex"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 262 52" fill="currentColor">

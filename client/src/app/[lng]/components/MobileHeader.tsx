@@ -3,12 +3,11 @@
 import { useState } from "react";
 // import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { i18n, TFunction } from "i18next";
+import { TFunction } from "i18next";
 import { StateSetter } from "@/app/lib/constants";
 
 interface MobileHeaderProps {
   t: TFunction;
-  i18n: i18n;
   handleSearchOpen: () => void;
 }
 
@@ -20,20 +19,20 @@ interface NavLink {
 }
 
 export default function MobileHeader({
-  t, i18n, handleSearchOpen
+  t, handleSearchOpen
 }: MobileHeaderProps): React.ReactNode {
   // const pathname: string = usePathname();
   const [isMenuOpen, setIsMenuOpen]: StateSetter<boolean> = useState<boolean>(false);
   const navLinks: NavLink[] = [
-    { id: 1, href: `/${i18n.language}`, label: t("header.learn"), isExternal: false },
-    { id: 2, href: `/${i18n.language}`, label: t("header.deploy"), isExternal: false },
-    { id: 3, href: `/${i18n.language}`, label: t("header.showcase"), isExternal: false },
-    { id: 4, href: `/${i18n.language}`, label: t("header.docs"), isExternal: false },
-    { id: 5, href: `/${i18n.language}`, label: t("header.blog"), isExternal: false },
-    { id: 6, href: `/${i18n.language}`, label: t("header.nextjsCommerce"), isExternal: false },
-    { id: 7, href: `/${i18n.language}`, label: t("header.templates"), isExternal: false },
-    { id: 8, href: `/${i18n.language}`, label: t("header.enterprise"), isExternal: false },
-    { id: 9, href: `/${i18n.language}`, label: t("header.github"), isExternal: false }
+    { id: 1, href: "/", label: t("header.learn"), isExternal: false },
+    { id: 2, href: "/", label: t("header.deploy"), isExternal: false },
+    { id: 3, href: "/", label: t("header.showcase"), isExternal: false },
+    { id: 4, href: "/", label: t("header.docs"), isExternal: false },
+    { id: 5, href: "/", label: t("header.blog"), isExternal: false },
+    { id: 6, href: "/", label: t("header.nextjsCommerce"), isExternal: false },
+    { id: 7, href: "/", label: t("header.templates"), isExternal: false },
+    { id: 8, href: "/", label: t("header.enterprise"), isExternal: false },
+    { id: 9, href: "/", label: t("header.github"), isExternal: false }
   ];
 
   const handleMenuOpenOrClose = (open: boolean): void => {
