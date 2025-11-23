@@ -14,6 +14,7 @@ import SearchModal from "./SearchModal";
 export default function Header(): React.ReactNode {
   const { t }: I18nInstance = useT("app", {});
   const responsiveContext: ResponsiveContextValue = useResponsiveContext();
+  const [showKeyDown, setShowKeyDown]: StateSetter<boolean> = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen]: StateSetter<boolean> = useState<boolean>(false);
   const [isSearchClosing, setIsSearchClosing]: StateSetter<boolean> = useState<boolean>(false);
   const searchModalId: string = Header.name.concat(SearchModal.name);
@@ -25,10 +26,12 @@ export default function Header(): React.ReactNode {
         modalManager.open(searchModalId);
       }
       if (e.key === "Escape") {
+        e.preventDefault();
         modalManager.close(searchModalId);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
+    setShowKeyDown(true);
 
     return (): void => window.removeEventListener("keydown", handleKeyDown);
   }, []);
@@ -95,6 +98,7 @@ export default function Header(): React.ReactNode {
             <LaptopHeader
               t={t}
               responsiveContext={responsiveContext}
+              showKeyDown={showKeyDown}
               handleSearchOpen={(): void => modalManager.open(searchModalId)}
             />
           )}

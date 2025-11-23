@@ -9,6 +9,7 @@ import { ResponsiveContextValue } from "./ResponsiveContext";
 interface LaptopHeaderProps {
   t: TFunction;
   responsiveContext: ResponsiveContextValue;
+  showKeyDown: boolean;
   handleSearchOpen: () => void;
 }
 
@@ -20,7 +21,7 @@ interface NavLink {
 }
 
 export default function LaptopHeader({
-  t, responsiveContext, handleSearchOpen
+  t, responsiveContext, showKeyDown, handleSearchOpen
 }: LaptopHeaderProps): React.ReactNode {
   // const pathname: string = usePathname();
   const navLinks: NavLink[] = [
@@ -71,9 +72,11 @@ export default function LaptopHeader({
           }}
         >
           {t("header.search.button")}
-          <span className="absolute right-[2px] border border-[var(--theme-text-subtle)] bg-[var(--theme-bg-base)] text-[12px] text-[var(--theme-fg-base)] font-medium px-[5px] py-[1.5px] rounded-lg">
-            {responsiveContext.isTabletScreen ? "⌘K" : "CtrlK"}
-          </span>
+          {showKeyDown && (
+            <span className="absolute right-[2px] border border-[var(--theme-text-subtle)] bg-[var(--theme-bg-base)] text-[12px] text-[var(--theme-fg-base)] font-medium px-[5px] py-[1.5px] rounded-lg">
+              {responsiveContext.isTabletScreen ? "⌘K" : "CtrlK"}
+            </span>
+          )}
         </button>
         <Link
           href="/"
