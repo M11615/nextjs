@@ -1,2 +1,4 @@
+server/.env.production.local
+client/.env.production.local
 !server/.env.production.local
 !client/.env.production.local
