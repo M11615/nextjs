@@ -1,6 +1,6 @@
 FROM node:24-alpine
 
-WORKDIR /usr/nextjs
+WORKDIR /opt/nextjs
 
 COPY ./client/.env.production.local .
 COPY ./client/package.json .
