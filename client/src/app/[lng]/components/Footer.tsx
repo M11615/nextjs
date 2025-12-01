@@ -168,7 +168,7 @@ export default function Footer(): React.ReactNode {
                   {t("footer.resources")}
                 </p>
                 <nav className="flex flex-col items-start space-y-3">
-                  {resourcesLinks.map(({ id, href, label }): React.ReactNode => (
+                  {resourcesLinks.map(({ id, href, label }: NavLink): React.ReactNode => (
                     <Link
                       key={id}
                       href={href}
@@ -184,7 +184,7 @@ export default function Footer(): React.ReactNode {
                   {t("footer.more")}
                 </p>
                 <nav className="flex flex-col items-start space-y-3">
-                  {moreLinks.map(({ id, href, label }): React.ReactNode => (
+                  {moreLinks.map(({ id, href, label }: NavLink): React.ReactNode => (
                     <Link
                       key={id}
                       href={href}
@@ -200,7 +200,7 @@ export default function Footer(): React.ReactNode {
                   {t("footer.aboutVercel")}
                 </p>
                 <nav className="flex flex-col items-start space-y-3">
-                  {aboutLinks.map(({ id, href, label }): React.ReactNode => (
+                  {aboutLinks.map(({ id, href, label }: NavLink): React.ReactNode => (
                     <Link
                       key={id}
                       href={href}
@@ -216,7 +216,7 @@ export default function Footer(): React.ReactNode {
                   {t("footer.legal")}
                 </p>
                 <nav className="flex flex-col items-start space-y-3">
-                  {legalLinks.map(({ id, href, label }): React.ReactNode => (
+                  {legalLinks.map(({ id, href, label }: NavLink): React.ReactNode => (
                     <Link
                       key={id}
                       href={href}

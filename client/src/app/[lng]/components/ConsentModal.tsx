@@ -18,7 +18,7 @@ interface Category {
 }
 
 const buildCookieConsent: (value: boolean) => Record<string, boolean> = (value: boolean): Record<string, boolean> => {
-  return Object.keys(FALLBACK_COOKIE_CONSENT).reduce((acc, key): Record<string, boolean> => {
+  return Object.keys(FALLBACK_COOKIE_CONSENT).reduce((acc: Record<string, boolean>, key: string): Record<string, boolean> => {
     acc[key] = key === COOKIE_CATEGORIES.ESSENTIAL ? true : value;
     return acc;
   }, {} as Record<string, boolean>);
@@ -109,7 +109,7 @@ export default function ConsentModal({
               {t("consentModal.description")}
             </p>
             <div key={renderKey} className="rounded-lg border border-[var(--theme-border-base)] mb-[50px] m-6">
-              {categories.map((category, index): React.ReactNode => (
+              {categories.map((category: Category, index: number): React.ReactNode => (
                 <div key={category.id}>
                   <div
                     className={`flex items-center justify-between px-4 py-[10px] cursor-pointer bg-[var(--theme-bg-dark)] hover:bg-[var(--theme-bg-base)] ${index === 0 ? "rounded-t-lg" : ""} ${index === categories.length - 1 ? "rounded-b-lg" : ""} ${index !== categories.length - 1 ? "border-b border-[var(--theme-border-base)]" : ""}`}

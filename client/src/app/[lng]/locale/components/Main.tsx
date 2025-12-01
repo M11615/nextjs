@@ -23,17 +23,14 @@ export default function Main() {
           {t("main.title")}
         </h1>
         <nav className={`grid gap-x-[5vw] gap-y-[20px] ${isTabletScreen ? `${isMobileScreen ? `${width < FALLBACK_MOBILE_M_SCREEN_WIDTH ? "grid-cols-[1fr]" : "grid-cols-[1fr_1fr]"}` : "grid-cols-[1fr_1fr_1fr_1fr]"}` : "grid-cols-[1fr_1fr_1fr_1fr]"} justify-start`}>
-          {languages.map((lang) => {
+          {languages.map((lang: string): React.ReactNode => {
             const item = LANGUAGE_MAP[lang];
             if (!item) return null;
 
             return (
               <button
                 key={lang}
-                onClick={(e: React.MouseEvent): void => {
-                  e.preventDefault();
-                  handleLanguageChange(lang);
-                }}
+                onClick={(): void => handleLanguageChange(lang)}
                 className="cursor-pointer inline w-fit text-[var(--theme-primary-light)] text-left underline"
               >
                 {item.region} - {item.label}

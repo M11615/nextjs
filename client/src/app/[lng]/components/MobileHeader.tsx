@@ -79,7 +79,7 @@ export default function MobileHeader({
 
       {isMenuOpen && (
         <div className="fixed top-[65px] left-0 w-full h-[100vh] bg-[var(--theme-bg-base)] z-50 flex flex-col pl-[25px] pt-[15px] shadow font-[family-name:var(--font-geist-sans)]">
-          {navLinks.map(({ id, href, label }): React.ReactNode => (
+          {navLinks.map(({ id, href, label }: NavLink): React.ReactNode => (
             <Link
               key={id}
               href={href}

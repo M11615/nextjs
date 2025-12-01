@@ -66,7 +66,7 @@ export default function ThemeSwitcher(): React.ReactNode {
 
   return (
     <div className="flex items-center border border-[var(--theme-border-base)] bg-[var(--theme-bg-base)] rounded-full px-1 py-1">
-      {options.map(({ value, icon }): React.ReactNode => {
+      {options.map(({ value, icon }: Option): React.ReactNode => {
         return (
           <button
             key={value}

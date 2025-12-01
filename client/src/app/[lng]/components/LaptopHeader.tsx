@@ -35,7 +35,7 @@ export default function LaptopHeader({
   return (
     <div className="flex items-center justify-between flex-1 gap-10">
       <nav className="flex space-x-6 text-[14px] flex-shrink-0">
-        {navLinks.map(({ id, href, label, isExternal }): React.ReactNode => (
+        {navLinks.map(({ id, href, label, isExternal }: NavLink): React.ReactNode => (
           <Link
             key={id}
             href={href}

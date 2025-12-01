@@ -79,7 +79,7 @@ export default function SearchModal({
               </div>
             </div>
             <div className="p-2 text-[var(--theme-fg-base)]">
-              {SearchResults.map(({ id, href, label }, index): React.ReactNode => (
+              {SearchResults.map(({ id, href, label }: SearchResult, index: number): React.ReactNode => (
                 <Link
                   key={id}
                   href={href}
