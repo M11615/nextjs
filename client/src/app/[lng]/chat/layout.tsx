@@ -3,7 +3,7 @@ import { getT } from "@/app/i18n/index";
 import { I18nInstance } from "@/app/lib/constants";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t }: I18nInstance = await getT("started", [null, "started"]);
+  const { t }: I18nInstance = await getT("chat", [null, "chat"]);
 
   return {
     title: t("layout.title")

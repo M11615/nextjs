@@ -2,17 +2,19 @@
 
 import { useState } from "react";
 import { StateSetter } from "@/app/lib/constants";
+import { Chat } from "./Page";
 
 interface AsideProps {
-  onSelectChat: (chat: string | null) => void;
+  chats: Chat[];
+  onSelectChat: (chat: Chat | null) => void;
 }
 
 export default function Aside({
-  onSelectChat
+  chats, onSelectChat
 }: AsideProps): React.ReactNode {
   const [collapsed, setCollapsed]: StateSetter<boolean> = useState<boolean>(false);
   const [showContent, setShowContent]: StateSetter<boolean> = useState<boolean>(true);
-  const [chats, setChats]: StateSetter<string[]> = useState<string[]>(["Chat 1", "Chat 2", "Chat 3"]);
+  const [isChatListVisible, setIsChatListVisible]: StateSetter<boolean> = useState<boolean>(true);
 
   const toggleAside: () => void = (): void => {
     if (!collapsed) {
@@ -26,16 +28,20 @@ export default function Aside({
     }
   };
 
+  const handleToggleChatList: () => void = (): void => {
+    setIsChatListVisible((visible): boolean => !visible);
+  };
+
   const handleNewChat: () => void = (): void => {
     onSelectChat(null);
   };
 
-  const handleSelectChat: (chat: string) => void = (chat: string): void => {
+  const handleSelectChat: (chat: Chat) => void = (chat: Chat): void => {
     onSelectChat(chat);
   };
 
   return (
-    <aside className={`relative ${collapsed ? "w-[52px]" : "w-[260px]"} h-full border-r border-[var(--theme-border-base)] transition-all duration-200 ease-in-out`}>
+    <aside className={`relative ${collapsed ? "w-[52px]" : "w-[260px]"} h-full bg-[var(--theme-bg-chat-muted)] border-r border-[var(--theme-border-base)] transition-all duration-200 ease-in-out`}>
       {showContent && (
         <button
           onClick={handleNewChat}
@@ -93,17 +99,45 @@ export default function Aside({
             </span>
           )}
         </button>
-        {showContent && (
+        {(showContent && chats.length > 0) && (
           <>
-            <p className="text-[14px] text-[var(--theme-text-caption)] pl-2 pt-4">Your chats</p>
-            <ul>
-              {chats.map((chat: string, index: number): React.ReactNode => (
-                <li key={index}>
+            <button
+              onClick={handleToggleChatList}
+              className="group select-none cursor-pointer flex items-center text-[14px] text-[var(--theme-text-caption)] pl-2 mt-4"
+            >
+              Your chats
+              {isChatListVisible ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="group-hover:inline hidden ml-[2px] mb-[2px]"
+                >
+                  <path d="M12.1338 5.94433C12.3919 5.77382 12.7434 5.80202 12.9707 6.02929C13.1979 6.25656 13.2261 6.60807 13.0556 6.8662L12.9707 6.9707L8.47067 11.4707C8.21097 11.7304 7.78896 11.7304 7.52926 11.4707L3.02926 6.9707L2.9443 6.8662C2.77379 6.60807 2.80199 6.25656 3.02926 6.02929C3.25653 5.80202 3.60804 5.77382 3.86617 5.94433L3.97067 6.02929L7.99996 10.0586L12.0293 6.02929L12.1338 5.94433Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="group-hover:inline hidden ml-[2px] mb-[2px]"
+                >
+                  <path d="M6.02925 3.02929C6.25652 2.80202 6.60803 2.77382 6.86616 2.94433L6.97065 3.02929L11.4707 7.52929C11.7304 7.78899 11.7304 8.211 11.4707 8.4707L6.97065 12.9707C6.71095 13.2304 6.28895 13.2304 6.02925 12.9707C5.76955 12.711 5.76955 12.289 6.02925 12.0293L10.0585 7.99999L6.02925 3.9707L5.94429 3.8662C5.77378 3.60807 5.80198 3.25656 6.02925 3.02929Z" />
+                </svg>
+              )}
+            </button>
+            <ul className={`${isChatListVisible ? "block" : "hidden"}`}>
+              {chats.map((chat: Chat): React.ReactNode => (
+                <li key={chat.id}>
                   <button
                     onClick={(): void => handleSelectChat(chat)}
                     className="w-full text-left whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
                   >
-                    {chat}
+                    {chat.title}
                   </button>
                 </li>
               ))}

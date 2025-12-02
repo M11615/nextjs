@@ -4,10 +4,6 @@ export interface UserGenerateRequest {
   input: string;
 }
 
-export interface UserGenerateResponse {
-  output: string;
-}
-
 export async function POST(request: NextRequest): Promise<NextResponse> {
   const requestUrl: URL = new URL("v1/generate/user-generate", process.env.SERVER_URL);
   const requestHeader: Headers = request.headers;
@@ -17,7 +13,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     headers: requestHeader,
     body: JSON.stringify(requestBody)
   });
-  const responseBody: UserGenerateResponse = await response.json();
 
-  return NextResponse.json(responseBody, { status: response.status });
+  return new NextResponse(response.body, {
+    status: response.status,
+    headers: response.headers,
+  });
 }
