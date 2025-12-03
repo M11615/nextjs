@@ -18,6 +18,11 @@ python3 -m venv ./.venv
 source ./.venv/bin/activate
 ```
 
+## Deactivate the Virtual Environment
+```bash
+deactivate
+```
+
 ## Upgrade pip
 ```bash
 python -m pip install --upgrade pip
@@ -33,11 +38,6 @@ pip install pip-tools
 pip-compile --output-file=./requirements.txt ./requirements.in
 ```
 
-## Pre-build Dependencies as Wheels (for faster installation in Docker or production environments)
-```bash
-pip wheel -w ./.wheelhouse -r ./requirements.txt
-```
-
 ## Install All Dependencies
 ```bash
 # Windows
@@ -45,6 +45,15 @@ pip install -r ./requirements.txt
 
 # Linux / macOS
 TMPDIR=~/tmp pip install -r ./requirements.txt
+```
+
+## Install or Synchronize Dependencies
+```bash
+# Windows
+pip-sync ./requirements.txt
+
+# Linux / macOS
+TMPDIR=~/tmp pip-sync ./requirements.txt
 ```
 
 ## Install a Specific Dependency
@@ -66,6 +75,15 @@ pip-compile --output-file=./requirements.txt ./requirements.in
 pip freeze > ./requirements.txt
 ```
 
+## Pre-build Dependencies as Wheels (for faster installation in Docker or production environments)
+```bash
+# Windows
+pip wheel -w ./.wheelhouse -r ./requirements.txt
+
+# Linux / macOS
+TMPDIR=~/tmp pip wheel -w ./.wheelhouse -r ./requirements.txt
+```
+
 ## Check Which Packages Can Be Upgraded
 ```bash
 # pip-tools
@@ -73,15 +91,6 @@ pip-compile --upgrade --output-file=./requirements.txt ./requirements.in
 
 # pip
 pip list --outdated
-```
-
-## Install or Synchronize Dependencies
-```bash
-# Windows
-pip-sync ./requirements.txt
-
-# Linux / macOS
-TMPDIR=~/tmp pip-sync ./requirements.txt
 ```
 
 ## Check the Latest Available Version of a Specific Package
@@ -93,9 +102,4 @@ pip show `<package-name>`
 ## Upgrade a Specific Package
 ```bash
 pip install --upgrade `<package-name>`
-```
-
-## Deactivate the Virtual Environment
-```bash
-deactivate
 ```
