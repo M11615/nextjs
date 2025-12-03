@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { StateSetter } from "@/app/lib/constants";
+import { StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { ResponsiveContextValue, useResponsiveContext } from "@/app/[lng]/components/ResponsiveContext";
 import Aside from "./Aside";
 import Header from "./Header";
 import Main from "./Main";
@@ -14,19 +15,40 @@ export interface Chat {
 
 export interface Message {
   id: string;
-  role: "user" | "assistant" | "system";
+  role: string;
   content: string;
-  status: "pending" | "sent" | "error";
+  status: string;
 }
 
 export default function Page(): React.ReactNode {
   const [hydrated, setHydrated]: StateSetter<boolean> = useState<boolean>(false);
-  const [chats, setChats]: StateSetter<Chat[]>= useState<Chat[]>([]);
-  const [selectedChat, setSelectedChat]: StateSetter<Chat | null> = useState<Chat | null>(null);
+  const responsiveContext: ResponsiveContextValue = useResponsiveContext();
+  const [collapsed, setCollapsed]: StateSetter<boolean> = useState<boolean>(responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH);
+  const [showContent, setShowContent]: StateSetter<boolean> = useState<boolean>(true);
+  const [chats, setChats]: StateSetter<Chat[]> = useState<Chat[]>([]);
+  const [selectedChatId, setSelectedChatId]: StateSetter<string | null> = useState<string | null>(null);
+  const selectedChat: Chat | null = chats.find((chat: Chat): boolean => chat.id === selectedChatId) ?? null;
 
   useEffect((): void => {
     setHydrated(true);
   }, []);
+
+  useEffect((): void => {
+    setCollapsed(responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH);
+    setShowContent(!(responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH));
+  }, [responsiveContext.width]);
+
+  const toggleAside: () => void = (): void => {
+    if (!collapsed) {
+      setCollapsed(true);
+      setShowContent(false);
+    } else {
+      setCollapsed(false);
+      setTimeout((): void => {
+        setShowContent(true);
+      }, 100);
+    }
+  };
 
   const createChat: () => Chat = (): Chat => {
     const newChat: Chat = {
@@ -39,8 +61,8 @@ export default function Page(): React.ReactNode {
     return newChat;
   }
 
-  const handleSelectChat: (chat: Chat | null) => void = (chat: Chat | null): void => {
-    setSelectedChat(chat);
+  const onSelectChatId: (chatId: string | null) => void = (chatId: string | null): void => {
+    setSelectedChatId(chatId);
   };
 
   const addMessage: (chatId: string, message: Message) => void = (chatId: string, message: Message): void => {
@@ -50,9 +72,6 @@ export default function Page(): React.ReactNode {
           ...chat,
           messages: [...chat.messages, message]
         } : chat;
-        if (selectedChat?.id !== chatId) {
-          handleSelectChat(newChat)
-        };
 
         return newChat
       })
@@ -68,9 +87,6 @@ export default function Page(): React.ReactNode {
             message.id === messageId ? { ...message, ...partial } : message
           )
         } : chat
-        if (selectedChat?.id !== chatId) {
-          handleSelectChat(newChat)
-        };
 
         return newChat
       })
@@ -81,13 +97,22 @@ export default function Page(): React.ReactNode {
 
   return (
     <div className="flex h-screen w-screen bg-[var(--theme-bg-base)] font-[family-name:var(--font-geist-sans)]">
-      <Aside chats={chats} onSelectChat={handleSelectChat} />
+      <Aside
+        responsiveContext={responsiveContext}
+        collapsed={collapsed}
+        showContent={showContent}
+        chats={chats}
+        selectedChat={selectedChat}
+        toggleAside={toggleAside}
+        onSelectChatId={onSelectChatId}
+      />
       <div className="flex flex-col flex-1 h-full">
-        <Header />
+        <Header responsiveContext={responsiveContext} toggleAside={toggleAside} onSelectChatId={onSelectChatId} />
         <Main
+          responsiveContext={responsiveContext}
           selectedChat={selectedChat}
           createChat={createChat}
-          onSelectChat={handleSelectChat}
+          onSelectChatId={onSelectChatId}
           addMessage={addMessage}
           updateMessage={updateMessage}
         />

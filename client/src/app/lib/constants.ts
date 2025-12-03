@@ -148,6 +148,17 @@ export const FALLBACK_COOKIE_CONSENT: Record<string, boolean> = {
   [COOKIE_CATEGORIES.FUNCTIONAL]: false
 } as const;
 
+export const CHAT_MESSAGE_ROLE: Record<string, string> = {
+  USER: "user",
+  ASSISTANT: "assistant"
+} as const;
+
+export const CHAT_MESSAGE_STATUS: Record<string, string> = {
+  PINDING: "pending",
+  SENT: "sent",
+  ERROR: "error"
+} as const;
+
 export const SCRSCREEN_WIDTH_OFFSET: number = 8 as const;
 
 export const FALLBACK_4K_SCREEN_WIDTH: number = 2560 + SCRSCREEN_WIDTH_OFFSET;

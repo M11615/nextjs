@@ -3,7 +3,7 @@ import { UserGenerateRequest } from './request/user-generate.request';
 
 @Injectable()
 export class GenerateService {
-  async userGenerate(requestBody: UserGenerateRequest): Promise<Response> {
+  async userGenerate(requestBody: UserGenerateRequest, signal: AbortSignal): Promise<Response> {
     const requestUrl: URL = new URL('v1/user_generate', process.env.CORE_URL);
     const requestHeader: Headers = new Headers({
       'content-type': 'application/json; charset=utf-8'
@@ -11,7 +11,8 @@ export class GenerateService {
     const response: Response = await fetch(requestUrl.toString(), {
       method: 'POST',
       headers: requestHeader,
-      body: JSON.stringify(requestBody)
+      body: JSON.stringify(requestBody),
+      signal
     });
 
     return response;
