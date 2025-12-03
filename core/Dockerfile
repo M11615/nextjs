@@ -10,7 +10,7 @@ COPY ./core/.wheelhouse ./.wheelhouse
 RUN mkdir src
 COPY ./core/src ./src
 
-RUN pip install --find-links=./.wheelhouse -r ./requirements.txt
+RUN pip install --no-index --find-links=./.wheelhouse -r ./requirements.txt
 
 EXPOSE 8000
 
