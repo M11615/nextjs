@@ -50,7 +50,7 @@ pip uninstall `<package-name>`
 
 ## Refresh requirements.txt
 ```bash
-# pip-compile
+# pip-tools
 pip-compile ./requirements.in --output-file=./requirements.txt
 # pip
 pip freeze > ./requirements.txt
@@ -58,7 +58,15 @@ pip freeze > ./requirements.txt
 
 ## Check Which Packages Can Be Upgraded
 ```bash
+# pip-tools
+pip-compile --upgrade ./requirements.in --output-file=./requirements.txt
+# pip
 pip list --outdated
+```
+
+## Install or Synchronize Dependencies
+```bash
+pip-sync ./requirements.txt
 ```
 
 ## Check the Latest Available Version of a Specific Package
