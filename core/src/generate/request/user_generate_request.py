@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class UserGenerateRequest(BaseModel):
-  input: str
+  input_text: str = Field(..., alias="inputText")

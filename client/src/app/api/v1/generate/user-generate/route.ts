@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export interface UserGenerateRequest {
-  input: string;
+  inputText: string;
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
@@ -11,7 +11,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   const response: Response = await fetch(requestUrl.toString(), {
     method: "POST",
     headers: requestHeader,
-    body: JSON.stringify(requestBody)
+    body: JSON.stringify(requestBody),
+    signal: request.signal
   });
 
   return new NextResponse(response.body, {

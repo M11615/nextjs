@@ -51,9 +51,7 @@ export default function Main(): React.ReactNode {
           }, 1500);
         })
         .catch((): void => { });
-    } catch (error: unknown) {
-      console.error(error);
-    }
+    } catch { }
   };
 
   return (

@@ -12,9 +12,9 @@ LATEST_SNAPSHOT_PATH: str = max(SNAPSHOT_PATHS, key=os.path.getmtime)
 tokenizer: PreTrainedTokenizerBase = AutoTokenizer.from_pretrained(LATEST_SNAPSHOT_PATH, local_files_only=True)
 model: PreTrainedModel = AutoModelForCausalLM.from_pretrained(LATEST_SNAPSHOT_PATH, local_files_only=True)
 
-def inference(input: str) -> str:
+def inference_process(input_text: str) -> str:
   messages: List[Dict[str, str]] = [
-    {"role": "user", "content": input}
+    {"role": "user", "content": input_text}
   ]
   inputs: Dict[str, Tensor] = tokenizer.apply_chat_template(
     messages,

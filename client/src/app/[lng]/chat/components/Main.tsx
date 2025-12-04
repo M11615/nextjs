@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { StateSetter, CHAT_MESSAGE_ROLE, CHAT_MESSAGE_STATUS, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { generateUUID } from "@/app/lib/uuid";
 import { userGenerate } from "@/app/services/v1/generate";
 import { ResponsiveContextValue } from "@/app/[lng]/components/ResponsiveContext";
 import { Chat, Message } from "./Page";
@@ -19,7 +20,7 @@ interface MainProps {
 export default function Main({
   responsiveContext, selectedChat, createChat, onSelectChatId, addMessage, updateMessage
 }: MainProps): React.ReactNode {
-  const [input, setInput]: StateSetter<string> = useState<string>("");
+  const [inputText, setInputText]: StateSetter<string> = useState<string>("");
   const [isMultiline, setIsMultiline]: StateSetter<boolean> = useState<boolean>(false);
   const [rows, setRows]: StateSetter<number> = useState<number>(1);
   const controllerRef: React.RefObject<AbortController | null> = useRef<AbortController | null>(null);
@@ -46,7 +47,7 @@ export default function Main({
       if (scrollHeight > clientHeight && !isMultiline) {
         setIsMultiline(true);
       }
-      setInput(value);
+      setInputText(value);
     }
   };
 
@@ -61,81 +62,73 @@ export default function Main({
   };
 
   const handleSubmit: () => Promise<void> = async (): Promise<void> => {
-    try {
-      const userInput: string = input.trim();
-      if (userInput.length === 0) return;
-      let chat: Chat | null = selectedChat;
-      if (!chat) {
-        chat = createChat();
-        onSelectChatId(chat.id);
-      }
-      const userMessage: Message = {
-        id: crypto.randomUUID(),
-        role: CHAT_MESSAGE_ROLE.USER,
-        content: userInput,
-        status: CHAT_MESSAGE_STATUS.SENT
-      };
-      addMessage(chat.id, userMessage);
-      setInput("");
-      setRows(1);
-      setIsMultiline(false);
-      const messageId: string = crypto.randomUUID();
-      const message: Message = {
-        id: messageId,
-        role: CHAT_MESSAGE_ROLE.ASSISTANT,
-        content: "",
-        status: CHAT_MESSAGE_STATUS.PINDING
-      };
-      addMessage(chat.id, message);
-      const controller: AbortController = new AbortController();
-      controllerRef.current = controller;
-      const response: Response = await userGenerate({
-        input: userInput
-      }, controller.signal);
-      if (!response.body) return;
-      const reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>> = response.body.getReader();
-      readerRef.current = reader;
-      const decoder: TextDecoder = new TextDecoder();
-      let accumulatedText: string = "";
-      while (true) {
-        const { done, value }: { done: boolean, value: Uint8Array<ArrayBuffer> | undefined } = await reader.read();
-        if (done) break;
-        const chunk: string = decoder.decode(value, { stream: true });
-        accumulatedText += chunk;
-        updateMessage(chat.id, messageId, {
-          content: accumulatedText,
-          status: CHAT_MESSAGE_STATUS.PINDING
-        });
-      }
+    const userInputText: string = inputText.trim();
+    if (userInputText.length === 0) return;
+    let chat: Chat | null = selectedChat;
+    if (!chat) {
+      chat = createChat();
+      onSelectChatId(chat.id);
+    }
+    const userMessage: Message = {
+      id: generateUUID(),
+      role: CHAT_MESSAGE_ROLE.USER,
+      content: userInputText,
+      status: CHAT_MESSAGE_STATUS.SENT
+    };
+    addMessage(chat.id, userMessage);
+    setInputText("");
+    setRows(1);
+    setIsMultiline(false);
+    const messageId: string = generateUUID();
+    const message: Message = {
+      id: messageId,
+      role: CHAT_MESSAGE_ROLE.ASSISTANT,
+      content: "",
+      status: CHAT_MESSAGE_STATUS.PINDING
+    };
+    addMessage(chat.id, message);
+    const controller: AbortController = new AbortController();
+    controllerRef.current = controller;
+    const response: Response = await userGenerate({
+      inputText: userInputText
+    }, controller.signal);
+    if (!response.body) return;
+    const reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>> = response.body.getReader();
+    readerRef.current = reader;
+    const decoder: TextDecoder = new TextDecoder();
+    let accumulatedText: string = "";
+    while (true) {
+      const { done, value }: { done: boolean, value: Uint8Array<ArrayBuffer> | undefined } = await reader.read();
+      if (done) break;
+      const chunk: string = decoder.decode(value, { stream: true });
+      accumulatedText += chunk;
       updateMessage(chat.id, messageId, {
         content: accumulatedText,
-        status: response.ok ? CHAT_MESSAGE_STATUS.SENT : CHAT_MESSAGE_STATUS.ERROR
+        status: CHAT_MESSAGE_STATUS.PINDING
       });
-    } catch (error: unknown) {
-      console.error(error);
     }
+    updateMessage(chat.id, messageId, {
+      content: accumulatedText,
+      status: response.ok ? CHAT_MESSAGE_STATUS.SENT : CHAT_MESSAGE_STATUS.ERROR
+    });
   };
 
   const handleStop: () => void = (): void => {
-    try {
-      if (controllerRef.current) {
-        controllerRef.current.abort();
-        controllerRef.current = null;
+    if (controllerRef.current) {
+      controllerRef.current.abort();
+      controllerRef.current = null;
+    }
+    if (readerRef.current) {
+      readerRef.current.cancel();
+      readerRef.current = null;
+    }
+    if (selectedChat) {
+      const last: Message = selectedChat.messages[selectedChat.messages.length - 1];
+      if (last && last.status === CHAT_MESSAGE_STATUS.PINDING) {
+        updateMessage(selectedChat.id, last.id, {
+          status: CHAT_MESSAGE_STATUS.SENT
+        });
       }
-      if (readerRef.current) {
-        readerRef.current.cancel();
-        readerRef.current = null;
-      }
-      if (selectedChat) {
-        const last: Message = selectedChat.messages[selectedChat.messages.length - 1];
-        if (last && last.status === CHAT_MESSAGE_STATUS.PINDING) {
-          updateMessage(selectedChat.id, last.id, {
-            status: CHAT_MESSAGE_STATUS.SENT
-          });
-        }
-      }
-    } catch (error: unknown) {
-      console.error(error);
     }
   };
 
@@ -143,7 +136,7 @@ export default function Main({
     <div className={`flex ${isMultiline ? "flex-col rounded-[24px]" : "flex-row rounded-full"} items-end w-full max-w-[770px] bg-[var(--theme-bg-chat-textarea)] border-[2px] border-[var(--theme-border-base)] p-2`}>
       <textarea
         ref={textareaRef}
-        value={input}
+        value={inputText}
         onChange={handleChange}
         onKeyDown={(e: React.KeyboardEvent<HTMLTextAreaElement>): void => {
           if (!responsiveContext.isTabletScreen) handleKeyDown(e);
@@ -165,8 +158,8 @@ export default function Main({
       ) : (
         <button
           onClick={handleSubmit}
-          disabled={input.trim().length === 0}
-          className={`select-none text-[var(--theme-border-base)] border ${input.trim().length === 0 ? "cursor-not-allowed border-[var(--theme-text-caption)] bg-[var(--theme-text-caption)]" : "cursor-pointer border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)]"} p-[8px] rounded-full transition duration-200 ease-in-out`}
+          disabled={inputText.trim().length === 0}
+          className={`select-none text-[var(--theme-border-base)] border ${inputText.trim().length === 0 ? "cursor-not-allowed border-[var(--theme-text-caption)] bg-[var(--theme-text-caption)]" : "cursor-pointer border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)]"} p-[8px] rounded-full transition duration-200 ease-in-out`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
             <path d="M8.99992 16V6.41407L5.70696 9.70704C5.31643 10.0976 4.68342 10.0976 4.29289 9.70704C3.90237 9.31652 3.90237 8.6835 4.29289 8.29298L9.29289 3.29298L9.36907 3.22462C9.76184 2.90427 10.3408 2.92686 10.707 3.29298L15.707 8.29298L15.7753 8.36915C16.0957 8.76192 16.0731 9.34092 15.707 9.70704C15.3408 10.0732 14.7618 10.0958 14.3691 9.7754L14.2929 9.70704L10.9999 6.41407V16C10.9999 16.5523 10.5522 17 9.99992 17C9.44764 17 8.99992 16.5523 8.99992 16Z" />

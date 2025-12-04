@@ -10,7 +10,7 @@ export class GenerateController {
   @Post('user-generate')
   async userGenerate(@Body() requestBody: UserGenerateRequest, @Res() reply: FastifyReply): Promise<void> {
     const controller: AbortController = new AbortController();
-    reply.raw.on("close", () => {
+    reply.raw.on('close', (): void => {
       controller.abort();
     });
     const response: Response = await this.generateService.userGenerate(requestBody, controller.signal);

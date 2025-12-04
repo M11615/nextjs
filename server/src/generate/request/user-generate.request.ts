@@ -5,5 +5,5 @@ export class UserGenerateRequest {
   @IsString()
   @IsNotEmpty()
   @Transform(({ value }: TransformFnParams) => value.trim())
-  input: string;
+  inputText: string;
 }

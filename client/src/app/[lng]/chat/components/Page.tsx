@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { generateUUID } from "@/app/lib/uuid";
 import { ResponsiveContextValue, useResponsiveContext } from "@/app/[lng]/components/ResponsiveContext";
 import Aside from "./Aside";
 import Header from "./Header";
@@ -52,7 +53,7 @@ export default function Page(): React.ReactNode {
 
   const createChat: () => Chat = (): Chat => {
     const newChat: Chat = {
-      id: crypto.randomUUID(),
+      id: generateUUID(),
       title: "New Chat",
       messages: []
     };
