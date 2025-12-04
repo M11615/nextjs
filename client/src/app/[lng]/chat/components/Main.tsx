@@ -115,7 +115,9 @@ export default function Main({
         content: accumulatedText,
         status: response.ok ? CHAT_MESSAGE_STATUS.SENT : CHAT_MESSAGE_STATUS.ERROR
       });
-    } catch { }
+    } catch (error: unknown) {
+      console.error(error);
+    }
   };
 
   const handleStop: () => void = (): void => {
@@ -136,7 +138,9 @@ export default function Main({
           });
         }
       }
-    } catch { }
+    } catch (error: unknown) {
+      console.error(error);
+    }
   };
 
   const ChatTextarea: React.ReactNode = (
@@ -145,7 +149,7 @@ export default function Main({
         ref={textareaRef}
         value={input}
         onChange={handleChange}
-        onKeyDown={responsiveContext.isMobileScreen ? (): void => { } : handleKeyDown}
+        onKeyDown={responsiveContext.isTabletScreen ? (): void => { } : handleKeyDown}
         rows={rows}
         placeholder="Ask anything"
         className="flex-1 w-full resize-none select-none outline-none text-[16px] text-[var(--theme-fg-base)] placeholder-[var(--theme-text-caption)] leading-[1.5] p-2 pl-4"

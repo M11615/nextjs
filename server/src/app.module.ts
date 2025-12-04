@@ -31,10 +31,24 @@ import { GenerateController } from './generate/generate.controller';
         AcceptLanguageResolver
       ]
     }),
-    MongooseModule.forRoot(process.env.MONGO_URL ?? 'mongodb://localhost:27017/nextjs'),
-    MongooseModule.forFeature([{ name: Subscription.name, schema: SubscriptionSchema }])
+    ...process.env.ENABLE_MONGO === 'true' ? [
+      MongooseModule.forRoot(process.env.MONGO_URL ?? 'mongodb://localhost:27017/nextjs'),
+      MongooseModule.forFeature([{ name: Subscription.name, schema: SubscriptionSchema }])
+    ] : []
   ],
-  providers: [AppService, SubscriptionService, GenerateService],
-  controllers: [AppController, SubscriptionController, GenerateController]
+  providers: [
+    AppService,
+    GenerateService,
+    ...process.env.ENABLE_MONGO === 'true' ? [
+      SubscriptionService
+    ] : []
+  ],
+  controllers: [
+    AppController,
+    GenerateController,
+    ...process.env.ENABLE_MONGO === 'true' ? [
+      SubscriptionController
+    ] : []
+  ]
 })
 export class AppModule { }
