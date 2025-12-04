@@ -1,5 +1,5 @@
 pip-tools
 transformers
 torch
-fastapi
+fastapi[standard]
 uvicorn
