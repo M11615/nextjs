@@ -3,7 +3,7 @@ from typing import Dict
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from fastapi import FastAPI, Request
-from inference import inference
+from src.inference import inference
 
 app: FastAPI = FastAPI()
 
