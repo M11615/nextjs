@@ -76,11 +76,8 @@ export default function ConsentModal({
   }, [isConsentOpen]);
 
   const onCategoryClick: (category: Category) => void = (category: Category): void => {
-    if (expandedIds.includes(category.id)) {
-      setExpandedIds(expandedIds.filter((id): boolean => id !== category.id));
-    } else {
-      setExpandedIds([...expandedIds, category.id]);
-    }
+    if (expandedIds.includes(category.id)) setExpandedIds(expandedIds.filter((id): boolean => id !== category.id));
+    else setExpandedIds([...expandedIds, category.id]);
     setRenderKey(renderKey < 10 ? renderKey + 1 : 0);
   };
 
@@ -113,15 +110,21 @@ export default function ConsentModal({
                 <div key={category.id}>
                   <div
                     className={`flex items-center justify-between px-4 py-[10px] cursor-pointer bg-[var(--theme-bg-dark)] hover:bg-[var(--theme-bg-base)] ${index === 0 ? "rounded-t-lg" : ""} ${index === categories.length - 1 ? "rounded-b-lg" : ""} ${index !== categories.length - 1 ? "border-b border-[var(--theme-border-base)]" : ""}`}
-                    onClick={(): void => onCategoryClick(category)}
+                    onClick={(): void => {
+                      onCategoryClick(category)
+                    }}
                   >
                     <span className="text-[14px] text-[var(--theme-fg-base)] font-medium">{category.name}</span>
-                    <label onClick={(e: React.MouseEvent): void => e.stopPropagation()}>
+                    <label onClick={(e: React.MouseEvent): void => {
+                      e.stopPropagation()
+                    }}>
                       <input
                         type="checkbox"
                         className="sr-only peer"
                         checked={cookieConsent[category.id]}
-                        onChange={(): void => toggle(category)}
+                        onChange={(): void => {
+                          toggle(category)
+                        }}
                         disabled={category.id === COOKIE_CATEGORIES.ESSENTIAL}
                       />
                       <div className={`border w-[42px] h-[26.4px] rounded-full transition-all ${category.id === COOKIE_CATEGORIES.ESSENTIAL ? "bg-[var(--theme-bg-base)] border-[var(--theme-text-subtle)] cursor-not-allowed" : "bg-[var(--theme-bg-muted)] border-[var(--theme-text-subtle)] peer-checked:bg-[var(--theme-accent-blue)] peer-checked:border-[var(--theme-accent-blue)] cursor-pointer"}`}>

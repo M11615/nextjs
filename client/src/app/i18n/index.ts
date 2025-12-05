@@ -14,12 +14,9 @@ type Options<
 export async function getT(ns: string | string[], options: Options): Promise<I18nInstance> {
   const headerList: Headers = await headers();
   const lng: string = headerList.get(headerName) as string;
-  if (lng && i18next.resolvedLanguage !== lng) {
-    await i18next.changeLanguage(lng);
-  }
-  if (ns && !i18next.hasLoadedNamespace(ns)) {
-    await i18next.loadNamespaces(ns);
-  }
+  if (lng && i18next.resolvedLanguage !== lng) await i18next.changeLanguage(lng);
+  if (ns && !i18next.hasLoadedNamespace(ns)) await i18next.loadNamespaces(ns);
+
   return {
     t: i18next.getFixedT(lng ?? i18next.resolvedLanguage, Array.isArray(ns) ? ns[0] : ns, options?.[2]),
     i18n: i18next

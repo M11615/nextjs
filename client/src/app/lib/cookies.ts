@@ -32,10 +32,9 @@ export const getCookie: (name: CookieKey) => string | undefined = (name: CookieK
   const cookies: string[] = cookieString.split("; ");
   for (const cookie of cookies) {
     const [key, value]: string[] = cookie.split("=");
-    if (key === name) {
-      return decodeURIComponent(value);
-    }
+    if (key === name) return decodeURIComponent(value);
   }
+
   return undefined;
 };
 

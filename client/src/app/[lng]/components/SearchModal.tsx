@@ -41,23 +41,31 @@ export default function SearchModal({
       {isSearchOpen && (
         <div
           className={`fixed inset-0 ${isSearchClosing ? "" : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "" : "bg-gradient-to-b from-transparent via-[var(--theme-bg-dark)]/80 to-[var(--theme-bg-dark)]/80"}`} flex items-start pt-[110px] justify-center z-70 font-[family-name:var(--font-geist-sans)]`}
-          onClick={(): void => handleSearchClose()}
+          onClick={(): void => {
+            handleSearchClose()
+          }}
         >
           <div
             className={`${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "absolute bottom-0 h-[525px] rounded-tl-[12px] rounded-tr-[12px]" : "rounded-[12px]"} bg-[var(--theme-bg-dark)] w-full max-w-[640px] border border-[var(--theme-border-base)] shadow ${isSearchClosing ? `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "search-modal-translate-out" : "search-modal-scale-out"}` : `${width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "search-modal-translate-in" : "search-modal-scale-in"}`}`}
-            onClick={(e: React.MouseEvent): void => e.stopPropagation()}
+            onClick={(e: React.MouseEvent): void => {
+              e.stopPropagation()
+            }}
           >
             <div className="p-3 border-b border-[var(--theme-border-base)]">
               <div className="flex items-center gap-2 mb-3">
                 <button
                   className={`cursor-pointer transition duration-200 ease-in-out text-xs font-medium border px-1 py-[1.2px] rounded ${searchActiveTab === "app" ? "border-[var(--theme-accent-blue-border)] text-[var(--theme-accent-blue)] bg-[var(--theme-accent-blue-bg)]" : "border-[var(--theme-border-base)] text-[var(--theme-text-muted)] hover:bg-[var(--theme-bg-muted-dark-hover)] bg-[var(--theme-bg-muted-dark)]"}`}
-                  onClick={(): void => setSearchActiveTab("app")}
+                  onClick={(): void => {
+                    setSearchActiveTab("app")
+                  }}
                 >
                   {t("header.search.activeTabs.app")}
                 </button>
                 <button
                   className={`cursor-pointer transition duration-200 ease-in-out text-xs font-medium border px-1 py-[1.2px] rounded ${searchActiveTab === "pages" ? "border-[var(--theme-accent-purple-border)] text-[var(--theme-accent-purple)] bg-[var(--theme-accent-purple-bg)]" : "border-[var(--theme-border-base)] text-[var(--theme-text-muted)] hover:bg-[var(--theme-bg-muted-dark-hover)] bg-[var(--theme-bg-muted-dark)]"}`}
-                  onClick={(): void => setSearchActiveTab("pages")}
+                  onClick={(): void => {
+                    setSearchActiveTab("pages")
+                  }}
                 >
                   {t("header.search.activeTabs.pages")}
                 </button>
@@ -84,7 +92,9 @@ export default function SearchModal({
                   key={id}
                   href={href}
                   className={`transition duration-200 ease-in-out flex items-center p-[9px] py-[10px] text-sm rounded ${!(width < FALLBACK_MOBILE_L_SCREEN_WIDTH) ? index === selectedResultIndex ? "bg-[var(--theme-bg-muted)]" : "hover:bg-[var(--theme-bg-muted)]" : ""}`}
-                  onMouseEnter={(): void => setSelectedResultIndex(index)}
+                  onMouseEnter={(): void => {
+                    setSelectedResultIndex(index)
+                  }}
                 >
                   <Image
                     className="select-none"

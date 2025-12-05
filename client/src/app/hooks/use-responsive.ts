@@ -25,9 +25,7 @@ export const useResponsive = (): ResponsiveState => {
     window.addEventListener("orientationchange", handleResize);
     window.visualViewport?.addEventListener("resize", handleResize);
     document.addEventListener("visibilitychange", (): void => {
-      if (document.visibilityState === "visible") {
-        handleResize();
-      }
+      if (document.visibilityState === "visible") handleResize();
     });
 
     return (): void => {

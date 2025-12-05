@@ -16,4 +16,4 @@ async def user_generate(request: Request, requestBody: UserGenerateRequest) -> S
       yield ch
       await asyncio.sleep(0.01)
 
-  return StreamingResponse(stream_generator(), media_type="text/plain")
+  return StreamingResponse(stream_generator(), media_type="text/plain; charset=utf-8")

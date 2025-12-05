@@ -31,7 +31,9 @@ export default function Header({
       </div>
       {responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH && (
         <button
-          onClick={(): void => onSelectChatId(null)}
+          onClick={(): void => {
+            onSelectChatId(null)
+          }}
           className="select-none cursor-pointer p-2 text-[var(--theme-fg-base)] rounded-lg transition duration-200 ease-in-out"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">

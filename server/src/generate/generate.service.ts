@@ -6,7 +6,7 @@ export class GenerateService {
   async userGenerate(requestBody: UserGenerateRequest, signal: AbortSignal): Promise<Response> {
     const requestUrl: URL = new URL('v1/generate/user_generate', process.env.CORE_URL);
     const requestHeader: Headers = new Headers({
-      'content-type': 'application/json; charset=utf-8'
+      'Content-Type': 'application/json; charset=utf-8'
     });
     const response: Response = await fetch(requestUrl.toString(), {
       method: 'POST',

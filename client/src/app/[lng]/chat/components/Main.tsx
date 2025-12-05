@@ -29,9 +29,7 @@ export default function Main({
 
   const handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     const value: string = e.target.value;
-    if (value === "\n") {
-      return;
-    }
+    if (value === "\n") return;
     const textarea: HTMLTextAreaElement | null = textareaRef.current;
     if (textarea) {
       const scrollHeight: number = textarea.scrollHeight;
@@ -41,20 +39,14 @@ export default function Main({
       if (value.trim().length === 0) {
         setIsMultiline(false);
         setRows(1);
-      } else {
-        setRows(newRows);
-      }
-      if (scrollHeight > clientHeight && !isMultiline) {
-        setIsMultiline(true);
-      }
+      } else setRows(newRows);
+      if (scrollHeight > clientHeight && !isMultiline) setIsMultiline(true);
       setInputText(value);
     }
   };
 
   const handleKeyDown: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void = (e: React.KeyboardEvent<HTMLTextAreaElement>): void => {
-    if (e.key === "Enter" && e.shiftKey) {
-      return;
-    }
+    if (e.key === "Enter" && e.shiftKey) return;
     if (e.key === "Enter") {
       e.preventDefault();
       handleSubmit();
@@ -69,24 +61,32 @@ export default function Main({
       chat = createChat();
       onSelectChatId(chat.id);
     }
-    const userMessage: Message = {
+    addMessage(chat.id, {
       id: generateUUID(),
       role: CHAT_MESSAGE_ROLE.USER,
       content: userInputText,
       status: CHAT_MESSAGE_STATUS.SENT
-    };
-    addMessage(chat.id, userMessage);
+    });
     setInputText("");
     setRows(1);
     setIsMultiline(false);
     const messageId: string = generateUUID();
-    const message: Message = {
+    if (userInputText.length > 20000) {
+      addMessage(chat.id, {
+        id: messageId,
+        role: CHAT_MESSAGE_ROLE.ASSISTANT,
+        content: "The message you submitted was too long, please edit it and resubmit.",
+        status: CHAT_MESSAGE_STATUS.ERROR
+      });
+
+      return;
+    }
+    addMessage(chat.id, {
       id: messageId,
       role: CHAT_MESSAGE_ROLE.ASSISTANT,
       content: "",
       status: CHAT_MESSAGE_STATUS.PINDING
-    };
-    addMessage(chat.id, message);
+    });
     try {
       const controller: AbortController = new AbortController();
       controllerRef.current = controller;
@@ -114,7 +114,7 @@ export default function Main({
       });
     } catch {
       updateMessage(chat.id, messageId, {
-        content: "",
+        content: "Something went wrong.",
         status: CHAT_MESSAGE_STATUS.ERROR
       });
     }
@@ -193,18 +193,38 @@ export default function Main({
             {selectedChat.messages.map((message: Message): React.ReactNode => (
               <div key={message.id} className={`flex w-full ${message.role === CHAT_MESSAGE_ROLE.USER ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`px-4 py-2 rounded-2xl whitespace-pre-wrap break-words ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-chat-message)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-red-500 bg-red-50 text-red-600" : ""}`}
+                  className={`px-4 rounded-2xl whitespace-pre-wrap break-words ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-chat-message)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-[var(--theme-border-chat-message-error)] bg-[var(--theme-bg-chat-message-error)] text-[var(--theme-fg-chat-message-error)] py-4" : "py-1"}`}
                 >
                   {message.status === CHAT_MESSAGE_STATUS.PINDING && message.content.length === 0 ? (
                     <div className="flex items-center">
                       <span className="w-3 h-3 bg-[var(--theme-fg-base)] rounded-full" />
                     </div>
                   ) : message.role === CHAT_MESSAGE_ROLE.ASSISTANT ? (
-                    <div className="prose max-w-none pb-10">
-                      <ReactMarkdown>
-                        {message.content}
-                      </ReactMarkdown>
-                    </div>
+                    message.status === CHAT_MESSAGE_STATUS.ERROR ? (
+                      <>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          className="inline border-[2px] border-[var(--theme-fg-chat-message-error)] rounded-full"
+                        >
+                          <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
+                          <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
+                          <path d="M10 5.83301C10.5293 5.83303 10.958 6.26273 10.958 6.79199C10.9578 7.3211 10.5291 7.74998 10 7.75C9.47084 7.75 9.04217 7.32111 9.04199 6.79199C9.04199 6.26272 9.47073 5.83301 10 5.83301Z" />
+                        </svg>
+                        <span className="pl-2 text-[14px]">
+                          {message.content}
+                        </span>
+                      </>
+                    ) : (
+                      <div className="prose max-w-none pb-10">
+                        <ReactMarkdown>
+                          {message.content}
+                        </ReactMarkdown>
+                      </div>
+                    )
                   ) : (
                     message.content
                   )}

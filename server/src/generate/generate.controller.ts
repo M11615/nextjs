@@ -14,7 +14,6 @@ export class GenerateController {
       controller.abort();
     });
     const response: Response = await this.generateService.userGenerate(requestBody, controller.signal);
-    reply.header('content-type', 'text/plain');
-    reply.send(response.body);
+    reply.type('text/plain; charset=utf-8').send(response.body);
   }
 }

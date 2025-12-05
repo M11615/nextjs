@@ -80,7 +80,7 @@ export default function Aside({
               )}
             </button>
             <button
-              onClick={() => { }}
+              onClick={(): void => { }}
               className="w-full text-left select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-chat-message)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
             >
               <svg
@@ -134,7 +134,9 @@ export default function Aside({
                   {chats.map((chat: Chat): React.ReactNode => (
                     <li key={chat.id}>
                       <button
-                        onClick={(): void => handleSelectChat(chat.id)}
+                        onClick={(): void => {
+                          handleSelectChat(chat.id)
+                        }}
                         className={`w-full text-left whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg ${selectedChat?.id === chat.id ? "bg-[var(--theme-bg-muted-hover)]" : "bg-[var(--theme-bg-chat-muted)]"} hover:bg-[var(--theme-bg-chat-message)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
                       >
                         {chat.title}

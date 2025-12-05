@@ -33,7 +33,9 @@ export default function Header(): React.ReactNode {
     window.addEventListener("keydown", handleKeyDown);
     setShowKeyDown(true);
 
-    return (): void => window.removeEventListener("keydown", handleKeyDown);
+    return (): void => {
+      window.removeEventListener("keydown", handleKeyDown)
+    };
   }, []);
 
   useEffect((): void => {
@@ -92,14 +94,18 @@ export default function Header(): React.ReactNode {
           {responsiveContext.isMobileScreen ? (
             <MobileHeader
               t={t}
-              handleSearchOpen={(): void => modalManager.open(searchModalId)}
+              handleSearchOpen={(): void => {
+                modalManager.open(searchModalId)
+              }}
             />
           ) : (
             <LaptopHeader
               t={t}
               responsiveContext={responsiveContext}
               showKeyDown={showKeyDown}
-              handleSearchOpen={(): void => modalManager.open(searchModalId)}
+              handleSearchOpen={(): void => {
+                modalManager.open(searchModalId)
+              }}
             />
           )}
         </div>
@@ -109,7 +115,9 @@ export default function Header(): React.ReactNode {
         <SearchModal
           isSearchOpen={isSearchOpen}
           isSearchClosing={isSearchClosing}
-          handleSearchClose={(): void => modalManager.close(searchModalId)}
+          handleSearchClose={(): void => {
+            modalManager.close(searchModalId)
+          }}
         />
       )}
     </>

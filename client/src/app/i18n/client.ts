@@ -22,9 +22,7 @@ export function useT(ns: string | string[], options: Options): I18nInstance {
   const lng: string = useParams()?.lng as string;
   if (typeof lng !== "string") throw new Error("useT is only available inside /app/[lng]");
   useEffect(() => {
-    if (runsOnServerSide && i18next.resolvedLanguage !== lng) {
-      i18next.changeLanguage(lng);
-    }
+    if (runsOnServerSide && i18next.resolvedLanguage !== lng) i18next.changeLanguage(lng);
   }, [lng]);
   const [activeLng, setActiveLng]: StateSetter<string | undefined> = useState<string | undefined>(i18next.resolvedLanguage);
   useEffect(() => {
@@ -35,5 +33,6 @@ export function useT(ns: string | string[], options: Options): I18nInstance {
     if (!lng || i18next.resolvedLanguage === lng) return;
     i18next.changeLanguage(lng);
   }, [lng]);
+
   return useTranslation(ns, options);
 }

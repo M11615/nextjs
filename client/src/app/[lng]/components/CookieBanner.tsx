@@ -41,7 +41,9 @@ export default function CookieBanner(): React.ReactNode {
     <>
       <ConsentModal
         isConsentOpen={isConsentOpen}
-        handleConsentClose={(): void => modalManager.close(consentModalId)}
+        handleConsentClose={(): void => {
+          modalManager.close(consentModalId)
+        }}
       />
 
       {visible && (
@@ -71,7 +73,9 @@ export default function CookieBanner(): React.ReactNode {
               </div>
               <button
                 className="whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer border border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] text-[var(--theme-border-base)] font-medium px-3 py-[5px] rounded-full text-[14px] hover:bg-[var(--theme-text-muted)] hover:border-[var(--theme-text-muted)] transition duration-200 ease-in-out"
-                onClick={(): void => modalManager.open(consentModalId)}
+                onClick={(): void => {
+                  modalManager.open(consentModalId)
+                }}
               >
                 {t("cookieBanner.settings")}
               </button>

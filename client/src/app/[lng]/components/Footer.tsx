@@ -86,6 +86,7 @@ export default function Footer(): React.ReactNode {
     const form: HTMLFormElement = e.currentTarget as HTMLFormElement;
     if (!form.checkValidity()) {
       form.reportValidity();
+
       return;
     }
     setIsSubmitting(true);
@@ -93,9 +94,7 @@ export default function Footer(): React.ReactNode {
     const response: Response = await createSubscription({
       email: subscriptionEmail.trim().toLowerCase()
     });
-    if (response.ok) {
-      setSubmitted(true);
-    }
+    if (response.ok) setSubmitted(true);
   };
 
   const SocialLinks: React.ReactNode = (
@@ -140,7 +139,9 @@ export default function Footer(): React.ReactNode {
     <>
       <ConsentModal
         isConsentOpen={isConsentOpen}
-        handleConsentClose={(): void => modalManager.close(consentModalId)}
+        handleConsentClose={(): void => {
+          modalManager.close(consentModalId)
+        }}
       />
 
       {!isConsentOpen && (
@@ -228,7 +229,9 @@ export default function Footer(): React.ReactNode {
                   ))}
                   <button
                     className="cursor-pointer transition duration-200 ease-in-out inline-flex text-left text-[var(--theme-text-muted)] hover:text-[var(--theme-fg-base)]"
-                    onClick={(): void => modalManager.open(consentModalId)}
+                    onClick={(): void => {
+                      modalManager.open(consentModalId)
+                    }}
                   >
                     {t("footer.cookiePreferences")}
                   </button>

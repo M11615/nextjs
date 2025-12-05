@@ -41,16 +41,13 @@ export default function Main(): React.ReactNode {
     setHovered(false);
   };
 
-  const handleCopy: () => void = (): void => {
+  const handleCopy: () => Promise<void> = async (): Promise<void> => {
     try {
-      navigator.clipboard.writeText(command)
-        .then((): void => {
-          setCopied(true);
-          setTimeout((): void => {
-            setCopied(false);
-          }, 1500);
-        })
-        .catch((): void => { });
+      await navigator.clipboard.writeText(command)
+        setCopied(true);
+        setTimeout((): void => {
+          setCopied(false);
+        }, 1500);
     } catch { }
   };
 
@@ -112,7 +109,9 @@ export default function Main(): React.ReactNode {
           </div>
           {visibleMedia && (
             <div
-              onClick={(): void => setShowVideo(true)}
+              onClick={(): void => {
+                setShowVideo(true)
+              }}
               className={`group absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center w-full max-w-[1024px] mt-[40px] ${width > FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-0" : "px-[30px]"} select-none`}
             >
               {!showVideo ? (

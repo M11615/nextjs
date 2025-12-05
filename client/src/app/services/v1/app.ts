@@ -6,10 +6,12 @@ export const getHello = async (i18n: i18n): Promise<Response> => {
   const requestHeader: Headers = new Headers({
     [headerName]: i18n.language
   });
-
-  return await fetch(requestUrl.toString(), {
+  const response: Response = await fetch(requestUrl.toString(), {
     method: "GET",
     headers: requestHeader,
     credentials: "include"
   });
+  if (!response.ok) throw new Error();
+
+  return response;
 };
