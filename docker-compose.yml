@@ -22,6 +22,7 @@ services:
     container_name: nextjs-core
     ports:
       - "8000:8000"
+    mem_limit: 8g
     networks:
       - nextjs-network
     restart: no

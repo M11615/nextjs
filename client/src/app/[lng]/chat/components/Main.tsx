@@ -87,30 +87,37 @@ export default function Main({
       status: CHAT_MESSAGE_STATUS.PINDING
     };
     addMessage(chat.id, message);
-    const controller: AbortController = new AbortController();
-    controllerRef.current = controller;
-    const response: Response = await userGenerate({
-      inputText: userInputText
-    }, controller.signal);
-    if (!response.body) return;
-    const reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>> = response.body.getReader();
-    readerRef.current = reader;
-    const decoder: TextDecoder = new TextDecoder();
-    let accumulatedText: string = "";
-    while (true) {
-      const { done, value }: { done: boolean, value: Uint8Array<ArrayBuffer> | undefined } = await reader.read();
-      if (done) break;
-      const chunk: string = decoder.decode(value, { stream: true });
-      accumulatedText += chunk;
+    try {
+      const controller: AbortController = new AbortController();
+      controllerRef.current = controller;
+      const response: Response = await userGenerate({
+        inputText: userInputText
+      }, controller.signal);
+      if (!response.body) return;
+      const reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>> = response.body.getReader();
+      readerRef.current = reader;
+      const decoder: TextDecoder = new TextDecoder();
+      let accumulatedText: string = "";
+      while (true) {
+        const { done, value }: { done: boolean, value: Uint8Array<ArrayBuffer> | undefined } = await reader.read();
+        if (done) break;
+        const chunk: string = decoder.decode(value, { stream: true });
+        accumulatedText += chunk;
+        updateMessage(chat.id, messageId, {
+          content: accumulatedText,
+          status: CHAT_MESSAGE_STATUS.PINDING
+        });
+      }
       updateMessage(chat.id, messageId, {
         content: accumulatedText,
-        status: CHAT_MESSAGE_STATUS.PINDING
+        status: response.ok ? CHAT_MESSAGE_STATUS.SENT : CHAT_MESSAGE_STATUS.ERROR
+      });
+    } catch {
+      updateMessage(chat.id, messageId, {
+        content: "",
+        status: CHAT_MESSAGE_STATUS.ERROR
       });
     }
-    updateMessage(chat.id, messageId, {
-      content: accumulatedText,
-      status: response.ok ? CHAT_MESSAGE_STATUS.SENT : CHAT_MESSAGE_STATUS.ERROR
-    });
   };
 
   const handleStop: () => void = (): void => {
@@ -186,7 +193,7 @@ export default function Main({
             {selectedChat.messages.map((message: Message): React.ReactNode => (
               <div key={message.id} className={`flex w-full ${message.role === CHAT_MESSAGE_ROLE.USER ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`px-4 py-2 rounded-2xl whitespace-pre-wrap break-words ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-muted)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-red-500 bg-red-50 text-red-600" : ""}`}
+                  className={`px-4 py-2 rounded-2xl whitespace-pre-wrap break-words ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-chat-message)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-red-500 bg-red-50 text-red-600" : ""}`}
                 >
                   {message.status === CHAT_MESSAGE_STATUS.PINDING && message.content.length === 0 ? (
                     <div className="flex items-center">

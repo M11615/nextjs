@@ -38,14 +38,14 @@ export default function Aside({
         {showContent && (
           <button
             onClick={handleNewChat}
-            className="absolute top-2 left-2 select-none cursor-pointer p-2 text-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-muted)] rounded-lg transition duration-200 ease-in-out"
+            className="absolute top-2 left-2 select-none cursor-pointer p-2 text-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-chat-message)] rounded-lg transition duration-200 ease-in-out"
           >
             TinyLlama
           </button>
         )}
         <button
           onClick={toggleAside}
-          className="absolute top-2 right-2 select-none cursor-pointer p-2 text-[var(--theme-text-caption)] hover:bg-[var(--theme-bg-muted)] rounded-lg transition duration-200 ease-in-out"
+          className="absolute top-2 right-2 select-none cursor-pointer p-2 text-[var(--theme-text-caption)] hover:bg-[var(--theme-bg-chat-message)] rounded-lg transition duration-200 ease-in-out"
         >
           {responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -61,7 +61,7 @@ export default function Aside({
           <div className="pt-[58px] px-2">
             <button
               onClick={handleNewChat}
-              className="w-full text-left select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+              className="w-full text-left select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-chat-message)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function Aside({
             </button>
             <button
               onClick={() => { }}
-              className="w-full text-left select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
+              className="w-full text-left select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg hover:bg-[var(--theme-bg-chat-message)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ export default function Aside({
                     <li key={chat.id}>
                       <button
                         onClick={(): void => handleSelectChat(chat.id)}
-                        className={`w-full text-left whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg ${selectedChat?.id === chat.id ? "bg-[var(--theme-bg-muted-hover)]" : "bg-[var(--theme-bg-chat-muted)]"} hover:bg-[var(--theme-bg-muted)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
+                        className={`w-full text-left whitespace-nowrap overflow-hidden text-ellipsis select-none cursor-pointer text-[14px] text-[var(--theme-fg-base)] p-2 rounded-lg ${selectedChat?.id === chat.id ? "bg-[var(--theme-bg-muted-hover)]" : "bg-[var(--theme-bg-chat-muted)]"} hover:bg-[var(--theme-bg-chat-message)] hover:border-[var(--theme-text-subtle)] transition duration-200 ease-in-out`}
                       >
                         {chat.title}
                       </button>

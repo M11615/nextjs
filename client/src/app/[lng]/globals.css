@@ -14,6 +14,7 @@
   --theme-bg-chat-base: #FFFFFF;
   --theme-bg-chat-muted: #F9F9F9;
   --theme-bg-chat-textarea: #FFFFFF;
+  --theme-bg-chat-message: #F4F4F4;
   --theme-fg-base: #171717;
   --theme-fg-light: #3C3C3C;
   --theme-fg-dark: #181818;
@@ -47,6 +48,7 @@
     --theme-bg-chat-base: #212121;
     --theme-bg-chat-muted: #181818;
     --theme-bg-chat-textarea: #303030;
+    --theme-bg-chat-message: #303030;
     --theme-fg-base: #FFFFFF;
     --theme-fg-light: #E7E7E7;
     --theme-fg-dark: #C5C5C5;
@@ -80,6 +82,7 @@ html.light {
   --theme-bg-chat-base: #FFFFFF;
   --theme-bg-chat-muted: #F9F9F9;
   --theme-bg-chat-textarea: #FFFFFF;
+  --theme-bg-chat-message: #F4F4F4;
   --theme-fg-base: #171717;
   --theme-fg-light: #3C3C3C;
   --theme-fg-dark: #181818;
@@ -112,6 +115,7 @@ html.dark {
   --theme-bg-chat-base: #212121;
   --theme-bg-chat-muted: #181818;
   --theme-bg-chat-textarea: #303030;
+  --theme-bg-chat-message: #303030;
   --theme-fg-base: #FFFFFF;
   --theme-fg-light: #E7E7E7;
   --theme-fg-dark: #C5C5C5;
