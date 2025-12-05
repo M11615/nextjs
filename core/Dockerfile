@@ -4,13 +4,13 @@ WORKDIR /opt/nextjs
 
 COPY ./core/requirements.txt .
 
-RUN mkdir .wheelhouse
-COPY ./core/.wheelhouse ./.wheelhouse
+RUN mkdir .wheel
+COPY ./core/.wheel ./.wheel
 
 RUN mkdir src
 COPY ./core/src ./src
 
-RUN pip install --no-index --find-links=./.wheelhouse -r ./requirements.txt
+RUN pip install --no-index --find-links=./.wheel -r ./requirements.txt
 
 EXPOSE 8000
 

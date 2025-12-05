@@ -12,7 +12,7 @@
     "python:sync:windows": "node ./python-runner.mjs -m piptools sync ./requirements.txt",
     "python:sync:unix": "TMPDIR=~/tmp node ./python-runner.mjs -m piptools sync ./requirements.txt",
     "dev": "node ./python-runner.mjs -m fastapi dev ./src/main.py",
-    "python:wheel:windows": "node ./python-runner.mjs -m pip wheel -w ./.wheelhouse -r ./requirements.txt",
-    "python:wheel:unix": "TMPDIR=~/tmp node ./python-runner.mjs -m pip wheel -w ./.wheelhouse -r ./requirements.txt"
+    "python:wheel:windows": "node ./python-runner.mjs -m pip wheel -w ./.wheel -r ./requirements.txt",
+    "python:wheel:unix": "TMPDIR=~/tmp node ./python-runner.mjs -m pip wheel -w ./.wheel -r ./requirements.txt"
   }
 }
