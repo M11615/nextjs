@@ -2,6 +2,17 @@
   "name": "core",
   "private": true,
   "scripts": {
-    "dev": "node ./python-runner.mjs -m fastapi dev ./src/main.py"
+    "python:venv": "python -m venv ./.venv",
+    "python:pip-upgrade": "python -m pip install --upgrade pip",
+    "python:freeze": "pip freeze > ./requirements.txt",
+    "python:compile": "pip-compile --output-file=./requirements.txt ./requirements.in",
+    "python:compile-update": "pip-compile --upgrade --output-file=./requirements.txt ./requirements.in",
+    "python:install": "pip install -r ./requirements.txt",
+    "python:install:unix": "TMPDIR=~/tmp pip install -r ./requirements.txt",
+    "python:sync": "pip-sync ./requirements.txt",
+    "python:sync:unix": "TMPDIR=~/tmp pip-sync ./requirements.txt",
+    "dev": "python ./python_runner.py -m fastapi dev ./src/main.py",
+    "python:wheel": "pip wheel -w ./.wheelhouse -r ./requirements.txt",
+    "python:wheel:unix": "TMPDIR=~/tmp pip wheel -w ./.wheelhouse -r ./requirements.txt"
   }
 }
