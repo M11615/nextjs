@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { StateSetter, CHAT_MESSAGE_ROLE, CHAT_MESSAGE_STATUS, FALLBACK_MOBILE_L_SCREEN_WIDTH } from "@/app/lib/constants";
+import { StateSetter, CHAT_MESSAGE_ROLE, CHAT_MESSAGE_STATUS, FALLBACK_MOBILE_L_SCREEN_WIDTH, CHAT_MESSAGE_INPUT_LENGTH } from "@/app/lib/constants";
 import { generateUUID } from "@/app/lib/uuid";
 import { userGenerate } from "@/app/services/v1/generate";
 import { ResponsiveContextValue } from "@/app/[lng]/components/ResponsiveContext";
@@ -71,7 +71,7 @@ export default function Main({
     setRows(1);
     setIsMultiline(false);
     const messageId: string = generateUUID();
-    if (userInputText.length > 20000) {
+    if (userInputText.length > CHAT_MESSAGE_INPUT_LENGTH) {
       addMessage(chat.id, {
         id: messageId,
         role: CHAT_MESSAGE_ROLE.ASSISTANT,
@@ -165,8 +165,8 @@ export default function Main({
       ) : (
         <button
           onClick={handleSubmit}
-          disabled={inputText.trim().length === 0}
-          className={`select-none text-[var(--theme-border-base)] border ${inputText.trim().length === 0 ? "cursor-not-allowed border-[var(--theme-text-caption)] bg-[var(--theme-text-caption)]" : "cursor-pointer border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)]"} p-[8px] rounded-full transition duration-200 ease-in-out`}
+          disabled={inputText.trim().length === 0 || inputText.trim().length > CHAT_MESSAGE_INPUT_LENGTH}
+          className={`select-none text-[var(--theme-border-base)] border ${inputText.trim().length === 0 || inputText.trim().length > CHAT_MESSAGE_INPUT_LENGTH ? "cursor-not-allowed border-[var(--theme-text-caption)] bg-[var(--theme-text-caption)]" : "cursor-pointer border-[var(--theme-fg-base)] bg-[var(--theme-fg-base)] hover:bg-[var(--theme-bg-base-hover)] hover:border-[var(--theme-bg-base-hover)]"} p-[8px] rounded-full transition duration-200 ease-in-out`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
             <path d="M8.99992 16V6.41407L5.70696 9.70704C5.31643 10.0976 4.68342 10.0976 4.29289 9.70704C3.90237 9.31652 3.90237 8.6835 4.29289 8.29298L9.29289 3.29298L9.36907 3.22462C9.76184 2.90427 10.3408 2.92686 10.707 3.29298L15.707 8.29298L15.7753 8.36915C16.0957 8.76192 16.0731 9.34092 15.707 9.70704C15.3408 10.0732 14.7618 10.0958 14.3691 9.7754L14.2929 9.70704L10.9999 6.41407V16C10.9999 16.5523 10.5522 17 9.99992 17C9.44764 17 8.99992 16.5523 8.99992 16Z" />
@@ -177,7 +177,7 @@ export default function Main({
   );
 
   return (
-    <main className="flex flex-col items-center flex-1 bg-[var(--theme-bg-chat-base)] overflow-auto">
+    <main className={`flex flex-col items-center flex-1 ${selectedChat !== null ? "border-t border-[var(--theme-border-base)]" : ""} bg-[var(--theme-bg-chat-base)] overflow-auto`}>
       {selectedChat === null ? (
         <div className={`flex flex-col items-center justify-center w-full h-full ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-4 pt-[56%]" : "px-9 pb-[185px]"}`}>
           <p className={`${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "text-[26px]" : "text-[30px]"} mb-7 text-center text-[var(--theme-fg-base)]`}>

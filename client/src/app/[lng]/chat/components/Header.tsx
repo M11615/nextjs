@@ -13,7 +13,7 @@ export default function Header({
   responsiveContext, toggleAside, onSelectChatId
 }: HeaderProps): React.ReactNode {
   return (
-    <header className="flex items-center justify-between w-full h-[53px] bg-[var(--theme-bg-chat-base)] border-b border-[var(--theme-border-base)] px-2">
+    <header className="flex items-center justify-between w-full h-[52px] bg-[var(--theme-bg-chat-base)] px-2">
       <div className="flex items-center gap-1">
         {responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH && (
           <button

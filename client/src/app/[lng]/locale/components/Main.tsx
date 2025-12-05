@@ -33,7 +33,7 @@ export default function Main() {
                 onClick={(): void => {
                   handleLanguageChange(lang)
                 }}
-                className="cursor-pointer inline w-fit text-[var(--theme-primary-light)] text-left underline"
+                className="cursor-pointer inline w-fit text-[var(--theme-primary)] text-left underline"
               >
                 {item.region} - {item.label}
               </button>

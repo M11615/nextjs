@@ -175,4 +175,6 @@ export const FALLBACK_MOBILE_M_SCREEN_WIDTH: number = 375 + SCRSCREEN_WIDTH_OFFS
 
 export const FALLBACK_MOBILE_S_SCREEN_WIDTH: number = 320 + SCRSCREEN_WIDTH_OFFSET;
 
-export const MAIN_CONTENT_ID = "main-content" as const;
+export const MAIN_CONTENT_ID: string = "main-content" as const;
+
+export const CHAT_MESSAGE_INPUT_LENGTH: number = 20000 as const;
