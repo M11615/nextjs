@@ -12,17 +12,14 @@ def get_python_executable() -> str:
   else:
     return os.path.join("./.venv/bin/python")
 
-def run_python(python_executable: str, args: list[str]) -> int:
+def run_python(python_executable: str, args: List[str]) -> int:
   process: subprocess.Popen[bytes] = subprocess.Popen([python_executable] + args, stdout=sys.stdout, stderr=sys.stderr)
   process.communicate()
 
   return process.returncode
 
 def main() -> int:
-  python_executable: str = get_python_executable()
-  command_arguments: List[str] = sys.argv[1:]
-
-  return run_python(python_executable, command_arguments)
+  return run_python(get_python_executable(), sys.argv[1:])
 
 if __name__ == "__main__":
   sys.exit(main())

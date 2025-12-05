@@ -12,7 +12,7 @@ const environmentFiles = [
   { temporaryFileName: "temporary.env.production.local", environmentFileName: ".env.production.local" }
 ];
 
-function copyFileWithBackup(sourceFilePath, destinationFilePath) {
+const copyFileWithBackup = (sourceFilePath, destinationFilePath) => {
   if (!fs.existsSync(sourceFilePath)) {
     return;
   }
@@ -24,7 +24,7 @@ function copyFileWithBackup(sourceFilePath, destinationFilePath) {
   fs.copyFileSync(sourceFilePath, destinationFilePath);
 }
 
-function main() {
+const main = () => {
   for (const workspaceDirectory of workspaceDirectories) {
     const absoluteWorkspaceDirectory = path.resolve(currentDirectoryPath, workspaceDirectory);
     for (const { temporaryFileName, environmentFileName } of environmentFiles) {
