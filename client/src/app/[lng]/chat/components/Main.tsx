@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { StateSetter, CHAT_MESSAGE_ROLE, CHAT_MESSAGE_STATUS, FALLBACK_MOBILE_L_SCREEN_WIDTH, CHAT_MESSAGE_INPUT_LENGTH } from "@/app/lib/constants";
+import { StateSetter, FALLBACK_MOBILE_L_SCREEN_WIDTH, CHAT_MESSAGE_ROLE, CHAT_MESSAGE_STATUS, CHAT_MESSAGE_INPUT_LENGTH } from "@/app/lib/constants";
 import { generateUUID } from "@/app/lib/uuid";
 import { userGenerate } from "@/app/services/v1/generate";
 import { ResponsiveContextValue } from "@/app/[lng]/components/ResponsiveContext";
