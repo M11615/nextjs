@@ -121,22 +121,24 @@ export default function Main({
   };
 
   const handleStop: () => void = (): void => {
-    if (controllerRef.current) {
-      controllerRef.current.abort();
-      controllerRef.current = null;
-    }
-    if (readerRef.current) {
-      readerRef.current.cancel();
-      readerRef.current = null;
-    }
-    if (selectedChat) {
-      const last: Message = selectedChat.messages[selectedChat.messages.length - 1];
-      if (last && last.status === CHAT_MESSAGE_STATUS.PINDING) {
-        updateMessage(selectedChat.id, last.id, {
-          status: CHAT_MESSAGE_STATUS.SENT
-        });
+    try {
+      if (controllerRef.current) {
+        controllerRef.current.abort();
+        controllerRef.current = null;
       }
-    }
+      if (readerRef.current) {
+        readerRef.current.cancel();
+        readerRef.current = null;
+      }
+      if (selectedChat) {
+        const last: Message = selectedChat.messages[selectedChat.messages.length - 1];
+        if (last && last.status === CHAT_MESSAGE_STATUS.PINDING) {
+          updateMessage(selectedChat.id, last.id, {
+            status: CHAT_MESSAGE_STATUS.SENT
+          });
+        }
+      }
+    } catch { }
   };
 
   const ChatTextarea: React.ReactNode = (
@@ -177,66 +179,90 @@ export default function Main({
   );
 
   return (
-    <main className={`flex flex-col items-center flex-1 ${selectedChat !== null ? "border-t border-[var(--theme-border-base)]" : ""} bg-[var(--theme-bg-chat-base)] overflow-auto`}>
-      {selectedChat === null ? (
-        <div className={`flex flex-col items-center justify-center w-full h-full ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-4 pt-[56%]" : "px-9 pb-[185px]"}`}>
-          <p className={`${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "text-[26px]" : "text-[30px]"} mb-7 text-center text-[var(--theme-fg-base)]`}>
-            Ready when you are.
-          </p>
-          <div className={`flex flex-col items-center w-full ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "mt-auto pb-4" : ""}`}>
-            {ChatTextarea}
+    <>
+      <main className={`flex flex-col items-center flex-1 ${selectedChat !== null ? "border-t border-[var(--theme-border-base)]" : ""} bg-[var(--theme-bg-chat-base)] overflow-auto`}>
+        {selectedChat === null ? (
+          <div className={`flex flex-col items-center justify-center w-full h-full ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-4 pt-[56%]" : "px-9 pb-[185px]"}`}>
+            <p className={`${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "text-[26px]" : "text-[30px]"} mb-7 text-center text-[var(--theme-fg-base)]`}>
+              Ready when you are.
+            </p>
+            <div className={`flex flex-col items-center w-full ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "mt-auto pb-4" : ""}`}>
+              {ChatTextarea}
+            </div>
           </div>
-        </div>
-      ) : (
-        <>
-          <div className={`flex flex-col w-full h-full ${responsiveContext.isTabletScreen ? `${responsiveContext.isMobileScreen ? "px-4" : "px-[8%]"}` : "px-[18.5%]"} pt-4 pb-[14%] gap-6 overflow-y-auto`}>
-            {selectedChat.messages.map((message: Message): React.ReactNode => (
-              <div key={message.id} className={`flex w-full ${message.role === CHAT_MESSAGE_ROLE.USER ? "justify-end" : "justify-start"}`}>
-                <div
-                  className={`px-4 rounded-2xl whitespace-pre-wrap break-words ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-chat-message)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-[var(--theme-border-chat-message-error)] bg-[var(--theme-bg-chat-message-error)] text-[var(--theme-fg-chat-message-error)] py-4" : "py-1"}`}
-                >
-                  {message.status === CHAT_MESSAGE_STATUS.PINDING && message.content.length === 0 ? (
-                    <div className="flex items-center">
-                      <span className="w-3 h-3 bg-[var(--theme-fg-base)] rounded-full" />
-                    </div>
-                  ) : message.role === CHAT_MESSAGE_ROLE.ASSISTANT ? (
-                    message.status === CHAT_MESSAGE_STATUS.ERROR ? (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          className="inline border-[2px] border-[var(--theme-fg-chat-message-error)] rounded-full"
-                        >
-                          <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
-                          <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
-                          <path d="M10 5.83301C10.5293 5.83303 10.958 6.26273 10.958 6.79199C10.9578 7.3211 10.5291 7.74998 10 7.75C9.47084 7.75 9.04217 7.32111 9.04199 6.79199C9.04199 6.26272 9.47073 5.83301 10 5.83301Z" />
-                        </svg>
-                        <span className="pl-2 text-[14px]">
-                          {message.content}
-                        </span>
-                      </>
-                    ) : (
-                      <div className="prose max-w-none pb-10">
-                        <ReactMarkdown>
-                          {message.content}
-                        </ReactMarkdown>
+        ) : (
+          <>
+            <div className={`flex flex-col w-full h-full ${responsiveContext.isTabletScreen ? `${responsiveContext.isMobileScreen ? "px-4" : "px-[8%]"}` : "px-[18.5%]"} pt-4 pb-[14%] gap-6 overflow-y-auto`}>
+              {selectedChat.messages.map((message: Message): React.ReactNode => (
+                <div key={message.id} className={`flex w-full ${message.role === CHAT_MESSAGE_ROLE.USER ? "justify-end" : "justify-start"}`}>
+                  <div
+                    className={`px-4 rounded-2xl break-all ${message.role === CHAT_MESSAGE_ROLE.USER ? "max-w-[68.5%] bg-[var(--theme-bg-chat-message)] text-[var(--theme-fg-base)]" : "max-w-[100%] bg-[var(--theme-bg-chat-base)] text-[var(--theme-fg-base)]"} ${message.status === CHAT_MESSAGE_STATUS.ERROR ? "border border-[var(--theme-border-chat-message-error)] bg-[var(--theme-bg-chat-message-error)] text-[var(--theme-fg-chat-message-error)] py-4" : "py-1"}`}
+                  >
+                    {message.status === CHAT_MESSAGE_STATUS.PINDING && message.content.length === 0 ? (
+                      <div className="flex items-center">
+                        <span className="w-[13px] h-[13px] bg-[var(--theme-fg-base)] rounded-full chat-main-pulse-scale" />
                       </div>
-                    )
-                  ) : (
-                    message.content
-                  )}
+                    ) : message.role === CHAT_MESSAGE_ROLE.ASSISTANT ? (
+                      message.status === CHAT_MESSAGE_STATUS.ERROR ? (
+                        <>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            className="inline border-[2px] border-[var(--theme-fg-chat-message-error)] rounded-full"
+                          >
+                            <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
+                            <path d="M10 9.25C10.4142 9.25002 10.75 9.5858 10.75 10V13.333C10.75 13.7472 10.4142 14.083 10 14.083C9.58579 14.083 9.25 13.7472 9.25 13.333V10C9.25 9.58579 9.58579 9.25 10 9.25Z" />
+                            <path d="M10 5.83301C10.5293 5.83303 10.958 6.26273 10.958 6.79199C10.9578 7.3211 10.5291 7.74998 10 7.75C9.47084 7.75 9.04217 7.32111 9.04199 6.79199C9.04199 6.26272 9.47073 5.83301 10 5.83301Z" />
+                          </svg>
+                          <span
+                            className="pl-2 text-[14px]"
+                            dangerouslySetInnerHTML={{ __html: message.content }}
+                          />
+                        </>
+                      ) : (
+                        <div className="break-all pb-10">
+                          <ReactMarkdown>
+                            {message.content}
+                          </ReactMarkdown>
+                        </div>
+                      )
+                    ) : (
+                      message.content
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className={`flex flex-col items-center w-full bg-[var(--theme-bg-chat-base)] ${responsiveContext.isTabletScreen ? `${responsiveContext.isMobileScreen ? `${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-4" : "px-6"}` : "px-14"}` : "px-8"} pb-[30px]`}>
-            {ChatTextarea}
-          </div>
-        </>
-      )}
-    </main>
+              ))}
+            </div>
+            <div className={`flex flex-col items-center w-full bg-[var(--theme-bg-chat-base)] ${responsiveContext.isTabletScreen ? `${responsiveContext.isMobileScreen ? `${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? "px-4" : "px-6"}` : "px-14"}` : "px-8"} pb-[30px]`}>
+              {ChatTextarea}
+            </div>
+          </>
+        )}
+      </main>
+
+      <style>
+        {`
+          .chat-main-pulse-scale {
+            animation-name: chat-main-pulse-scale;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          @keyframes chat-main-pulse-scale {
+            0% {
+              transform: scale(1);
+            }
+            100% {
+              transform: scale(1.2);
+            }
+          }
+        `}
+      </style>
+    </>
   );
 }

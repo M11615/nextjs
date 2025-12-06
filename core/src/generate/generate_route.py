@@ -11,7 +11,18 @@ runner: ProcessInferenceRunner = ProcessInferenceRunner(inference_process)
 @generate_router.post("/v1/generate/user_generate")
 async def user_generate(request: Request, requestBody: UserGenerateRequest) -> StreamingResponse:
   async def stream_generator():
-    output: str = await runner.run(requestBody.input_text, request)
+    output: str = await runner.run(
+      request,
+      requestBody.input_text,
+      max_new_tokens=256,
+      do_sample=True,
+      temperature=0.7,
+      top_k=50,
+      top_p=0.95,
+      num_return_sequences=1,
+      seed=None,
+      return_all=False
+    )
     for ch in output:
       yield ch
       await asyncio.sleep(0.01)

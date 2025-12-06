@@ -49,9 +49,9 @@
     --theme-bg-muted-hover: #1F1F1F;
     --theme-bg-muted-dark: #1F1F1F;
     --theme-bg-muted-dark-hover: #1A1A1A;
-    --theme-bg-chat-base: #080808;
+    --theme-bg-chat-base: #070707;
     --theme-bg-chat-muted: #050505;
-    --theme-bg-chat-textarea: #0B0B0B;
+    --theme-bg-chat-textarea: #0A0A0A;
     --theme-bg-chat-message: #303030;
     --theme-bg-chat-message-error: #2B2222;
     --theme-fg-base: #FFFFFF;
@@ -122,9 +122,9 @@ html.dark {
   --theme-bg-muted-hover: #1F1F1F;
   --theme-bg-muted-dark: #1F1F1F;
   --theme-bg-muted-dark-hover: #1A1A1A;
-  --theme-bg-chat-base: #080808;
+  --theme-bg-chat-base: #070707;
   --theme-bg-chat-muted: #050505;
-  --theme-bg-chat-textarea: #0B0B0B;
+  --theme-bg-chat-textarea: #0A0A0A;
   --theme-bg-chat-message: #303030;
   --theme-bg-chat-message-error: #2B2222;
   --theme-fg-base: #FFFFFF;

@@ -1,27 +1,35 @@
 import asyncio
-from typing import Self, Callable
-from multiprocessing import Process, Pipe
+from typing import Any, List, Self, Callable, Union
+from multiprocessing import Process
 from multiprocessing.connection import Connection
 from fastapi import Request
 
 class ProcessInferenceRunner:
-  def __init__(self: Self, inference_function: Callable[[str], str]) -> None:
+  def __init__(self: Self, inference_function: Callable[..., Union[str, List[str]]], **default_keyword_arguments: Any) -> None:
     self.inference_fn = inference_function
+    self.default_kwargs = default_keyword_arguments
 
-  def _worker(self: Self, input_text: str, connection: Connection) -> None:
+  def _worker(self: Self, connection: Connection, input_text: str, **keyword_arguments: Any) -> None:
     try:
-      result: str = self.inference_fn(input_text)
-      connection.send(result)
+      all_keyword_arguments = {**self.default_kwargs, **keyword_arguments, "input_text": input_text}
+      result: Union[str, List[str]] = self.inference_fn(**all_keyword_arguments)
+      result_to_send: str = None
+      if isinstance(result, list):
+        result_to_send = result[0] if result else ""
+      else:
+        result_to_send = result
+      connection.send(result_to_send)
     except Exception as e:
       connection.send(e)
     finally:
       connection.close()
 
-  async def run(self: Self, input_text: str, request: Request) -> str:
+  async def run(self: Self, request: Request, input_text: str, **keyword_arguments: Any) -> str:
+    from multiprocessing import Pipe
     parent_connection: Connection
     child_connection: Connection
     parent_connection, child_connection = Pipe()
-    process: Process = Process(target=self._worker, args=(input_text, child_connection))
+    process: Process = Process(target=self._worker, args=(child_connection, input_text), kwargs=keyword_arguments)
     process.start()
     try:
       while True:

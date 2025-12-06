@@ -34,7 +34,7 @@ export default function Aside({
 
   return (
     <>
-      <aside className={`${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? `fixed top-0 left-0 h-full z-50 w-[260px] bg-[var(--theme-bg-chat-muted)] border-r border-[var(--theme-border-base)] transition-transform duration-300 ease-in-out ${collapsed ? "translate-x-[-260px]" : "translate-x-0"}` : ` relative h-full ${collapsed ? "w-[52px]" : "w-[260px]"} bg-[var(--theme-bg-chat-muted)] border-r border-[var(--theme-border-base)] transition-all duration-200 ease-in-out`}`}>
+      <aside className={`flex-shrink-0 ${responsiveContext.width < FALLBACK_MOBILE_L_SCREEN_WIDTH ? `fixed top-0 left-0 h-full z-50 w-[260px] bg-[var(--theme-bg-chat-muted)] border-r border-[var(--theme-border-base)] transition-transform duration-300 ease-in-out ${collapsed ? "translate-x-[-260px]" : "translate-x-0"}` : ` relative h-full ${collapsed ? "w-[52px]" : "w-[260px]"} bg-[var(--theme-bg-chat-muted)] border-r border-[var(--theme-border-base)] transition-all duration-200 ease-in-out`}`}>
         {showContent && (
           <button
             onClick={handleNewChat}

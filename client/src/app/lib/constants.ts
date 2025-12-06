@@ -177,4 +177,4 @@ export const CHAT_MESSAGE_STATUS: Record<string, string> = {
   ERROR: "error"
 } as const;
 
-export const CHAT_MESSAGE_INPUT_LENGTH: number = 20000 as const;
+export const CHAT_MESSAGE_INPUT_LENGTH: number = 20480 as const;

@@ -3,7 +3,7 @@
 import os
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_id: str = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+model_id: str = "openai-community/gpt2"
 base_directory: str = os.path.dirname(__file__)
 cache_directory: str = os.path.join(base_directory, "./src/lib/.models")
 
